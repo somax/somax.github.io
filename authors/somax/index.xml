@@ -2,20 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Somax on So&#39;Blog</title>
-    <link>https://somax.github.io/authors/somax/</link>
+    <link>https://somax.me/authors/somax/</link>
     <description>Recent content in Somax on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 20 May 2018 09:52:51 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 21 May 2018 16:41:58 +0800</lastBuildDate>
     
-	<atom:link href="https://somax.github.io/authors/somax/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://somax.me/authors/somax/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>建站笔记 - 将网站托管到 Github</title>
+      <link>https://somax.me/memo/host-on-github/</link>
+      <pubDate>Mon, 21 May 2018 16:41:58 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/host-on-github/</guid>
+      <description>有很多使用 github pages 功能免费发布网站的教程，也可以直接看 官方文档，就不再赘述了。
+有一些注意事项这里提一下，根据 github 的规定，使用 &amp;lt;用户名&amp;gt;.github.io 作为项目名称，就可以通过 &amp;lt;用户名&amp;gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
+hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
+ 在项目中建立 master 及 src 两个分支，master 分支用来放最终静态网站文件，而 src 分支存放源文件 在 src 分支上，添加 public 目录到 .gitignore 以便提交源码时忽略它 然后在 public 目录中重新 git init 并存放 master 分支  这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
+域名设置 想要 .IO 或者 .ME 的域名，找了一下国内域名供应商视乎没有提供。最后在 godaddy.com 购买了 somax.me，第一年 6 折，2年共 ￥150.99。
+购买成功后，进入 DNS 管理界面进行 DNS 配置：
+   类型 名称 值 TTL     A @ 185.</description>
+    </item>
+    
+    <item>
+      <title>建站笔记 - 使用 hugo 建立我的博客</title>
+      <link>https://somax.me/memo/building-soblog-with-hugo/</link>
+      <pubDate>Mon, 21 May 2018 14:01:10 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/building-soblog-with-hugo/</guid>
+      <description>这是 开篇 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
+ 前言 其实很久之前就有看到别人使用 Github Pages + jekyll 来免费搭建自己的博客网站，不过最近由于工作的原因接触 go 语言的项目越来越多，所以特意查了一下 Go 语言相关的建站工具，发现了 hugo 这个项目。 就毫不犹豫的（其实还是纠结了一下）选择了 hugo。原因主要是 开源，跨平台，安装简单，渲染速度快！官方自称：&amp;rdquo;The world’s fastest framework for building websites&amp;ldquo;
+使用 Hugo 建立网站 过程中参考了官方文档，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
+不过作为学习总结，还是记录一下自己的操作过程。
+安装 Hugo hugo 官网访问很慢，还是直接 github release 下载比较快。根据操作系统选择合适版本下载即可（由于 Go语言的特性，天生跨平台，可以选择 ARM 版本来安装到树莓派上玩耍），具体过程就略了。
+新建站点 按照 快速手册 一步步下来，基本上没什么问题。
+ hugo 安装完成一定要选择一个 Theme（或者自建&amp;ndash;如果觉得自己可以的话），并且根据 Theme 的说明配置好 config.toml 文件，否则可能只能看到不完整的网站。
+ https://themes.gohugo.io/minimo/ 看上去不错，比较简洁，很适合做日志型网站。
+文档 一定要先看一遍，避免走弯路（因为我已经走了🕺）。
+修改配置  从 minimo theme 的 exampleSite 目录中复制 config.</description>
+    </item>
+    
+    <item>
       <title>开篇</title>
-      <link>https://somax.github.io/post/first/</link>
+      <link>https://somax.me/post/first/</link>
       <pubDate>Sun, 20 May 2018 09:52:51 +0800</pubDate>
       
-      <guid>https://somax.github.io/post/first/</guid>
+      <guid>https://somax.me/post/first/</guid>
       <description>Finally!! 🎉 为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
 经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
 第一篇，就这样。</description>

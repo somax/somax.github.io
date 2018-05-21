@@ -4,23 +4,31 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='Finally!! 🎉 为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
-经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
-第一篇，就这样。'>
+<meta name='description' content='有很多使用 github pages 功能免费发布网站的教程，也可以直接看 官方文档，就不再赘述了。
+有一些注意事项这里提一下，根据 github 的规定，使用 &lt;用户名&gt;.github.io 作为项目名称，就可以通过 &lt;用户名&gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
+hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
+ 在项目中建立 master 及 src 两个分支，master 分支用来放最终静态网站文件，而 src 分支存放源文件 在 src 分支上，添加 public 目录到 .gitignore 以便提交源码时忽略它 然后在 public 目录中重新 git init 并存放 master 分支  这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
+域名设置 想要 .IO 或者 .ME 的域名，找了一下国内域名供应商视乎没有提供。最后在 godaddy.com 购买了 somax.me，第一年 6 折，2年共 ￥150.99。
+购买成功后，进入 DNS 管理界面进行 DNS 配置：
+   类型 名称 值 TTL     A @ 185.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='开篇 • Somax'>
-<meta property='og:description' content='Finally!! 🎉 为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
-经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
-第一篇，就这样。'>
-<meta property='og:url' content='https://somax.me/post/first/'>
+<meta property='og:title' content='建站笔记 - 将网站托管到 Github • Somax'>
+<meta property='og:description' content='有很多使用 github pages 功能免费发布网站的教程，也可以直接看 官方文档，就不再赘述了。
+有一些注意事项这里提一下，根据 github 的规定，使用 &lt;用户名&gt;.github.io 作为项目名称，就可以通过 &lt;用户名&gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
+hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
+ 在项目中建立 master 及 src 两个分支，master 分支用来放最终静态网站文件，而 src 分支存放源文件 在 src 分支上，添加 public 目录到 .gitignore 以便提交源码时忽略它 然后在 public 目录中重新 git init 并存放 master 分支  这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
+域名设置 想要 .IO 或者 .ME 的域名，找了一下国内域名供应商视乎没有提供。最后在 godaddy.com 购买了 somax.me，第一年 6 折，2年共 ￥150.99。
+购买成功后，进入 DNS 管理界面进行 DNS 配置：
+   类型 名称 值 TTL     A @ 185.'>
+<meta property='og:url' content='https://somax.me/memo/host-on-github/'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Post'><meta property='article:published_time' content='2018-05-20T09:52:51&#43;08:00'/><meta property='article:modified_time' content='2018-05-20T09:52:51&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Memo'><meta property='article:tag' content='git'><meta property='article:tag' content='建站'><meta property='article:published_time' content='2018-05-21T16:41:58&#43;08:00'/><meta property='article:modified_time' content='2018-05-21T16:41:58&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>开篇 • Somax</title>
-  <link rel='canonical' href='https://somax.me/post/first/'>
+  <title>建站笔记 - 将网站托管到 Github • Somax</title>
+  <link rel='canonical' href='https://somax.me/memo/host-on-github/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -38,7 +46,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='page type-post has-sidebar'>
+<body class='page type-memo has-sidebar'>
 
   <div class='site'>
 
@@ -192,7 +200,7 @@ ga('send', 'pageview');
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>开篇</h1>
+      <h1 class='title'>建站笔记 - 将网站托管到 Github</h1>
       
 
     </div>
@@ -207,7 +215,7 @@ ga('send', 'pageview');
   
 </svg>
 <span class='screen-reader-text'>发布 </span>
-  <time class='entry-date' datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
+  <time class='entry-date' datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
 </span>
 
   <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
@@ -240,25 +248,91 @@ ga('send', 'pageview');
   <div class='container entry-content'>
   
 
-<h2 id="finally">Finally!! 🎉</h2>
+<p>有很多使用 github pages 功能免费发布网站的教程，也可以直接看 <a href="https://pages.github.com/" target="_blank">官方文档</a>，就不再赘述了。</p>
 
-<p>为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！</p>
+<p>有一些注意事项这里提一下，根据 github 的规定，使用 <code>&lt;用户名&gt;.github.io</code> 作为项目名称，就可以通过 <code>&lt;用户名&gt;.github.io</code> 这个域名访问到网站，所以我的是就是 <a href="https://somax.github.io" target="_blank">somax.github.io</a>。</p>
 
-<p>经过了<strong>精心</strong>的挑选，最后选择了 <a href="https://gohugo.io" target="_blank">hugo</a> 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。</p>
+<p>hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：</p>
 
-<p>第一篇，就这样。</p>
+<ul>
+<li>在项目中建立 <code>master</code> 及 <code>src</code> 两个分支，<code>master</code> 分支用来放最终静态网站文件，而 <code>src</code> 分支存放源文件</li>
+<li>在 <code>src</code> 分支上，添加 <code>public</code> 目录到 <code>.gitignore</code> 以便提交源码时忽略它</li>
+<li>然后在 <code>public</code> 目录中重新 <code>git init</code> 并存放 <code>master</code> 分支</li>
+</ul>
+
+<p>这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。</p>
+
+<h3 id="域名设置">域名设置</h3>
+
+<p>想要 <code>.IO</code> 或者 <code>.ME</code> 的域名，找了一下国内域名供应商视乎没有提供。最后在 <a href="https://godaddy.com" target="_blank">godaddy.com</a> 购买了 <code>somax.me</code>，第一年 6 折，2年共 ￥150.99。</p>
+
+<p>购买成功后，进入 DNS 管理界面进行 DNS 配置：</p>
+
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>名称</th>
+<th>值</th>
+<th>TTL</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>A</td>
+<td>@</td>
+<td>185.199.110.153</td>
+<td>600 秒</td>
+</tr>
+
+<tr>
+<td>CNAME</td>
+<td>www</td>
+<td>somax.github.io</td>
+<td>1 小时</td>
+</tr>
+</tbody>
+</table>
+
+<p>然后回到项目 master 分支（也就是 public 目录），添加 CNAME 文件：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">echo somax.me &gt; CNAME</code></pre></div>
+<p>提交代码后就可以使用新域名 <a href="https://somax.me" target="_blank">somax.me</a> 访问我的博客了🏖。</p>
 
 </div>
 
   
 <footer class='entry-footer'>
   <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/git'>Git</a>, <a class='tag' href='/tags/%E5%BB%BA%E7%AB%99'>建站</a></div>
+
   </div>
 </footer>
 
 
 </article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/memo/building-soblog-with-hugo/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ 上一个</span>
+        <span class='screen-reader-text'>上一篇文章: </span>建站笔记 - 使用 hugo 建立我的博客</a>
+    </div></div>
+</nav>
 
 
 

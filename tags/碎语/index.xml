@@ -2,20 +2,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>碎语 on So&#39;Blog</title>
-    <link>https://somax.github.io/tags/%E7%A2%8E%E8%AF%AD/</link>
+    <link>https://somax.me/tags/%E7%A2%8E%E8%AF%AD/</link>
     <description>Recent content in 碎语 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 20 May 2018 09:52:51 +0800</lastBuildDate>
     
-	<atom:link href="https://somax.github.io/tags/%E7%A2%8E%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://somax.me/tags/%E7%A2%8E%E8%AF%AD/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>开篇</title>
-      <link>https://somax.github.io/post/first/</link>
+      <link>https://somax.me/post/first/</link>
       <pubDate>Sun, 20 May 2018 09:52:51 +0800</pubDate>
       
-      <guid>https://somax.github.io/post/first/</guid>
+      <guid>https://somax.me/post/first/</guid>
       <description>Finally!! 🎉 为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
 经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
 第一篇，就这样。</description>

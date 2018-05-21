@@ -2,19 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on So&#39;Blog</title>
-    <link>https://somax.github.io/tags/</link>
+    <link>https://somax.me/tags/</link>
     <description>Recent content in Tags on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 21 May 2018 16:41:58 +0800</lastBuildDate>
     
-	<atom:link href="https://somax.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://somax.me/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>碎语</title>
-      <link>https://somax.github.io/tags/%E7%A2%8E%E8%AF%AD/</link>
-      <pubDate>Sun, 20 May 2018 09:52:51 +0800</pubDate>
+      <title>Git</title>
+      <link>https://somax.me/tags/git/</link>
+      <pubDate>Mon, 21 May 2018 16:41:58 +0800</pubDate>
       
-      <guid>https://somax.github.io/tags/%E7%A2%8E%E8%AF%AD/</guid>
+      <guid>https://somax.me/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>建站</title>
+      <link>https://somax.me/tags/%E5%BB%BA%E7%AB%99/</link>
+      <pubDate>Mon, 21 May 2018 16:41:58 +0800</pubDate>
+      
+      <guid>https://somax.me/tags/%E5%BB%BA%E7%AB%99/</guid>
       <description></description>
     </item>
     

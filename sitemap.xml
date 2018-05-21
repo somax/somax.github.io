@@ -3,61 +3,79 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://somax.github.io/</loc>
+    <loc>https://somax.me/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/memo/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/post/</loc>
     <lastmod>2018-05-20T09:52:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://somax.github.io/memo/</loc>
+    <loc>https://somax.me/about/</loc>
   </url>
   
   <url>
-    <loc>https://somax.github.io/post/</loc>
+    <loc>https://somax.me/memo/host-on-github/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/memo/building-soblog-with-hugo/</loc>
+    <lastmod>2018-05-21T14:01:10+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/post/first/</loc>
     <lastmod>2018-05-20T09:52:51+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://somax.github.io/about/</loc>
+    <loc>https://somax.me/authors/</loc>
   </url>
   
   <url>
-    <loc>https://somax.github.io/post/first/</loc>
-    <lastmod>2018-05-20T09:52:51+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://somax.github.io/authors/</loc>
-  </url>
-  
-  <url>
-    <loc>https://somax.github.io/categories/</loc>
+    <loc>https://somax.me/categories/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.github.io/page/</loc>
+    <loc>https://somax.me/tags/git/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.github.io/series/</loc>
+    <loc>https://somax.me/page/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.github.io/authors/somax/</loc>
-    <lastmod>2018-05-20T09:52:51+08:00</lastmod>
+    <loc>https://somax.me/series/</loc>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.github.io/tags/</loc>
+    <loc>https://somax.me/authors/somax/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.github.io/tags/%E7%A2%8E%E8%AF%AD/</loc>
-    <lastmod>2018-05-20T09:52:51+08:00</lastmod>
+    <loc>https://somax.me/tags/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/tags/%E5%BB%BA%E7%AB%99/</loc>
+    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
     <priority>0</priority>
   </url>
   

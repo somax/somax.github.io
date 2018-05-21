@@ -5,7 +5,6 @@ authors: ["somax"]
 # categories:
 #   - post
 tags:
-  - 碎语
 slug: first
 # toc: true
 ---

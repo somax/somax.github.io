@@ -6,3 +6,13 @@
 .menu li.current a {
     border-bottom: 2px solid #ffcd00;
 }
+
+#sidebar .widget-recent_posts .item-title{
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 920px){
+    .main {
+        width: 100%;
+    }
+}

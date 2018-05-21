@@ -1,4 +1,4 @@
-baseURL = "https://somax.github.io"
+baseURL = "https://somax.me"
 title = "So'Blog"
 # for smart copyright line, leave this blank and check [params.copyright]
 copyright = ""
@@ -6,9 +6,9 @@ copyright = ""
 theme = "minimo"
 
 disqusShortname = ""
-googleAnalytics = ""
+googleAnalytics = "UA-119531833-1"
 
-Paginate = 5
+Paginate = 10
 preserveTaxonomyNames = true
 
 enableRobotsTXT = true # generate robots.txt

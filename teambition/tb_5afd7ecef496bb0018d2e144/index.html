@@ -4,21 +4,31 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='知识就像空气，学习如同呼吸。'>
+<meta name='description' content='这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
+ 安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
+ If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
+if [ $commands[kubectl] ]; then source &lt;(kubectl completion zsh) fi Or when using Oh-My-Zsh, edit the ~/.zshrc file and update the plugins= line to include the kubectl plugin.
+source &lt;(kubectl completion zsh) 安装 minikube  官方文档：https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube
+因为网络的原因，国内安装要用阿里改过的版本，参考：
+ https://yq.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='作者们: Somax • So&#39;Blog'>
-<meta property='og:description' content='知识就像空气，学习如同呼吸。'>
-<meta property='og:url' content='https://somax.me/authors/somax/'>
+<meta property='og:title' content='k8s 学习笔记 • Somax'>
+<meta property='og:description' content='这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
+ 安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
+ If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
+if [ $commands[kubectl] ]; then source &lt;(kubectl completion zsh) fi Or when using Oh-My-Zsh, edit the ~/.zshrc file and update the plugins= line to include the kubectl plugin.
+source &lt;(kubectl completion zsh) 安装 minikube  官方文档：https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube
+因为网络的原因，国内安装要用阿里改过的版本，参考：
+ https://yq.'>
+<meta property='og:url' content='https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-05-23T23:06:25&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:tag' content='运维'><meta property='article:tag' content='docker'><meta property='article:tag' content='k8s'><meta property='article:published_time' content='2018-05-17T13:08:30Z'/><meta property='article:modified_time' content='2018-05-17T13:08:30Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>作者们: Somax • So&#39;Blog</title>
-  <link rel='canonical' href='https://somax.me/authors/somax/'>
-  
-    <link href="https://somax.me/authors/somax/index.xml" rel="alternate" type="application/rss+xml" title="So&#39;Blog" />
+  <title>k8s 学习笔记 • Somax</title>
+  <link rel='canonical' href='https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -36,7 +46,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='taxonomy type-authors taxonomy-author has-sidebar'>
+<body class='page type-teambition has-sidebar'>
 
   <div class='site'>
 
@@ -228,140 +238,144 @@ ga('send', 'pageview');
       <main id='content'>
 
 
-<header class='header'>
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'><span class='taxonomy-name'>作者们: </span>Somax</h1>
-
+      <h1 class='title'>k8s 学习笔记</h1>
       
 
     </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2018-05-17T13:08:30Z'>2018-05-17</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要1分钟读完
+</span>
+
+
+</div>
+
+
   </div>
 </header>
 
-
-
-
-<div class='container list-container'>
-  <ul class='list'>
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-23T17:29:49&#43;08:00'>2018-05-23</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/teambition/'> 从 Teambition 迁移过来的文档</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/export-from-teambition/'>将 Teambition 分享迁移到 hugo</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/host-on-github/'>建站笔记 - 将网站托管到 Github</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/building-soblog-with-hugo/'>建站笔记 - 使用 hugo 建立我的博客</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/post/first/'>开篇</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-17T13:08:30Z'>2018-05-17</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/teambition/tb_5afd7ecef496bb0018d2e144/'>k8s 学习笔记</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-17T09:29:35Z'>2018-05-17</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/teambition/tb_5afd4b7f8fb0b000189366aa/'>内部并联网络打通配置方法</a>
-    </h3>
-  </header>
-</li>
-
-    
-  </ul>
-
+  
   
 
+  <div class='container entry-content'>
+  
+
+<blockquote>
+<p>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的</p>
+</blockquote>
+
+<h2 id="安装-kubectl">安装 kubectl</h2>
+
+<h3 id="启用命令自动补完-zsh">启用命令自动补完 Zsh</h3>
+
+<blockquote>
+<p>官方文档： <a href="https://kubernetes.io/docs/tasks/tools/install-kubectl/" target="_blank">https://kubernetes.io/docs/tasks/tools/install-kubectl/</a></p>
+</blockquote>
+
+<p>If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#66d9ef">if</span> <span style="color:#f92672">[</span> $commands<span style="color:#f92672">[</span>kubectl<span style="color:#f92672">]</span> <span style="color:#f92672">]</span>; <span style="color:#66d9ef">then</span>
+  source &lt;<span style="color:#f92672">(</span>kubectl completion zsh<span style="color:#f92672">)</span>
+<span style="color:#66d9ef">fi</span></code></pre></div>
+<p>Or when using <a href="http://ohmyz.sh/" target="_blank">Oh-My-Zsh</a>, edit the ~/.zshrc file and update the <code>plugins=</code> line to include the kubectl plugin.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">source &lt;<span style="color:#f92672">(</span>kubectl completion zsh<span style="color:#f92672">)</span></code></pre></div>
+<h2 id="安装-minikube">安装 minikube</h2>
+
+<blockquote>
+<p>官方文档：<a href="https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube" target="_blank">https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube</a></p>
+
+<p>因为网络的原因，国内安装要用阿里改过的版本，参考：</p>
+
+<ul>
+<li><a href="https://yq.aliyun.com/articles/221687" target="_blank">https://yq.aliyun.com/articles/221687</a></li>
+<li><a href="https://ehlxr.me/2018/01/12/kubernetes-minikube-installation/" target="_blank">https://ehlxr.me/2018/01/12/kubernetes-minikube-installation/</a></li>
+</ul>
+</blockquote>
+
+<h4 id="mac-上安装-hyperkit-driver">Mac 上安装 hyperkit driver</h4>
+
+<blockquote>
+<p>minikube 默认使用 virtualbox 起虚拟机，我的 mac 上装过 docker，所有可以使用 hyperkit，注意启动时需要加 <code>--vm-driver hyperkit</code> 参数</p>
+</blockquote>
+
+<p><a href="https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver" target="_blank">https://github.com/kubernetes/minikube/blob/master/docs/drivers.md#hyperkit-driver</a></p>
+
+<p>如果出现错误可以尝试清除数据重新开始 <code>rm -rf ~/.minikube</code></p>
+
+<h4 id="启动-minikube-使用-hyperkit">启动 minikube （使用 hyperkit）</h4>
+
+<blockquote>
+<p>如果不指定 &ndash;vm-driver 默认使用 virtualbox 启动</p>
+</blockquote>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">minikube start --registry-mirror<span style="color:#f92672">=</span>https://registry.docker-cn.com --vm-driver hyperkit</code></pre></div>
+<h4 id="启动-dashboard">启动 Dashboard</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">minikube dashboard</code></pre></div>
 </div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/%E8%BF%90%E7%BB%B4'>运维</a>, <a class='tag' href='/tags/docker'>Docker</a>, <a class='tag' href='/tags/k8s'>K8s</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/teambition/tb_5afd4b7f8fb0b000189366aa/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ 上一个</span>
+        <span class='screen-reader-text'>上一篇文章: </span>内部并联网络打通配置方法</a>
+    </div></div>
+</nav>
+
+
+
 
       </main>
 

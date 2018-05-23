@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>学习备忘录 on So&#39;Blog</title>
-    <link>https://somax.me/memo/</link>
-    <description>Recent content in 学习备忘录 on So&#39;Blog</description>
+    <title>Hugo on So&#39;Blog</title>
+    <link>https://somax.me/tags/hugo/</link>
+    <description>Recent content in Hugo on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 23 May 2018 23:06:25 +0800</lastBuildDate>
     
-	<atom:link href="https://somax.me/memo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://somax.me/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,21 +19,6 @@
       <description>Teambition 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。
 经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 somax/teambition-sync 。
 虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。</description>
-    </item>
-    
-    <item>
-      <title>建站笔记 - 将网站托管到 Github</title>
-      <link>https://somax.me/memo/host-on-github/</link>
-      <pubDate>Mon, 21 May 2018 16:41:58 +0800</pubDate>
-      
-      <guid>https://somax.me/memo/host-on-github/</guid>
-      <description>有很多使用 github pages 功能免费发布网站的教程，也可以直接看 官方文档，就不再赘述了。
-有一些注意事项这里提一下，根据 github 的规定，使用 &amp;lt;用户名&amp;gt;.github.io 作为项目名称，就可以通过 &amp;lt;用户名&amp;gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
-hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
- 在项目中建立 master 及 src 两个分支，master 分支用来放最终静态网站文件，而 src 分支存放源文件 在 src 分支上，添加 public 目录到 .gitignore 以便提交源码时忽略它 然后在 public 目录中重新 git init 并存放 master 分支  这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
-域名设置 想要 .IO 或者 .ME 的域名，找了一下国内域名供应商视乎没有提供。最后在 godaddy.com 购买了 somax.me，第一年 6 折，2年共 ￥150.99。
-购买成功后，进入 DNS 管理界面进行 DNS 配置：
-   类型 名称 值 TTL     A @ 185.</description>
     </item>
     
     <item>

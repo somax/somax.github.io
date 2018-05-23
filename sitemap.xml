@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://somax.me/</loc>
-    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <lastmod>2018-05-23T23:06:25+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://somax.me/memo/</loc>
-    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <lastmod>2018-05-23T23:06:25+08:00</lastmod>
   </url>
   
   <url>
@@ -18,7 +18,17 @@
   </url>
   
   <url>
+    <loc>https://somax.me/teambition/</loc>
+    <lastmod>2018-05-23T17:29:49+08:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://somax.me/about/</loc>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/memo/export-from-teambition/</loc>
+    <lastmod>2018-05-23T23:06:25+08:00</lastmod>
   </url>
   
   <url>
@@ -37,6 +47,16 @@
   </url>
   
   <url>
+    <loc>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</loc>
+    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</loc>
+    <lastmod>2018-05-17T09:29:35+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://somax.me/authors/</loc>
   </url>
   
@@ -46,8 +66,26 @@
   </url>
   
   <url>
+    <loc>https://somax.me/tags/docker/</loc>
+    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://somax.me/tags/git/</loc>
     <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/tags/hugo/</loc>
+    <lastmod>2018-05-23T23:06:25+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/tags/k8s/</loc>
+    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -63,19 +101,25 @@
   
   <url>
     <loc>https://somax.me/authors/somax/</loc>
-    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <lastmod>2018-05-23T17:29:49+08:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://somax.me/tags/</loc>
-    <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://somax.me/tags/%E5%BB%BA%E7%AB%99/</loc>
     <lastmod>2018-05-21T16:41:58+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/tags/%E8%BF%90%E7%BB%B4/</loc>
+    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
     <priority>0</priority>
   </url>
   

@@ -4,21 +4,31 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='知识就像空气，学习如同呼吸。'>
+<meta name='description' content='这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的
+ 网络拓扑  [192.168.126.0] / \ [wan: 192.168.126.200] [wan: 192.168.126.233] TP-Link | | MiRoute Pro [lan: 192.168.123.0] [lan: 192.168.120.0]  目的 将 192.168.123.0网段与 192.168.120.0 网段相互打通。
+配置方案 在两个子网路由器上分别设置静态路由，192.168.123.0 网段访问 192.168.120.0 配置路由指向 192.168.126.233 ，同理 192.168.120.0 网段访问 192.168.123.0 网段则配置路由指向 192.168.126.200
+具体步骤 配置 TP-Link 路由器  添加静态路由规则：
+ 登录控制界面，选择 『传输控制』 - 『路由设置』-『静态路由』
+ 点选『新增』
+   规则名称: to120 目的地址: 192.168.120.0 子网掩码: 255.255.255.0 下一跳: 192.168.126.233 出接口: WAN1  ​'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='学习备忘录 • So&#39;Blog'>
-<meta property='og:description' content='知识就像空气，学习如同呼吸。'>
-<meta property='og:url' content='https://somax.me/memo/'>
+<meta property='og:title' content='内部并联网络打通配置方法 • Somax'>
+<meta property='og:description' content='这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的
+ 网络拓扑  [192.168.126.0] / \ [wan: 192.168.126.200] [wan: 192.168.126.233] TP-Link | | MiRoute Pro [lan: 192.168.123.0] [lan: 192.168.120.0]  目的 将 192.168.123.0网段与 192.168.120.0 网段相互打通。
+配置方案 在两个子网路由器上分别设置静态路由，192.168.123.0 网段访问 192.168.120.0 配置路由指向 192.168.126.233 ，同理 192.168.120.0 网段访问 192.168.123.0 网段则配置路由指向 192.168.126.200
+具体步骤 配置 TP-Link 路由器  添加静态路由规则：
+ 登录控制界面，选择 『传输控制』 - 『路由设置』-『静态路由』
+ 点选『新增』
+   规则名称: to120 目的地址: 192.168.120.0 子网掩码: 255.255.255.0 下一跳: 192.168.126.233 出接口: WAN1  ​'>
+<meta property='og:url' content='https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-05-23T23:06:25&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:tag' content='运维'><meta property='article:published_time' content='2018-05-17T09:29:35Z'/><meta property='article:modified_time' content='2018-05-17T09:29:35Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>学习备忘录 • So&#39;Blog</title>
-  <link rel='canonical' href='https://somax.me/memo/'>
-  
-    <link href="https://somax.me/memo/index.xml" rel="alternate" type="application/rss+xml" title="So&#39;Blog" />
+  <title>内部并联网络打通配置方法 • Somax</title>
+  <link rel='canonical' href='https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -36,7 +46,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='section type-memo has-sidebar'>
+<body class='page type-teambition has-sidebar'>
 
   <div class='site'>
 
@@ -204,8 +214,8 @@ ga('send', 'pageview');
 </button>
     <ul><li class='item'>
         <a href='/'>起点</a>
-      </li><li class='item current'>
-        <a aria-current='page' href='/memo/'>备忘录</a>
+      </li><li class='item'>
+        <a href='/memo/'>备忘录</a>
       </li><li class='item'>
         <a href='/post/'>碎语</a>
       </li><li class='item'>
@@ -228,86 +238,186 @@ ga('send', 'pageview');
       <main id='content'>
 
 
-<header class='header'>
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>学习备忘录</h1>
-
+      <h1 class='title'>内部并联网络打通配置方法</h1>
       
 
     </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2018-05-17T09:29:35Z'>2018-05-17</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要1分钟读完
+</span>
+
+
+</div>
+
+
   </div>
 </header>
 
-
-
-<div class='entry'>
-  <div class='container entry-content'>
-  <blockquote>
-<p>这里都是我的学习记录。</p>
-</blockquote>
-
-</div>
-
-</div>
-
-
-<div class='container list-container'>
-  <ul class='list'>
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/export-from-teambition/'>将 Teambition 分享迁移到 hugo</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/host-on-github/'>建站笔记 - 将网站托管到 Github</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/building-soblog-with-hugo/'>建站笔记 - 使用 hugo 建立我的博客</a>
-    </h3>
-  </header>
-</li>
-
-    
-  </ul>
-
+  
   
 
+  <div class='container entry-content'>
+  
+
+<blockquote>
+<p>这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的</p>
+</blockquote>
+
+<h2 id="网络拓扑">网络拓扑</h2>
+
+<pre><code>                 [192.168.126.0]
+                /               \
+ [wan: 192.168.126.200]     [wan: 192.168.126.233]
+       TP-Link |                 | MiRoute Pro
+  [lan: 192.168.123.0]       [lan: 192.168.120.0]
+</code></pre>
+
+<h2 id="目的">目的</h2>
+
+<p>将 <code>192.168.123.0</code>网段与 <code>192.168.120.0</code> 网段相互打通。</p>
+
+<h2 id="配置方案">配置方案</h2>
+
+<p>在两个子网路由器上分别设置静态路由，<code>192.168.123.0</code> 网段访问 <code>192.168.120.0</code> 配置路由指向 <code>192.168.126.233</code>  ，同理  <code>192.168.120.0</code> 网段访问  <code>192.168.123.0</code> 网段则配置路由指向 <code>192.168.126.200</code></p>
+
+<h2 id="具体步骤">具体步骤</h2>
+
+<h3 id="配置-tp-link-路由器">配置 TP-Link 路由器</h3>
+
+<ol>
+<li><p>添加静态路由规则：</p>
+
+<ol>
+<li><p>登录控制界面，选择 『传输控制』 - 『路由设置』-『静态路由』</p></li>
+
+<li><p>点选『新增』</p></li>
+</ol>
+
+<pre><code>  规则名称: to120
+  目的地址: 192.168.120.0
+  子网掩码: 255.255.255.0
+  下一跳: 192.168.126.233
+  出接口: WAN1
+
+</code></pre>
+
+<p>​</p></li>
+</ol>
+
+<h3 id="配置小米路由器">配置小米路由器</h3>
+
+<blockquote>
+<p>小米路由默认不支持静态路由配置，所以先根据指引开启 SSH ( <a href="http://bbs.xiaomi.cn/t-9921071" target="_blank">http://bbs.xiaomi.cn/t-9921071</a> )，并用 ssh 登录执行以下操作：</p>
+</blockquote>
+
+<p>以下内容删除（用 route 命令添加存在网络中断后静态路由失效的问题，参考 <a href="https://openwrt.org/zh/docs/user-guide/start" target="_blank">https://openwrt.org/zh/docs/user-guide/start</a> 改成网络配置方式）
+<del>1. 添加静态路由：route add -net 192.168.123.0 netmask 255.255.255.0 gw 192.168.126.200</del>
+<del>2. 设置开机自动添加：vim /etc/rc.local ，加入一行：route add -net 192.168.123.0 netmask 255.255.255.0 gw 192.168.126.200</del></p>
+
+<ol>
+<li>编辑网络配置 <code>vim /etc/config/network</code></li>
+</ol>
+
+<pre><code>config 'route' 'static_route_123'
+        option 'interface' 'wan'
+        option 'target' '192.168.123.0'
+        option 'netmask' '255.255.255.0'
+        option 'gateway' '192.168.126.200'
+</code></pre>
+
+<ol>
+<li><p>重启网络：<code>/etc/init.d/network restart</code></p></li>
+
+<li><p>开启防火墙转发，编辑配置文件： <code>vim /etc/config/firewall</code></p></li>
+</ol>
+
+<pre><code>config defaults
+        option syn_flood '0'
+        option input 'ACCEPT'
+        option output 'ACCEPT'
+  -     option forward 'REJECT'
+  +     option forward 'ACCEPT'
+        option drop_invalid '1'
+        option disable_ipv6 '0'
+......
+</code></pre>
+
+<ol>
+<li><p>重启防火墙：<code>/etc/init.d/firewall restart</code></p></li>
+
+<li><p>路由器管理界面配置 DNS：192.168.123.90 114.114.114.114</p></li>
+</ol>
+
+<p>EOF</p>
+
 </div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/%E8%BF%90%E7%BB%B4'>运维</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='next-entry sep-before'>
+      <a href='/teambition/tb_5afd7ecef496bb0018d2e144/'>
+        <span class='screen-reader-text'>下一篇文章: </span>k8s 学习笔记<span aria-hidden='true'>下一个 <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
 
       </main>
 

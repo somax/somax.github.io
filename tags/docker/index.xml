@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on So&#39;Blog</title>
+    <link>https://somax.me/tags/docker/</link>
+    <description>Recent content in Docker on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 May 2018 13:08:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>k8s 学习笔记</title>
+      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</link>
+      <pubDate>Thu, 17 May 2018 13:08:30 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</guid>
+      <description>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
+ 安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
+ If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
+if [ $commands[kubectl] ]; then source &amp;lt;(kubectl completion zsh) fi Or when using Oh-My-Zsh, edit the ~/.zshrc file and update the plugins= line to include the kubectl plugin.
+source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube
+因为网络的原因，国内安装要用阿里改过的版本，参考：
+ https://yq.</description>
+    </item>
+    
+  </channel>
+</rss>

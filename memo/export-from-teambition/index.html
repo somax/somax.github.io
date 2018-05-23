@@ -4,21 +4,23 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='知识就像空气，学习如同呼吸。'>
+<meta name='description' content='Teambition 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。
+经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 somax/teambition-sync 。
+虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='学习备忘录 • So&#39;Blog'>
-<meta property='og:description' content='知识就像空气，学习如同呼吸。'>
-<meta property='og:url' content='https://somax.me/memo/'>
+<meta property='og:title' content='将 Teambition 分享迁移到 hugo • Somax'>
+<meta property='og:description' content='Teambition 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。
+经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 somax/teambition-sync 。
+虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。'>
+<meta property='og:url' content='https://somax.me/memo/export-from-teambition/'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='website'><meta property='og:updated_time' content='2018-05-23T23:06:25&#43;08:00'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Memo'><meta property='article:tag' content='hugo'><meta property='article:published_time' content='2018-05-23T23:06:25&#43;08:00'/><meta property='article:modified_time' content='2018-05-23T23:06:25&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>学习备忘录 • So&#39;Blog</title>
-  <link rel='canonical' href='https://somax.me/memo/'>
-  
-    <link href="https://somax.me/memo/index.xml" rel="alternate" type="application/rss+xml" title="So&#39;Blog" />
+  <title>将 Teambition 分享迁移到 hugo • Somax</title>
+  <link rel='canonical' href='https://somax.me/memo/export-from-teambition/'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -36,7 +38,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='section type-memo has-sidebar'>
+<body class='page type-memo has-sidebar'>
 
   <div class='site'>
 
@@ -204,8 +206,8 @@ ga('send', 'pageview');
 </button>
     <ul><li class='item'>
         <a href='/'>起点</a>
-      </li><li class='item current'>
-        <a aria-current='page' href='/memo/'>备忘录</a>
+      </li><li class='item'>
+        <a href='/memo/'>备忘录</a>
       </li><li class='item'>
         <a href='/post/'>碎语</a>
       </li><li class='item'>
@@ -228,86 +230,99 @@ ga('send', 'pageview');
       <main id='content'>
 
 
-<header class='header'>
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>学习备忘录</h1>
-
+      <h1 class='title'>将 Teambition 分享迁移到 hugo</h1>
       
 
     </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要1分钟读完
+</span>
+
+
+</div>
+
+
   </div>
 </header>
 
-
-
-<div class='entry'>
-  <div class='container entry-content'>
-  <blockquote>
-<p>这里都是我的学习记录。</p>
-</blockquote>
-
-</div>
-
-</div>
-
-
-<div class='container list-container'>
-  <ul class='list'>
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/export-from-teambition/'>将 Teambition 分享迁移到 hugo</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/host-on-github/'>建站笔记 - 将网站托管到 Github</a>
-    </h3>
-  </header>
-</li>
-
-    
-      <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/memo/building-soblog-with-hugo/'>建站笔记 - 使用 hugo 建立我的博客</a>
-    </h3>
-  </header>
-</li>
-
-    
-  </ul>
-
+  
   
 
+  <div class='container entry-content'>
+  <p><a href="https://www.teambition.com" target="_blank">Teambition</a> 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。</p>
+
+<p>经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 <a href="https://github.com/somax/teambition-sync" target="_blank"> somax/teambition-sync</a> 。</p>
+
+<p>虽然 hugo 生成 300 篇文章只需要 <code>2250ms</code>，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。</p>
+
 </div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/hugo'>Hugo</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/memo/host-on-github/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ 上一个</span>
+        <span class='screen-reader-text'>上一篇文章: </span>建站笔记 - 将网站托管到 Github</a>
+    </div></div>
+</nav>
+
+
+
 
       </main>
 

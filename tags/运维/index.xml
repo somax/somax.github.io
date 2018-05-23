@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>运维 on So&#39;Blog</title>
+    <link>https://somax.me/tags/%E8%BF%90%E7%BB%B4/</link>
+    <description>Recent content in 运维 on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 17 May 2018 13:08:30 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/%E8%BF%90%E7%BB%B4/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>k8s 学习笔记</title>
+      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</link>
+      <pubDate>Thu, 17 May 2018 13:08:30 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</guid>
+      <description>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
+ 安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
+ If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
+if [ $commands[kubectl] ]; then source &amp;lt;(kubectl completion zsh) fi Or when using Oh-My-Zsh, edit the ~/.zshrc file and update the plugins= line to include the kubectl plugin.
+source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://kubernetes.io/docs/tasks/tools/install-minikube/#install-minikube
+因为网络的原因，国内安装要用阿里改过的版本，参考：
+ https://yq.</description>
+    </item>
+    
+    <item>
+      <title>内部并联网络打通配置方法</title>
+      <link>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</link>
+      <pubDate>Thu, 17 May 2018 09:29:35 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</guid>
+      <description>这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的
+ 网络拓扑  [192.168.126.0] / \ [wan: 192.168.126.200] [wan: 192.168.126.233] TP-Link | | MiRoute Pro [lan: 192.168.123.0] [lan: 192.168.120.0]  目的 将 192.168.123.0网段与 192.168.120.0 网段相互打通。
+配置方案 在两个子网路由器上分别设置静态路由，192.168.123.0 网段访问 192.168.120.0 配置路由指向 192.168.126.233 ，同理 192.168.120.0 网段访问 192.168.123.0 网段则配置路由指向 192.168.126.200
+具体步骤 配置 TP-Link 路由器  添加静态路由规则：
+ 登录控制界面，选择 『传输控制』 - 『路由设置』-『静态路由』
+ 点选『新增』
+   规则名称: to120 目的地址: 192.168.120.0 子网掩码: 255.255.255.0 下一跳: 192.168.126.233 出接口: WAN1  ​</description>
+    </item>
+    
+  </channel>
+</rss>

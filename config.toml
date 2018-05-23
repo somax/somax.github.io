@@ -74,7 +74,7 @@ email = "somaxj@163.com"
 # facebook = "somax"
 github = "somax"
 # gitlab = "somax"
-# instagram = "somax"
+instagram = "somax.me"
 # linkedin = "somax"
 # twitter = "somax"
 # telegram = "somax"
@@ -90,7 +90,7 @@ maxDepth = 2
 
 [params.comments.staticman.github]
 username = "somax"
-repository = "soblog"
+repository = "somax.github.io"
 branch = "master"
 
 [taxonomies]

@@ -5,6 +5,7 @@ authors: ["somax"]
 slug: building-soblog-with-hugo
 tags:
   - 建站
+  - hugo
 ---
 
 > 这是 [开篇](/post/first/) 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。

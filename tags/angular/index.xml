@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Angular on So&#39;Blog</title>
+    <link>https://somax.me/tags/angular/</link>
+    <description>Recent content in Angular on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 30 Oct 2015 03:13:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/angular/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AngularJs 代码风格指南</title>
+      <link>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</link>
+      <pubDate>Fri, 30 Oct 2015 03:13:13 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</guid>
+      <description>这篇文章（5632e0496fec47d05396a864）是从 Teambition 迁移过来的
+ Controller 的别名 使用这种风格编写代码，可以增强可读性，便于维护及减少出错的可能
+app.js (function(global) { &amp;#39;use strict&amp;#39;; var __appname = &amp;#39;myApp&amp;#39; angular.module(__appname, [&amp;#39;myModule&amp;#39;]) .config(__config) .run(__run); function __config($somethingInject) { // ...  } __config.$inject = [&amp;#39;$somethingInject&amp;#39;]; function __run($somethingInject){ //...  } __run.$inject = [&amp;#39;$somethingInject&amp;#39;] // 启动 App  angular.element(document).ready(function() { // { strictDi:true} 为可选参数  // 在 AngularJs 1.3 版本以后，使用静态注入(strictDi)可以提高性能  angular.bootstrap(document, [__appname],{ strictDi:true}); }); })();  myModule.js (function(global) { &amp;#39;use strict&amp;#39;; angular.module(&amp;#39;myModule&amp;#39;, [&amp;#39;subModule&amp;#39;]) .</description>
+    </item>
+    
+    <item>
+      <title>Angular 视频精选</title>
+      <link>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</link>
+      <pubDate>Tue, 15 Sep 2015 15:45:12 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</guid>
+      <description>这篇文章（55f83d08a415a44077c73551）是从 Teambition 迁移过来的
+ ng-conf 2015 The New Router Creating Container Components with Web Components and Angular
+附带一个国外视频网站下载工具：http://en.savefrom.net</description>
+    </item>
+    
+  </channel>
+</rss>

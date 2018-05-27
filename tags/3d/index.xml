@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3D on So&#39;Blog</title>
+    <link>https://somax.me/tags/3d/</link>
+    <description>Recent content in 3D on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 28 Aug 2015 02:08:59 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/3d/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>3D模型转换与烘培贴图</title>
+      <link>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</link>
+      <pubDate>Fri, 28 Aug 2015 02:08:59 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</guid>
+      <description>这篇文章（55dfc2bb44b37a5b19c7a35d）是从 Teambition 迁移过来的
+ 工具：
+SketchUp 2014Blender 2.74流程：
+从 SketchUp 中导出 dae文件 （选项：除了仅“导出所选集合”外，不用勾选任何其他选项）在 blender 中导入 dae文件在 blender 中清理模型中的无用物体为每一个物体展开UV选择Cycles渲染 &amp;gt;&amp;nbsp;添加基本材质烘培光影贴图 &amp;gt; 保存渲染贴图切换回Blender渲染 &amp;gt; 为物体添加材质导出 3ds 文件格式导出模型注意事项：
+模型中不能存在镂空，如有镂空，需要用线切分模型（也就是说可以是 “ C ” 形，但不能是 “ O ” 形）。只有在Blender渲染模式下定义贴图，才能在导出的模型中携带贴图路径信息导出3ds模型中贴图引用的文件名不能超过7个字符</description>
+    </item>
+    
+  </channel>
+</rss>

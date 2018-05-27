@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on So&#39;Blog</title>
+    <link>https://somax.me/tags/linux/</link>
+    <description>Recent content in Linux on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 02 Oct 2015 05:17:10 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Rsync 在非标ssh端口(22) 中用法</title>
+      <link>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</link>
+      <pubDate>Fri, 02 Oct 2015 05:17:10 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</guid>
+      <description>这篇文章（560e1356d908de0d2585d058）是从 Teambition 迁移过来的
+ 问题 使用rsync拷贝文件，有个主机的ssh端口使用的并非标准端口(22)，查看rsync的文档，看到有种带有端口的用法： rsync [OPTION]&amp;hellip; SRC [SRC]&amp;hellip; rsync://[USER@]HOST[:PORT]/DEST
+但使用会返回错误： rsync: server sent &amp;ldquo;SSH-2.0-OpenSSH_5.3&amp;rdquo; rather than greeting rsync error: error starting client-server protocol (code 5) at main.c(1534) [sender=3.0.9]
+解决 开始以为是客户端服务器rsync版本不兼容，后来发现对于非标准ssh端口(22)的使用方法是使用-e参数： rsync [OPTION]&amp;hellip; -e &amp;ldquo;ssh -p 2222&amp;rdquo; SRC [SRC]&amp;hellip; [USER@]HOST[:PORT]/DEST</description>
+    </item>
+    
+    <item>
+      <title>iptables 配置范例</title>
+      <link>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</link>
+      <pubDate>Wed, 30 Sep 2015 06:03:00 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</guid>
+      <description>这篇文章（560b7b14262a98424070c7a7）是从 Teambition 迁移过来的
+ linux 系统中使用 iptables 配置防火墙
+修改文件：/etc/sysconfig/iptables
+*filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -s 127.0.0.1/32 -d 127.0.0.1/32 -j ACCEPT -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT -A INPUT -p tcp -m tcp --dport 20 -j ACCEPT -A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT -A INPUT -j REJECT --reject-with icmp-port-unreachable -A FORWARD -j REJECT --reject-with icmp-port-unreachable -A OUTPUT -j ACCEPT COMMIT  重新启动 service iptables restart</description>
+    </item>
+    
+    <item>
+      <title>服务器上时区引起的问题</title>
+      <link>https://somax.me/teambition/tb_55fb8da623de26634d8794d5/</link>
+      <pubDate>Fri, 18 Sep 2015 04:05:58 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55fb8da623de26634d8794d5/</guid>
+      <description>这篇文章（55fb8da623de26634d8794d5）是从 Teambition 迁移过来的
+ 尝试将 CamU 应用部署到在美国租用的服务器，发现查询当日的照片却没有出现，经过分析发现是服务器时区与本地测试环境不同
+解决方案有两种， 1. 改变服务器时区 2. 改代码适应不同时区
+我采用了第一个方案，改时区（现在未知是否会造成其他应用的问题）
+那么，来改时区： $ cp &amp;ndash;remove-destination /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+搞定！</description>
+    </item>
+    
+    <item>
+      <title>Linux Netcat 命令——网络工具中的瑞士军刀</title>
+      <link>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</link>
+      <pubDate>Mon, 22 Jun 2015 15:29:42 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</guid>
+      <description>这篇文章（558829e6ddf0439e275133fa）是从 Teambition 迁移过来的
+ http://www.oschina.net/translate/linux-netcat-command
+快看，绝对值得学习！</description>
+    </item>
+    
+    <item>
+      <title>修正 虚拟机中 CentOS7 系统时间</title>
+      <link>https://somax.me/teambition/tb_5555a840886052772bc70db3/</link>
+      <pubDate>Fri, 15 May 2015 08:03:12 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5555a840886052772bc70db3/</guid>
+      <description>这篇文章（5555a840886052772bc70db3）是从 Teambition 迁移过来的
+ 刚才在虚拟机中（ Centos） 安装后提示系统时间不正确，通过 date 命令查看返回：2015年2月1日（原因不明），通过hwclock 查硬件时间，返回是正确的，查了一下hwclock 帮助，其中有一条：-s, --hctosys 从硬件时钟设置系统时间。运行后，再用 date 检查，系统时间正确了！</description>
+    </item>
+    
+  </channel>
+</rss>

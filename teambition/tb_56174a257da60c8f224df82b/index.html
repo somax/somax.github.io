@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang='zh'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的
+ 200 – 服务器成功返回网页 404 – 请求的网页不存在 503 – 服务不可用&nbsp;
+1xx（临时响应）&nbsp;
+表示临时响应并需要请求者继续执行操作的状态代码。
+代码&nbsp;&nbsp; 说明&nbsp;
+100&nbsp;&nbsp; （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&nbsp;&nbsp;
+101&nbsp;&nbsp; （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。
+2xx （成功）&nbsp;
+表示成功处理了请求的状态代码。
+代码&nbsp;&nbsp; 说明&nbsp;
+200&nbsp;&nbsp; （成功）&nbsp; 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。&nbsp;
+201&nbsp;&nbsp; （已创建）&nbsp; 请求成功并且服务器创建了新的资源。&nbsp;
+202&nbsp;&nbsp; （已接受）&nbsp; 服务器已接受请求，但尚未处理。&nbsp;
+203&nbsp;&nbsp; （非授权信息）&nbsp; 服务器已成功处理了请求，但返回的信息可能来自另一来源。&nbsp;
+204&nbsp;&nbsp; （无内容）&nbsp; 服务器成功处理了请求，但没有返回任何内容。&nbsp;
+205&nbsp;&nbsp; （重置内容） 服务器成功处理了请求，但没有返回任何内容。&nbsp;
+206&nbsp;&nbsp; （部分内容）&nbsp; 服务器成功处理了部分 GET 请求。
+3xx （重定向）&nbsp;
+表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。
+代码&nbsp;&nbsp; 说明&nbsp;
+300&nbsp;&nbsp; （多种选择）&nbsp; 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&nbsp;
+301&nbsp;&nbsp; （永久移动）&nbsp; 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&nbsp;'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='HTTP协议状态码详解（HTTP Status Code） • Somax'>
+<meta property='og:description' content='这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的
+ 200 – 服务器成功返回网页 404 – 请求的网页不存在 503 – 服务不可用&nbsp;
+1xx（临时响应）&nbsp;
+表示临时响应并需要请求者继续执行操作的状态代码。
+代码&nbsp;&nbsp; 说明&nbsp;
+100&nbsp;&nbsp; （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&nbsp;&nbsp;
+101&nbsp;&nbsp; （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。
+2xx （成功）&nbsp;
+表示成功处理了请求的状态代码。
+代码&nbsp;&nbsp; 说明&nbsp;
+200&nbsp;&nbsp; （成功）&nbsp; 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。&nbsp;
+201&nbsp;&nbsp; （已创建）&nbsp; 请求成功并且服务器创建了新的资源。&nbsp;
+202&nbsp;&nbsp; （已接受）&nbsp; 服务器已接受请求，但尚未处理。&nbsp;
+203&nbsp;&nbsp; （非授权信息）&nbsp; 服务器已成功处理了请求，但返回的信息可能来自另一来源。&nbsp;
+204&nbsp;&nbsp; （无内容）&nbsp; 服务器成功处理了请求，但没有返回任何内容。&nbsp;
+205&nbsp;&nbsp; （重置内容） 服务器成功处理了请求，但没有返回任何内容。&nbsp;
+206&nbsp;&nbsp; （部分内容）&nbsp; 服务器成功处理了部分 GET 请求。
+3xx （重定向）&nbsp;
+表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。
+代码&nbsp;&nbsp; 说明&nbsp;
+300&nbsp;&nbsp; （多种选择）&nbsp; 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&nbsp;
+301&nbsp;&nbsp; （永久移动）&nbsp; 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&nbsp;'>
+<meta property='og:url' content='https://somax.me/teambition/tb_56174a257da60c8f224df82b/'>
+<meta property='og:site_name' content='So&#39;Blog'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:published_time' content='2015-10-09T05:01:25Z'/><meta property='article:modified_time' content='2015-10-09T05:01:25Z'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+  <title>HTTP协议状态码详解（HTTP Status Code） • Somax</title>
+  <link rel='canonical' href='https://somax.me/teambition/tb_56174a257da60c8f224df82b/'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.67e9c12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-119531833-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+
+<body class='page type-teambition has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>跳到主页</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='https://avatars2.githubusercontent.com/u/5010811?s=460&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    So&#39;Blog
+    </h2>
+    <div class='desc'>
+    知识就像空气，学习如同呼吸。
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>标签</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud no-shuffle'><li>
+        <a href='/tags/3d' style='font-size:1em'>3D</a>
+      </li><li>
+        <a href='/tags/linux' style='font-size:1.5714285714285714em'>Linux</a>
+      </li><li>
+        <a href='/tags/angular' style='font-size:1.1428571428571428em'>Angular</a>
+      </li><li>
+        <a href='/tags/animation' style='font-size:1em'>Animation</a>
+      </li><li>
+        <a href='/tags/develop' style='font-size:1em'>Develop</a>
+      </li><li>
+        <a href='/tags/docker' style='font-size:1.1428571428571428em'>Docker</a>
+      </li><li>
+        <a href='/tags/git' style='font-size:1.4285714285714286em'>Git</a>
+      </li><li>
+        <a href='/tags/gitlab' style='font-size:1.1428571428571428em'>Gitlab</a>
+      </li><li>
+        <a href='/tags/golang' style='font-size:1em'>Golang</a>
+      </li><li>
+        <a href='/tags/html5' style='font-size:1.1428571428571428em'>Html5</a>
+      </li><li>
+        <a href='/tags/hugo' style='font-size:1.1428571428571428em'>Hugo</a>
+      </li><li>
+        <a href='/tags/ide' style='font-size:1em'>Ide</a>
+      </li><li>
+        <a href='/tags/javascript' style='font-size:2em'>Javascript</a>
+      </li><li>
+        <a href='/tags/k8s' style='font-size:1em'>K8s</a>
+      </li><li>
+        <a href='/tags/nodejs' style='font-size:1.2857142857142856em'>Nodejs</a>
+      </li><li>
+        <a href='/tags/osx' style='font-size:1.1428571428571428em'>Osx</a>
+      </li><li>
+        <a href='/tags/proxy' style='font-size:1.1428571428571428em'>Proxy</a>
+      </li><li>
+        <a href='/tags/sublime' style='font-size:1em'>Sublime</a>
+      </li><li>
+        <a href='/tags/%E4%BF%A1%E6%81%AF' style='font-size:1em'>信息</a>
+      </li><li>
+        <a href='/tags/%E5%8E%9F%E5%88%9B' style='font-size:1.4285714285714286em'>原创</a>
+      </li><li>
+        <a href='/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD' style='font-size:1em'>基本技能</a>
+      </li><li>
+        <a href='/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE' style='font-size:1em'>大数据</a>
+      </li><li>
+        <a href='/tags/%E5%B7%A5%E5%85%B7' style='font-size:1.2857142857142856em'>工具</a>
+      </li><li>
+        <a href='/tags/%E5%BB%BA%E7%AB%99' style='font-size:1.1428571428571428em'>建站</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E4%BB%B6' style='font-size:1em'>插件</a>
+      </li><li>
+        <a href='/tags/%E6%90%9C%E7%B4%A2' style='font-size:1em'>搜索</a>
+      </li><li>
+        <a href='/tags/%E8%B5%84%E6%BA%90' style='font-size:1em'>资源</a>
+      </li><li>
+        <a href='/tags/%E8%BF%90%E7%BB%B4' style='font-size:1.7142857142857142em'>运维</a>
+      </li></ul>
+</div>
+
+
+</section>
+<section class='widget widget-recent_posts sep-after'>
+  <header>
+    <h4 class='title widget-title'>最近文章</h4>
+  </header>
+
+  <ul class='list'>
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/export-from-teambition/'>将 Teambition 分享迁移到 hugo</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/host-on-github/'>建站笔记 - 将网站托管到 Github</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/building-soblog-with-hugo/'>建站笔记 - 使用 hugo 建立我的博客</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/post/first/'>开篇</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-17T13:08:30Z'>2018-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5afd7ecef496bb0018d2e144/'>k8s 学习笔记</a>
+    </h3>
+  </header>
+</li>
+
+  
+  </ul>
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='主菜单'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>跳到文章</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>切换侧边栏</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>起点</a>
+      </li><li class='item'>
+        <a href='/memo/'>备忘录</a>
+      </li><li class='item'>
+        <a href='/post/'>碎语</a>
+      </li><li class='item'>
+        <a href='/teambition/'>TB</a>
+      </li><li class='item'>
+        <a href='/about/'>关于</a>
+      </li><li class='item'>
+        <a href=''></a>
+      </li></ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>So&#39;Blog</p><p class='desc site-desc'>知识就像空气，学习如同呼吸。</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>HTTP协议状态码详解（HTTP Status Code）</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2015-10-09T05:01:25Z'>2015-10-09</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要1分钟读完
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  <blockquote>
+<p>这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的</p>
+</blockquote>
+
+<p><p>200 – 服务器成功返回网页 404 – 请求的网页不存在 503 – 服务不可用&nbsp;<br>1xx（临时响应）&nbsp;<br>表示临时响应并需要请求者继续执行操作的状态代码。</p><p>代码&nbsp;&nbsp; 说明&nbsp;<br>100&nbsp;&nbsp; （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&nbsp;&nbsp;<br>101&nbsp;&nbsp; （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。</p><p>2xx （成功）&nbsp;<br>表示成功处理了请求的状态代码。</p><p>代码&nbsp;&nbsp; 说明&nbsp;<br>200&nbsp;&nbsp; （成功）&nbsp; 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。&nbsp;<br>201&nbsp;&nbsp; （已创建）&nbsp; 请求成功并且服务器创建了新的资源。&nbsp;<br>202&nbsp;&nbsp; （已接受）&nbsp; 服务器已接受请求，但尚未处理。&nbsp;<br>203&nbsp;&nbsp; （非授权信息）&nbsp; 服务器已成功处理了请求，但返回的信息可能来自另一来源。&nbsp;<br>204&nbsp;&nbsp; （无内容）&nbsp; 服务器成功处理了请求，但没有返回任何内容。&nbsp;<br>205&nbsp;&nbsp; （重置内容） 服务器成功处理了请求，但没有返回任何内容。&nbsp;<br>206&nbsp;&nbsp; （部分内容）&nbsp; 服务器成功处理了部分 GET 请求。</p><p>3xx （重定向）&nbsp;<br>表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</p><p>代码&nbsp;&nbsp; 说明&nbsp;<br>300&nbsp;&nbsp; （多种选择）&nbsp; 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&nbsp;<br>301&nbsp;&nbsp; （永久移动）&nbsp; 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&nbsp;<br>302&nbsp;&nbsp; （临时移动）&nbsp; 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。&nbsp;<br>303&nbsp;&nbsp; （查看其他位置） 请求者应当对不同的位置使用单独的 GET 请求来检索响应时，服务器返回此代码。&nbsp;<br>304&nbsp;&nbsp; （未修改） 自从上次请求后，请求的网页未修改过。 服务器返回此响应时，不会返回网页内容。&nbsp;<br>305&nbsp;&nbsp; （使用代理） 请求者只能使用代理访问请求的网页。 如果服务器返回此响应，还表示请求者应使用代理。&nbsp;<br>307&nbsp;&nbsp; （临时重定向）&nbsp; 服务器目前从不同位置的网页响应请求，但请求者应继续使用原有位置来进行以后的请求。</p><p>4xx（请求错误）&nbsp;<br>这些状态代码表示请求可能出错，妨碍了服务器的处理。</p><p>代码&nbsp;&nbsp; 说明&nbsp;<br>400&nbsp;&nbsp; （错误请求） 服务器不理解请求的语法。&nbsp;<br>401&nbsp;&nbsp; （未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。&nbsp;<br>403&nbsp;&nbsp; （禁止） 服务器拒绝请求。&nbsp;<br>404&nbsp;&nbsp; （未找到） 服务器找不到请求的网页。&nbsp;<br>405&nbsp;&nbsp; （方法禁用） 禁用请求中指定的方法。&nbsp;<br>406&nbsp;&nbsp; （不接受） 无法使用请求的内容特性响应请求的网页。&nbsp;<br>407&nbsp;&nbsp; （需要代理授权） 此状态代码与 401（未授权）类似，但指定请求者应当授权使用代理。&nbsp;<br>408&nbsp;&nbsp; （请求超时）&nbsp; 服务器等候请求时发生超时。&nbsp;<br>409&nbsp;&nbsp; （冲突）&nbsp; 服务器在完成请求时发生冲突。 服务器必须在响应中包含有关冲突的信息。&nbsp;<br>410&nbsp;&nbsp; （已删除）&nbsp; 如果请求的资源已永久删除，服务器就会返回此响应。&nbsp;<br>411&nbsp;&nbsp; （需要有效长度） 服务器不接受不含有效内容长度标头字段的请求。&nbsp;<br>412&nbsp;&nbsp; （未满足前提条件） 服务器未满足请求者在请求中设置的其中一个前提条件。&nbsp;<br>413&nbsp;&nbsp; （请求实体过大） 服务器无法处理请求，因为请求实体过大，超出服务器的处理能力。&nbsp;<br>414&nbsp;&nbsp; （请求的 URI 过长） 请求的 URI（通常为网址）过长，服务器无法处理。&nbsp;<br>415&nbsp;&nbsp; （不支持的媒体类型） 请求的格式不受请求页面的支持。&nbsp;<br>416&nbsp;&nbsp; （请求范围不符合要求） 如果页面无法提供请求的范围，则服务器会返回此状态代码。&nbsp;<br>417&nbsp;&nbsp; （未满足期望值） 服务器未满足”期望”请求标头字段的要求。</p><p>5xx（服务器错误）&nbsp;<br>这些状态代码表示服务器在尝试处理请求时发生内部错误。 这些错误可能是服务器本身的错误，而不是请求出错。</p><p>代码&nbsp;&nbsp; 说明&nbsp;<br>500&nbsp;&nbsp; （服务器内部错误）&nbsp; 服务器遇到错误，无法完成请求。&nbsp;<br>501&nbsp;&nbsp; （尚未实施） 服务器不具备完成请求的功能。 例如，服务器无法识别请求方法时可能会返回此代码。&nbsp;<br>502&nbsp;&nbsp; （错误网关） 服务器作为网关或代理，从上游服务器收到无效响应。&nbsp;<br>503&nbsp;&nbsp; （服务不可用） 服务器目前无法使用（由于超载或停机维护）。 通常，这只是暂时状态。&nbsp;<br>504&nbsp;&nbsp; （网关超时）&nbsp; 服务器作为网关或代理，但是没有及时从上游服务器收到请求。&nbsp;<br>505&nbsp;&nbsp; （HTTP 版本不受支持） 服务器不支持请求中所用的 HTTP 协议版本。</p><p>&nbsp;</p><p><a href="http://tools.ietf.org/html/rfc6585">RFC 6585</a>&nbsp;最近刚刚发布，该文档描述了 4 个新的 HTTP 状态码。</p><p>HTTP 协议还在变化？是的，HTTP 协议一直在演变，新的状态码对于开发 REST 服务或者说是基于 HTTP 的服务非常有用，下面我们为你详细介绍这四个新的状态码以及是否应该使用。</p><p>428 Precondition Required (要求先决条件)</p><p>先决条件是客户端发送 HTTP 请求时，如果想要请求能成功必须满足一些预设的条件。</p><p>一个好的例子就是 If-None-Match 头，经常在 GET 请求中使用，如果指定了 If-None-Match ，那么客户端只在响应中的 ETag 改变后才会重新接收回应。</p><h4><br></h4></p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/teambition/tb_56172c5e6de963d23969d33d/'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ 上一个</span>
+        <span class='screen-reader-text'>上一篇文章: </span>chrome 无法网页定位的问题</a>
+    </div><div class='next-entry sep-before'>
+      <a href='/teambition/tb_56189a31e7a72b1965b6df12/'>
+        <span class='screen-reader-text'>下一篇文章: </span>Nginx 源码安装<span aria-hidden='true'>下一个 <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="4" y1="12" x2="20" y2="12"/>
+  <polyline points="14 6 20 12 14 18"/>
+  
+</svg>
+</span>
+      </a>
+    </div></div>
+</nav>
+
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'>
+          <section class='widget widget-social_menu sep-after'><nav aria-label='社交菜单'>
+    <ul><li>
+        <a href='mailto:somaxj@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>通过邮件联系</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/somax.me' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Instagram的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Github的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Codepen的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section>
+          <div class='copyright'>
+  <p> &copy; 2018 Somax </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.0d92f56c.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gitlab on So&#39;Blog</title>
+    <link>https://somax.me/tags/gitlab/</link>
+    <description>Recent content in Gitlab on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 03 Nov 2015 05:20:19 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>如何在Git项目中添加空目录</title>
+      <link>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec/</link>
+      <pubDate>Tue, 03 Nov 2015 05:20:19 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec/</guid>
+      <description>这篇文章（5638441326ad9cd2130a33ec）是从 Teambition 迁移过来的
+ 在要添加的目录下新建 .gitignore 文件，文件中添加以下信息：
+# Ignore everything in this directory * # Except this file !.gitignore 更新 20160429：这里可以找到针对各种开发语言的模板：github.com/github/gitignore</description>
+    </item>
+    
+    <item>
+      <title>git简介</title>
+      <link>https://somax.me/teambition/tb_55265335879013c64ac090a2/</link>
+      <pubDate>Thu, 09 Apr 2015 10:23:49 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55265335879013c64ac090a2/</guid>
+      <description>这篇文章（55265335879013c64ac090a2）是从 Teambition 迁移过来的
+ 更新 (20160429)：最好的Git 电子书&amp;nbsp;https://git-scm.com/book/&amp;nbsp;（在线或下载）什么是 GitGIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。
+Git vs SVNGit 是分布式的，SVN不是&amp;nbsp;SVN 必须连接服务器才能提交变更； Git 在本地有完整版本库的 &amp;ldquo;clone&amp;rdquo;,允许离线提交变更和管理分支，然后push到远程库
+GIT把内容按元数据方式存储，而SVN是按文件&amp;nbsp;Git会在本地存储所有东西，包括标签，分支，版本记录 SVN只在本地存储一个工作副本。
+GIT分支和SVN的分支不同&amp;nbsp;SVN中分支就是版本库中的另外的一个目录； GIT的分支可以从同一个工作目录下快速的在几个分支间切换。
+GIT没有一个全局的版本号，而SVN有&amp;nbsp;SVN里使用容易阅读的数字版本号，Git使用SHA-1来唯一的标识一个代码快照
+GIT的内容完整性要优于SVN&amp;nbsp;GIT的内容存储使用的是SHA-1哈希算法,确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
+Internet上开放的git仓库国外：gitHub、gitLab &amp;hellip;国内：coding、gitcafe &amp;hellip;私有gitgitLabCE： http://git.jkr3.com限内部访问，自行注册，注意：确认邮件99%可能会进垃圾邮件
+客户端&amp;ldquo;建议学习命令方式&amp;rdquo;，熟悉之后非常快捷，mac或linux中可以使用自带 git 命令，通过&amp;nbsp;git help&amp;nbsp;获得帮助。
+windows系统可以选择tortoiseGit，适合原来使用tortoiseSVN的用户，有中文语言包
+http://git-scm.com/downloadshttp://git-scm.com/downloads/guishttps://code.google.com/p/tortoisegit/Git的基本流程和使用方法这里只介绍命令方式，在线试玩：&amp;nbsp;GitTryIt
+初始化&amp;nbsp;git init查看状态&amp;nbsp;git status&amp;nbsp;添加文件&amp;nbsp;git add README.md&amp;nbsp;/&amp;nbsp;git add *.js提交代码&amp;nbsp;git commit -m &amp;ldquo;添加 Readme&amp;rdquo;&amp;nbsp;&amp;nbsp;{学习:&amp;nbsp;Markdown}查看日志&amp;nbsp;git log远程库添加&amp;nbsp;git remote add origin http://git.jkr3.com/username/demo.git&amp;nbsp;{注意：远程库需要事先在网站上新建好}推送到远程库&amp;nbsp;git push -u origin master从远程库拉回&amp;nbsp;git pull origin master检查改变&amp;nbsp;git diff HEAD放弃提交&amp;nbsp;git reset file.txt恢复到最后版本&amp;nbsp;git checkout &amp;ndash; file.txt建立分支&amp;nbsp;git branch fixbug切换到分支&amp;nbsp;git checkout fixbug删除文件&amp;nbsp;git rm bug.txt合并&amp;nbsp;git checkout master&amp;nbsp;,&amp;nbsp;git merge fixbug删除分支&amp;nbsp;git branch -d fixbug最后推送到服务器&amp;nbsp;git push从SVN迁移到git实际上svn和git在本地是可以共存的</description>
+    </item>
+    
+  </channel>
+</rss>

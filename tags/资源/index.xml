@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>资源 on So&#39;Blog</title>
+    <link>https://somax.me/tags/%E8%B5%84%E6%BA%90/</link>
+    <description>Recent content in 资源 on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 05 May 2015 06:36:23 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/%E8%B5%84%E6%BA%90/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>移动开发相关学习资源</title>
+      <link>https://somax.me/teambition/tb_554864e774f9bfb2776b88ac/</link>
+      <pubDate>Tue, 05 May 2015 06:36:23 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_554864e774f9bfb2776b88ac/</guid>
+      <description>这篇文章（554864e774f9bfb2776b88ac）是从 Teambition 迁移过来的
+ 原型制作工具
+
+http://www.axure.com/&amp;nbsp; &amp;nbsp;
+国外开源混合模式 APP 开发框架
+http://ionicframework.com/&amp;nbsp;http://ionicmaterial.com/&amp;nbsp;&amp;nbsp;
+http://famous.org/
+国内
+http://ask.dcloud.net.cn/docs/
+http://ApiCloud.com &amp;nbsp;http://AppCan.cn http://www.exmobi.cn/&amp;nbsp;
+HTML5中国产业联盟
+http://www.html5plus.org &amp;nbsp;
+包含:了&amp;nbsp;HTML5+规范 &amp;nbsp;JSDoc+规范&amp;nbsp;&amp;nbsp;案例与工具
+一些文章
+十款不错的Hybrid App移动开发框架
+Hybrid APP开发者一定不要错过的框架和工具
+我是hybrid app的忠实粉丝和大力倡导者，从&amp;nbsp;新浪移动云开始就不断的寻找能帮助Web程序员开发出漂亮又好用的UI层框架。在历经了jqmobile、sencha touch等框架后，一直没能找到一个真正符合我的想法的框架：它应该为hybrid app设计、组件化结构、UI简洁而优美。
+性能、UX、跨平台：移动Web应用UI框架大比拼
+本文作者Tal Gleichger是拥有8年实战经验的资深全栈Web开发者，也是SocialBelong的CTO及联合创始人。在移动开发成为大势所趋之后，转战移动应用开发，在深度接触Hybrid App开发的同时，他也对几大开发者使用最广泛的框架进行了使用与对比，剖析优劣，供开发者们参考。
+真正的Hybrid APP没你想的那么简单
+然而，Hybrid App的精髓在Hybrid，也就是混合上，既然是混合，就要考虑到混合比例，就像钢筋混凝土，如果混合比例不当就会让一个建筑摇摇欲坠。
+使用ionic框架开发移动hybrid应用
+别闯进Hybrid App的误区
+Hybrid App，一种开发模式，兼顾Web和Native的一种开发模式。有人说它把Web App扼杀在摇篮里，有人说它把Native App引向一个新阶段。我说，它是一把双刃剑，千万别闯进它的误区。本文是笔者在实践Hybrid App开发模式过程中总结出的一些经验教训，供读者参考。Hybrid App虽好，可万万不能仓促选择，盲目运用。
+Hybrid App开发实战
+关于UIWebView和PhoneGap的总结
+
+Ionic 资源
+ionic中文社区 http://ionichina.com/&amp;nbsp;&amp;nbsp;http://www.haomou.net/tags/ionic/
+代码范例 http://codepen.io/ionic/public-list/
+youtube视频 https://www.youtube.com/channel/UChYheBnVeCfhCmqZfCUdJQw
+在线编辑器&amp;nbsp;http://creator.ionic.io/</description>
+    </item>
+    
+  </channel>
+</rss>

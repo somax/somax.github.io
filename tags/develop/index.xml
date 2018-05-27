@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Develop on So&#39;Blog</title>
+    <link>https://somax.me/tags/develop/</link>
+    <description>Recent content in Develop on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 11 Jul 2015 16:03:12 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/develop/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>【译】NodeJS错误处理最佳实践 — OneAPM</title>
+      <link>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</link>
+      <pubDate>Sat, 11 Jul 2015 16:03:12 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</guid>
+      <description>这篇文章（55a13e4027aadebf0ac9510c）是从 Teambition 迁移过来的
+ 【译】NodeJS错误处理最佳实践 — OneAPM http://code.oneapm.com/nodejs/2015/04/13/nodejs-errorhandling/
+
+
+NodeJS的错误处理让人痛苦，在很长的一段时间里，大量的错误被放任不管。但是要想建立一个健壮的Node.js程序就必须正确的处理这些错误，而且这并不难学。如果你实在没有耐心，那就直接绕过长篇大论跳到“总结”部分吧。
+原文
+这篇文章会回答NodeJS初学者的若干问题：
+我写的函数里什么时候该抛出异常，什么时候该传给callback, 什么时候触发EventEmitter等等。
+我的函数对参数该做出怎样的假设？我应该检查更加具体的约束么？例如参数是否非空，是否大于零，是不是看起来像个IP地址，等等等。
+我该如何处理那些不符合预期的参数？我是应该抛出一个异常，还是把错误传递给一个callback。
+我该怎么在程序里区分不同的异常（比如“请求错误”和“服务不可用”）？
+我怎么才能提供足够的信息让调用者知晓错误细节。
+我该怎么处理未预料的出错？我是应该用 try/catch ，domains 还是其它什么方式呢？
+这篇文章可以划分成互相为基础的几个部分：
+背景：希望你所具备的知识。
+操作失败和程序员的失误：介绍两种基本的异常。
+编写新函数的实践：关于怎么让函数产生有用报错的基本原则。
+编写新函数的具体推荐：编写能产生有用报错的、健壮的函数需要的一个检查列表
+例子：以connect函数为例的文档和序言。
+总结：全文至此的观点总结。
+附录：Error对象属性约定：用标准方式提供一个属性列表，以提供更多信息。
+背景本文假设：
+你已经熟悉了JavaScript、Java、 Python、 C++ 或者类似的语言中异常的概念，而且你知道抛出异常和捕获异常是什么意思。
+你熟悉怎么用NodeJS编写代码。你使用异步操作的时候会很自在，并能用callback(err,result)模式去完成异步操作。你得知道下面的代码不能正确处理异常的原因是什么[脚注1]
+function myApiFunc(callback) { /* * This pattern does NOT work! */ try { doSomeAsynchronousOperation(function (err) { &amp;nbsp; if (err) &amp;nbsp; &amp;nbsp; throw (err); &amp;nbsp; /* continue as normal */ }); } catch (ex) { callback(ex); } }你还要熟悉三种传递错误的方式: - 作为异常抛出。 - 把错误传给一个callback，这个函数正是为了处理异常和处理异步操作返回结果的。 - 在EventEmitter上触发一个Error事件。</description>
+    </item>
+    
+  </channel>
+</rss>

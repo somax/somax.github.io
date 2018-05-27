@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>信息 on So&#39;Blog</title>
+    <link>https://somax.me/tags/%E4%BF%A1%E6%81%AF/</link>
+    <description>Recent content in 信息 on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Apr 2015 00:27:55 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/%E4%BF%A1%E6%81%AF/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>微软推出面向Windows的Docker客户端</title>
+      <link>https://somax.me/teambition/tb_5530538bf6c019611ce98bd9/</link>
+      <pubDate>Fri, 17 Apr 2015 00:27:55 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5530538bf6c019611ce98bd9/</guid>
+      <description>这篇文章（5530538bf6c019611ce98bd9）是从 Teambition 迁移过来的
+ 在宣布与Docker建立合作伙伴关系后，微软已经构建了一个Windows原生Docker客户端。该命令行接口（CLI）与运行在Linux上的Docker客户端完全兼容。
+10月15日，Azure副总裁Jason Zander宣布了微软与Docker的合作伙伴关系。通过这种合作，微软和Docker计划推动以下几个方面的工作：
+致力于下一代Windows Server的开发以开源方式开发Docker Engine for Windows ServerAzure支持Docker Open Orchestration APIs将Docker Hub映像集成到Azure Gallery和PortalDocker将与下一个版本的Windows Server集成，使在Windows上运行容器更简单。作为迈向那个目标的第一步，微软推出了面向Windows的Docker客户端。开发人员可以使用该客户端管理运行在Linux上的Docker容器。没有该工具，开发人员必须在运行在Windows上的Linux虚拟机上运行Docker客户端和服务器。
+Docker客户端CLI已集成到Docker官方Github库，位于Pull Request#9113下。
+Microsoft Azure团队的Ahmet Alp Balkan已经发布了一份在Windows上编译Docker客户端的分步指南。
+
+安装指南 https://docs.docker.com/installation/windows/
+http://boot2docker.io/</description>
+    </item>
+    
+  </channel>
+</rss>

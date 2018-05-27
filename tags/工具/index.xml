@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>工具 on So&#39;Blog</title>
+    <link>https://somax.me/tags/%E5%B7%A5%E5%85%B7/</link>
+    <description>Recent content in 工具 on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 15 May 2015 05:57:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>NPM 的版本号管理命令 version</title>
+      <link>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</link>
+      <pubDate>Fri, 15 May 2015 05:57:46 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</guid>
+      <description>这篇文章（55558ada886052772bc6fec6）是从 Teambition 迁移过来的
+ 利用&amp;nbsp;npm version&amp;nbsp;命令，可以自动更改 package.json 中的版本号
+$ npm version [&amp;lt;newversion&amp;gt; | major | minor | patch | premajor如果项目是基于 git 管理的，运行这个命令会在 git 中用此版本号自动打一个 tag，使用&amp;nbsp;-m&amp;nbsp;参数在添加 tag 时加上注释。
+$ npm version patch -m &#34;Upgrade to %s for reasons&#34;如果不需要在 git 打 tag 使用参数&amp;nbsp;--no-git-tag-version
+$ npm --no-git-tag-version version patch完整文档：&amp;nbsp;https://docs.npmjs.com/cli/version</description>
+    </item>
+    
+    <item>
+      <title>百度免费在线应用</title>
+      <link>https://somax.me/teambition/tb_552d0d483e298a932840d74c/</link>
+      <pubDate>Tue, 14 Apr 2015 12:51:20 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_552d0d483e298a932840d74c/</guid>
+      <description>这篇文章（552d0d483e298a932840d74c）是从 Teambition 迁移过来的
+ 百度脑图&amp;nbsp;http://naotu.baidu.com/
+百度DOC http://word.baidu.com/</description>
+    </item>
+    
+    <item>
+      <title>gitbook 开源图书制作工具</title>
+      <link>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</link>
+      <pubDate>Tue, 14 Apr 2015 06:19:50 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</guid>
+      <description>这篇文章（552cb1869c170add4f7fa78f）是从 Teambition 迁移过来的
+ Write &amp;amp; Publish with Markdown and Git
+https://www.gitbook.com
+
+免费图书
+https://www.gitbook.com/explore</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@ logo = "https://avatars2.githubusercontent.com/u/5010811?s=460&v=4"             
 # Recent Posts Widget config
 [recent_posts]
 title = ""                            # default: "Recent Posts"
-length = 5                            # default: 5
+length = 10                            # default: 5
 excludeTypes = ["page"]               # default: ["page"]
 
 # Sidebar Menu Widget config
@@ -25,4 +25,4 @@ platforms = ["email","instagram","github","codepen"]
 [taxonomy_cloud]
 title = ""                            # default: Plural Name for `taxonomyCloud.taxonomy`
 taxonomy = "tags"                     # default: "tags"
-shuffle = false                        # default: true
+shuffle = true                        # default: true

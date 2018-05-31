@@ -105,10 +105,10 @@ page = "/:slug/"
 # post = "/:year/:month/:slug/"
 
 [[menu.main]]
-# name = "Github"
-# weight = -10
-# identifier = "repository"
-# url = "https://github.com/somax/"
+name = " 搜索"
+weight = -10
+identifier = "search"
+url = "https://www.google.com/search?q=site%3Asomax.me"
 
 [blackfriday]
 hrefTargetBlank = true

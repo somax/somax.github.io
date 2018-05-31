@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Css on So&#39;Blog</title>
+    <link>https://somax.me/tags/css/</link>
+    <description>Recent content in Css on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 30 Nov 2015 02:07:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/css/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>CSS3 选择器</title>
+      <link>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</link>
+      <pubDate>Mon, 30 Nov 2015 02:07:46 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</guid>
+      <description>这篇文章（565baf720317841b6e0ec363）是从 Teambition 迁移过来的
+ CSS3 选择器在 CSS 中，选择器是一种模式，用于选择需要添加样式的元素。
+&amp;ldquo;CSS&amp;rdquo; 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）
+选择器例子例子描述CSS.class.intro选择 class=&amp;ldquo;intro&amp;rdquo; 的所有元素。1#id#firstname选择 id=&amp;ldquo;firstname&amp;rdquo; 的所有元素。1选择所有元素。2elementp选择所有 &amp;lt;p&amp;gt; 元素。1element,elementdiv,p选择所有 &amp;lt;div&amp;gt; 元素和所有 &amp;lt;p&amp;gt; 元素。1element&amp;nbsp;elementdiv p选择 &amp;lt;div&amp;gt; 元素内部的所有 &amp;lt;p&amp;gt; 元素。1element&amp;gt;elementdiv&amp;gt;p选择父元素为 &amp;lt;div&amp;gt; 元素的所有 &amp;lt;p&amp;gt; 元素。2element+elementdiv+p选择紧接在 &amp;lt;div&amp;gt; 元素之后的所有 &amp;lt;p&amp;gt; 元素。2[attribute][target]选择带有 target 属性所有元素。2[attribute=value][target=_blank]选择 target=&amp;rdquo;_blank&amp;rdquo; 的所有元素。2[attribute~=value][title~=flower]选择 title 属性包含单词 &amp;ldquo;flower&amp;rdquo; 的所有元素。2[attribute|=value][lang|=en]选择 lang 属性值以 &amp;ldquo;en&amp;rdquo; 开头的所有元素。2:linka:link选择所有未被访问的链接。1:visiteda:visited选择所有已被访问的链接。1:activea:active选择活动链接。1:hovera:hover选择鼠标指针位于其上的链接。1:focusinput:focus选择获得焦点的 input 元素。2:first-letterp:first-letter选择每个 &amp;lt;p&amp;gt; 元素的首字母。1:first-linep:first-line选择每个 &amp;lt;p&amp;gt; 元素的首行。1:first-childp:first-child选择属于父元素的第一个子元素的每个 &amp;lt;p&amp;gt; 元素。2:beforep:before在每个 &amp;lt;p&amp;gt; 元素的内容之前插入内容。2:afterp:after在每个 &amp;lt;p&amp;gt; 元素的内容之后插入内容。2:lang(language)p:lang(it)选择带有以 &amp;ldquo;it&amp;rdquo; 开头的 lang 属性值的每个 &amp;lt;p&amp;gt; 元素。2element1~element2p~ul选择前面有 &amp;lt;p&amp;gt; 元素的每个 &amp;lt;ul&amp;gt; 元素。3[attribute^=value]a[src^=&amp;ldquo;https&amp;rdquo;]选择其 src 属性值以 &amp;ldquo;https&amp;rdquo; 开头的每个 &amp;lt;a&amp;gt; 元素。3[attribute$=value]a[src$=&amp;ldquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mocha on So&#39;Blog</title>
+    <link>https://somax.me/tags/mocha/</link>
+    <description>Recent content in Mocha on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 06 Dec 2015 12:56:36 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/mocha/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mocha test-runner with gulp</title>
+      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</link>
+      <pubDate>Sun, 06 Dec 2015 12:56:36 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</guid>
+      <description>这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
+ Mocha test-runner with gulp Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
+    </item>
+    
+  </channel>
+</rss>

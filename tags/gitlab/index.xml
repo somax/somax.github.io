@@ -5,10 +5,35 @@
     <link>https://somax.me/tags/gitlab/</link>
     <description>Recent content in Gitlab on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 03 Nov 2015 05:20:19 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 May 2018 16:28:44 +0000</lastBuildDate>
     
 	<atom:link href="https://somax.me/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Gitlab 备份到 Minio 的配置方法</title>
+      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</link>
+      <pubDate>Mon, 07 May 2018 16:28:44 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</guid>
+      <description>这篇文章（5af07ebce98ef93186181ac0）是从 Teambition 迁移过来的
+  进入 Gitlab 容器操作：docker exec -it &amp;lt;container-id&amp;gt; bash
+ 编辑 /etc/gitlab/gitlab.rb
+   gitlab_rails[&#39;backup_upload_connection&#39;] = { &#39;provider&#39; =&amp;gt; &#39;AWS&#39;, &#39;aws_access_key_id&#39; =&amp;gt; &#39;xxxxxxxxxxxxx&#39;, &#39;aws_secret_access_key&#39; =&amp;gt; &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;, &#39;endpoint&#39; =&amp;gt; &#39;http://minio-server-host:9000&#39;, &#39;path_style&#39; =&amp;gt; true } gitlab_rails[&#39;backup_upload_remote_directory&#39;] = &#39;bucket-name&#39;  注意事项：
+ 必须设置 &#39;path_style&#39; =&amp;gt; true aws_access_key_id 和 aws_secret_access_key 对应的是 Minio 的 Access Key 与 Secret Key，注意这两个值必须足够复杂，否则可能会导致 403 错误   重新配置 gitlab：gitlab-ctl reconfigure，配置正确的话会自动重启 Gitlab
+ 运行备份命令：gitlab-rake gitlab:backup:create</description>
+    </item>
+    
+    <item>
+      <title>容器中运行的 Gitlab 备份方法</title>
+      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</link>
+      <pubDate>Thu, 26 Apr 2018 16:09:20 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</guid>
+      <description>  这篇文章（5ae1f9b051c9c600182a40aa）是从 Teambition 迁移过来的
+ 原文： https://docs.gitlab.com/omnibus/settings/backups.html#creating-backups-for-gitlab-instances-in-docker-containers
+备份 Gitlab 数据 docker exec -t &amp;lt;your container name&amp;gt; gitlab-rake gitlab:backup:create 备份配置文件 docker exec -t &amp;lt;your container name&amp;gt; /bin/sh -c &amp;#39;umask 0077; tar cfz /secret/gitlab/backups/$(date &amp;#34;+etc-gitlab-%s.tgz&amp;#34;) -C / etc/gitlab&amp;#39;</description>
+    </item>
     
     <item>
       <title>如何在Git项目中添加空目录</title>

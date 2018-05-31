@@ -107,6 +107,143 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     </item>
     
     <item>
+      <title>Gitlab 备份到 Minio 的配置方法</title>
+      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</link>
+      <pubDate>Mon, 07 May 2018 16:28:44 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</guid>
+      <description>这篇文章（5af07ebce98ef93186181ac0）是从 Teambition 迁移过来的
+  进入 Gitlab 容器操作：docker exec -it &amp;lt;container-id&amp;gt; bash
+ 编辑 /etc/gitlab/gitlab.rb
+   gitlab_rails[&#39;backup_upload_connection&#39;] = { &#39;provider&#39; =&amp;gt; &#39;AWS&#39;, &#39;aws_access_key_id&#39; =&amp;gt; &#39;xxxxxxxxxxxxx&#39;, &#39;aws_secret_access_key&#39; =&amp;gt; &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;, &#39;endpoint&#39; =&amp;gt; &#39;http://minio-server-host:9000&#39;, &#39;path_style&#39; =&amp;gt; true } gitlab_rails[&#39;backup_upload_remote_directory&#39;] = &#39;bucket-name&#39;  注意事项：
+ 必须设置 &#39;path_style&#39; =&amp;gt; true aws_access_key_id 和 aws_secret_access_key 对应的是 Minio 的 Access Key 与 Secret Key，注意这两个值必须足够复杂，否则可能会导致 403 错误   重新配置 gitlab：gitlab-ctl reconfigure，配置正确的话会自动重启 Gitlab
+ 运行备份命令：gitlab-rake gitlab:backup:create</description>
+    </item>
+    
+    <item>
+      <title>免费的视频流媒体相关软件</title>
+      <link>https://somax.me/teambition/tb_5ae1fa8b2f381a0018f1b77a/</link>
+      <pubDate>Thu, 26 Apr 2018 16:12:59 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5ae1fa8b2f381a0018f1b77a/</guid>
+      <description>这篇文章（5ae1fa8b2f381a0018f1b77a）是从 Teambition 迁移过来的
+ https://obsproject.com/zh-cn 录屏软件
+https://www.videolan.org/vlc/index.zh.html 媒体播放器
+https://github.com/tiangolo/nginx-rtmp-docker 流媒体服务器
+&amp;hellip;</description>
+    </item>
+    
+    <item>
+      <title>容器中运行的 Gitlab 备份方法</title>
+      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</link>
+      <pubDate>Thu, 26 Apr 2018 16:09:20 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</guid>
+      <description>  这篇文章（5ae1f9b051c9c600182a40aa）是从 Teambition 迁移过来的
+ 原文： https://docs.gitlab.com/omnibus/settings/backups.html#creating-backups-for-gitlab-instances-in-docker-containers
+备份 Gitlab 数据 docker exec -t &amp;lt;your container name&amp;gt; gitlab-rake gitlab:backup:create 备份配置文件 docker exec -t &amp;lt;your container name&amp;gt; /bin/sh -c &amp;#39;umask 0077; tar cfz /secret/gitlab/backups/$(date &amp;#34;+etc-gitlab-%s.tgz&amp;#34;) -C / etc/gitlab&amp;#39;</description>
+    </item>
+    
+    <item>
+      <title>使用容器部署 openvpn</title>
+      <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</link>
+      <pubDate>Tue, 17 Apr 2018 14:06:43 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</guid>
+      <description>这篇文章（5ad5ff7346021671da825337）是从 Teambition 迁移过来的
+部署过程使用了开源项目：kylemanna/docker-openvpn，详细文档请访问 https://github.com/kylemanna/docker-openvpn
+  为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。   OVPN_DATA=&amp;quot;ovpn-data-example&amp;quot;   初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。   docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki   启动容器   docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn   生成客户端证书（无密码）   docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass   导出客户端配置文件（包含证书）   docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &amp;gt; CLIENTNAME.</description>
+    </item>
+    
+    <item>
+      <title>Rancher 中 RethinkDB 集群节点无法启动故障排除</title>
+      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</link>
+      <pubDate>Sat, 18 Nov 2017 07:46:02 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</guid>
+      <description>这篇文章（5a0fe53a4da5ce0928d5f28d）是从 Teambition 迁移过来的
+ 故障描述  之前 RethinkDB 按照 1 + 3 的模式集群部署成功，每个节点分别部署在不同的 host 上。由于某种未知原因，其中一台 host 在 Rancher 中失联，在连接恢复后该 host 上的 RethinkDB 就一直无法正常启动。  解决过程  首先检查了 RethinkDB 节点的日志，发现一切正常，但 Rancher UI 上的状态却一直显示不正常 在 RethinkDB 管理界面上有一瞬间看到了第三个节点加入，然后忽然又没了，推断该节点容器在被 Rancher 一直重启 检查 Rancher 基础服务，发现 Rancher/HealthCheck 处于不正常状态，尝试重启、删除都没有成功。 远程进入容器所在主机，用 docker 命令 kill，竟然没用 🤷‍♂️ Rancher 中停止主机，再删，还是没有用 🤷‍♀️ 要不重启主机？等下&amp;hellip;&amp;hellip; 还是先试试重启 docker 吧&amp;hellip;  解决方案  重启 Docker sudo systemctl restart docker  成功👌，Rancher 会帮我们把余下的事情做掉，所有的容器不出意外都会自动起来（事实上的确没出意外）。来再检查一下，HealthCheck ✅， RethinkDB ✅，搞定！</description>
+    </item>
+    
+    <item>
+      <title>NodeJS监测module是被直接执行还是被require</title>
+      <link>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2/</link>
+      <pubDate>Mon, 07 Dec 2015 06:50:28 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2/</guid>
+      <description> 这篇文章（56652c34bb9364076f95e8a2）是从 Teambition 迁移过来的
+ 通常用在模块可以直接运行，也可以被其他项目引用的情况下
+// Check if run directly if (require.main === module) { console.log(&#39;run directly...&#39;); main(); } else { console.log(&#39;require on module....&#39;); module.exports = servermon; }  </description>
+    </item>
+    
+    <item>
+      <title>Mocha test-runner with gulp</title>
+      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</link>
+      <pubDate>Sun, 06 Dec 2015 12:56:36 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</guid>
+      <description>这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
+ Mocha test-runner with gulp Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
+    </item>
+    
+    <item>
+      <title>CSS3 选择器</title>
+      <link>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</link>
+      <pubDate>Mon, 30 Nov 2015 02:07:46 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</guid>
+      <description>这篇文章（565baf720317841b6e0ec363）是从 Teambition 迁移过来的
+ CSS3 选择器在 CSS 中，选择器是一种模式，用于选择需要添加样式的元素。
+&amp;ldquo;CSS&amp;rdquo; 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）
+选择器例子例子描述CSS.class.intro选择 class=&amp;ldquo;intro&amp;rdquo; 的所有元素。1#id#firstname选择 id=&amp;ldquo;firstname&amp;rdquo; 的所有元素。1选择所有元素。2elementp选择所有 &amp;lt;p&amp;gt; 元素。1element,elementdiv,p选择所有 &amp;lt;div&amp;gt; 元素和所有 &amp;lt;p&amp;gt; 元素。1element&amp;nbsp;elementdiv p选择 &amp;lt;div&amp;gt; 元素内部的所有 &amp;lt;p&amp;gt; 元素。1element&amp;gt;elementdiv&amp;gt;p选择父元素为 &amp;lt;div&amp;gt; 元素的所有 &amp;lt;p&amp;gt; 元素。2element+elementdiv+p选择紧接在 &amp;lt;div&amp;gt; 元素之后的所有 &amp;lt;p&amp;gt; 元素。2[attribute][target]选择带有 target 属性所有元素。2[attribute=value][target=_blank]选择 target=&amp;rdquo;_blank&amp;rdquo; 的所有元素。2[attribute~=value][title~=flower]选择 title 属性包含单词 &amp;ldquo;flower&amp;rdquo; 的所有元素。2[attribute|=value][lang|=en]选择 lang 属性值以 &amp;ldquo;en&amp;rdquo; 开头的所有元素。2:linka:link选择所有未被访问的链接。1:visiteda:visited选择所有已被访问的链接。1:activea:active选择活动链接。1:hovera:hover选择鼠标指针位于其上的链接。1:focusinput:focus选择获得焦点的 input 元素。2:first-letterp:first-letter选择每个 &amp;lt;p&amp;gt; 元素的首字母。1:first-linep:first-line选择每个 &amp;lt;p&amp;gt; 元素的首行。1:first-childp:first-child选择属于父元素的第一个子元素的每个 &amp;lt;p&amp;gt; 元素。2:beforep:before在每个 &amp;lt;p&amp;gt; 元素的内容之前插入内容。2:afterp:after在每个 &amp;lt;p&amp;gt; 元素的内容之后插入内容。2:lang(language)p:lang(it)选择带有以 &amp;ldquo;it&amp;rdquo; 开头的 lang 属性值的每个 &amp;lt;p&amp;gt; 元素。2element1~element2p~ul选择前面有 &amp;lt;p&amp;gt; 元素的每个 &amp;lt;ul&amp;gt; 元素。3[attribute^=value]a[src^=&amp;ldquo;https&amp;rdquo;]选择其 src 属性值以 &amp;ldquo;https&amp;rdquo; 开头的每个 &amp;lt;a&amp;gt; 元素。3[attribute$=value]a[src$=&amp;ldquo;.</description>
+    </item>
+    
+    <item>
+      <title>ShadowSock 安装方法</title>
+      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</link>
+      <pubDate>Fri, 13 Nov 2015 03:17:57 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</guid>
+      <description>这篇文章（5645566510638ccf2327a70e）是从 Teambition 迁移过来的
+ Server Install Debian / Ubuntu:
+apt-get install python-pip pip install shadowsocks  CentOS:
+yum install python-setuptools &amp;amp;&amp;amp; easy_install pip pip install shadowsocks  Windows:
+See [Install Server on Windows]
+Usage ssserver -p 443 -k password -m aes-256-cfb  To run in the background:
+sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start  To stop:
+sudo ssserver -d stop  To check the log:</description>
+    </item>
+    
+    <item>
+      <title>Gulp挑战Grunt，背后的哲学</title>
+      <link>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</link>
+      <pubDate>Wed, 11 Nov 2015 09:37:32 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</guid>
+      <description>这篇文章（56430c5c9aa4fb332ec87d72）是从 Teambition 迁移过来的
+ 原文链接： http://www.jianshu.com/p/3779f708f5d7/
+ [按：网上介绍Gulp和Grunt安装使用的文章很多，甚少比较二者的思路，连官方文档都语焉不详。我在此做一个粗陋的对比，希望能提纲挈领，加深读者对这两个工具的理解。]
+ 做过点儿正经开发的同学都知道，构建工具必不可少。C时代的Make、Java的Ant、Ruby的Rake……没有这些工具，一遍遍地点选输入，准烦死你。
+在前端和Node JS的开发中，最普及的构建工具就是Grunt。它的功能说来简单，就是管理一系列的Task。大部分的Task都是第三方的插件，安装好对应的NPM包，再loadNpmTasks就可以用了。
+Grunt的配置文件Gruntfile，主要包含两部分：
+配置每个Task，包括文件从哪里，到哪里去，还有一些处理的选项
+自己写一些简单的Task，把第三方插件提供的Task组合起来
+别看这两个事儿，轻轻松松几百行出来了。每个Task的配置，各有各的规矩，还牵扯到插件间的配合。反正我从seed库开始做新项目的时候，基本不敢改原来的Gruntfile，很多用不上的功能也搁那儿。留意了一下很多开源项目的Gruntfile，也都臃肿杂乱，好不到哪儿去。
+Gruntfile维护起来那么困难，有几个原因：
+配置和运行分离 程序员都知道，变量的声明和使用挨在一起，最方便理解和修改。但Gruntfile里，配置Task和调用它们的地方离得很远，极大地增加了心智负担。
+每个插件做的事太多 每个Task的结果必须写到磁盘文件，另一个Task再读，损害性能倒是小事，更麻烦的是让整个过程变复杂了。 就像一个个小作坊，来料加工又返回给客户，这中间的沟通成本、出错机会都大大增加。
+配置项过多 做事多了，配置项自然也多。至少输入和输出的位置得配吧。每个插件的配置规则还不尽相同。用每个插件，都得去学习一番。
+Gulp应运而生。
+恐怕没几个IT人不知道Unix管道的概念。前一级的输出，直接变成后一级的输入。把简单的工具组合起来，优雅地解决复杂的问题。听起来那么熟悉呢？是的，Gulp就把这种思维用在构建过程中。
+Gulp基于Node JS的一个机制，叫做stream，有点类似C++中的stream。在Node中，文件访问、输入输出、HTTP连接，都是stream。Gulp的每个插件从stream中读取输入，做一些处理，再输出到stream中。
+每个插件不是拿来独立使用的。相反，它专注于完成单一职责。只有把合适的插件组合起来，才能完成具体的Task。引用官方的例子，看看一个典型的Task长什么样(略有删减)：
+var paths = { scripts: [&#39;client/js/**/*.coffee&#39;, &#39;!client/external/**/*.coffee&#39;] }; gulp.task(&#39;scripts&#39;, [&#39;clean&#39;], function() { // 可以依赖于其它task return gulp.src(paths.scripts) // 指定输入 .pipe(coffee()) // 环节一 .pipe(uglify()) // 环节二 .pipe(concat(&#39;all.min.js&#39;)) // 环节三 .pipe(gulp.dest(&#39;build/js&#39;)); // 指定输出 });  配置呢？不需要了。是不是行云流水，一气呵成？
+那我们再回头来看看前面Grunt的几个问题，Gulp是怎么解决的：
+配置和运行分离 code over configuration，直接就在调用的地方配置。
+每个插件做的事太多 单一职责，依靠组合来发挥作用。就像一条自动化生产线，上一道工序的产出直接交给下一步，效率不要太高。</description>
+    </item>
+    
+    <item>
       <title>如何在Git项目中添加空目录</title>
       <link>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec/</link>
       <pubDate>Tue, 03 Nov 2015 05:20:19 +0000</pubDate>
@@ -370,16 +507,6 @@ Elasticsearch所涉及到的每一项技术都不是创新或者革命性的，�
 Elasticsearch是你新认识的最好的朋友。
 
 继续阅读：&amp;nbsp;http://es.xiaoleilu.com/index.html 或&amp;nbsp;https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details</description>
-    </item>
-    
-    <item>
-      <title>How to develop a HTML5 Image Uploader</title>
-      <link>https://somax.me/teambition/tb_55caf4015ebf96e855b16819/</link>
-      <pubDate>Wed, 12 Aug 2015 07:21:37 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55caf4015ebf96e855b16819/</guid>
-      <description>这篇文章（55caf4015ebf96e855b16819）是从 Teambition 迁移过来的
- https://hacks.mozilla.org/2011/01/how-to-develop-a-html5-image-uploader/</description>
     </item>
     
     <item>
@@ -897,17 +1024,6 @@ https://developer.mozilla.org/zh-CN/docs/Web</description>
     </item>
     
     <item>
-      <title>百度免费在线应用</title>
-      <link>https://somax.me/teambition/tb_552d0d483e298a932840d74c/</link>
-      <pubDate>Tue, 14 Apr 2015 12:51:20 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552d0d483e298a932840d74c/</guid>
-      <description>这篇文章（552d0d483e298a932840d74c）是从 Teambition 迁移过来的
- 百度脑图&amp;nbsp;http://naotu.baidu.com/
-百度DOC http://word.baidu.com/</description>
-    </item>
-    
-    <item>
       <title>gitbook 开源图书制作工具</title>
       <link>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</link>
       <pubDate>Tue, 14 Apr 2015 06:19:50 +0000</pubDate>
@@ -919,27 +1035,6 @@ https://www.gitbook.com
 
 免费图书
 https://www.gitbook.com/explore</description>
-    </item>
-    
-    <item>
-      <title>ECMAScript 6入门</title>
-      <link>https://somax.me/teambition/tb_552ca2c6ff901ebc2b29c6d2/</link>
-      <pubDate>Tue, 14 Apr 2015 05:16:54 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552ca2c6ff901ebc2b29c6d2/</guid>
-      <description>这篇文章（552ca2c6ff901ebc2b29c6d2）是从 Teambition 迁移过来的
- 一本开源的JavaScript语言教程
-http://es6.ruanyifeng.com/#README&amp;nbsp;</description>
-    </item>
-    
-    <item>
-      <title>LoopBack 中文文档</title>
-      <link>https://somax.me/teambition/tb_552c8b7dbc20e6d62bd3f752/</link>
-      <pubDate>Tue, 14 Apr 2015 03:37:33 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552c8b7dbc20e6d62bd3f752/</guid>
-      <description>这篇文章（552c8b7dbc20e6d62bd3f752）是从 Teambition 迁移过来的
- LoopBack 中文文档 http://docs.strongloop.com/plugins/servlet/mobile#content/view/6094904</description>
     </item>
     
     <item>

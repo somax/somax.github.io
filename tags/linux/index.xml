@@ -5,10 +5,26 @@
     <link>https://somax.me/tags/linux/</link>
     <description>Recent content in Linux on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 02 Oct 2015 05:17:10 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Nov 2015 03:17:57 +0000</lastBuildDate>
     
 	<atom:link href="https://somax.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ShadowSock 安装方法</title>
+      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</link>
+      <pubDate>Fri, 13 Nov 2015 03:17:57 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</guid>
+      <description>这篇文章（5645566510638ccf2327a70e）是从 Teambition 迁移过来的
+ Server Install Debian / Ubuntu:
+apt-get install python-pip pip install shadowsocks  CentOS:
+yum install python-setuptools &amp;amp;&amp;amp; easy_install pip pip install shadowsocks  Windows:
+See [Install Server on Windows]
+Usage ssserver -p 443 -k password -m aes-256-cfb  To run in the background:
+sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start  To stop:
+sudo ssserver -d stop  To check the log:</description>
+    </item>
     
     <item>
       <title>Rsync 在非标ssh端口(22) 中用法</title>

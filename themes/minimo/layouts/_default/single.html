@@ -10,4 +10,38 @@
 {{ partial "nav/entry_nav" . }}
 {{ partial "entry/comments" . }}
 
+<div id="git-comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: '{{ .Slug }}',  // 可选, 默认为 location.href
+    owner: 'somax',
+    repo: 'somax.github.io',
+    oauth: {
+      client_id: '10c302c020aa50878afd',
+      client_secret: '3ae426ae0ab176d0c6ec7861b649431ff09d1a42',
+    }
+  })
+  gitment.render('git-comments')
+
+
+  // var gitment = new Gitment({
+  //     id: '{{ .File.BaseFileName }}', /* 页面ID，可选。默认为 location.href */
+  //     owner: '{{ .Site.Params.gitment.github_username }}', /* 你的 Github ID */
+  //     repo: '{{ .Site.Params.gitment.repo_for_gitment }}', /* 存储评论的 repo */
+  //     title: '{{ .Title }}',/*issue页的标题 */
+  //     oauth: {
+  //       client_id: '{{ .Site.Params.gitment.oauth_client_id }}', /*你的 client ID */
+  //       client_secret: '{{ .Site.Params.gitment.oauth_client_secret }}', /*你的 client secret */
+  //     },
+  //   })
+</script>
+<!-- {{ if (.Params.gitment) }} -->
+
+<!-- {{ end }} -->
+
+
 {{ partial "footer" . }}
+
+

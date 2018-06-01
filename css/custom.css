@@ -16,3 +16,8 @@
         width: 100%;
     }
 }
+
+/* fix gitment width issue */
+#git-comments {
+    max-width: 720px;
+}

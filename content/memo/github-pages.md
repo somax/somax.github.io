@@ -10,6 +10,8 @@ tags:
 
 有很多使用 github pages 功能免费发布网站的教程，也可以直接看 [官方文档](https://pages.github.com/)，就不再赘述了。
 
+## github 设定
+
 有一些注意事项这里提一下，根据 github 的规定，使用 `<用户名>.github.io` 作为项目名称，就可以通过 `<用户名>.github.io` 这个域名访问到网站，所以我的是就是 [somax.github.io](https://somax.github.io)。
 
 hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
@@ -20,7 +22,7 @@ hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源�
 
 这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
 
-### 域名设置
+## 域名设置
 
 想要 `.IO` 或者 `.ME` 的域名，找了一下国内域名供应商视乎没有提供。最后在 [godaddy.com](https://godaddy.com) 购买了 `somax.me`，第一年 6 折，2年共 ￥150.99。
 

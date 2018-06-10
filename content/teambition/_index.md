@@ -7,4 +7,5 @@ menu: main
 weight: -220
 ---
 
-> 这里的文章都是从 [Teambition](https://www.teambition.com) 迁移过来的，迁移说明在[这里](/memo/export-from-teambition/)。
+> 这里的文章都是从 [Teambition](https://www.teambition.com) 迁移过来的，迁移说明在[这里](/memo/export-from-teambition.html)。
+

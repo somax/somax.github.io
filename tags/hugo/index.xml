@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on So&#39;Blog</title>
-    <link>https://somax.me/tags/hugo/</link>
+    <link>https://somax.me/tags/hugo.html</link>
     <description>Recent content in Hugo on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 23 May 2018 23:06:25 +0800</lastBuildDate>
@@ -12,24 +12,24 @@
     
     <item>
       <title>将 Teambition 分享迁移到 hugo</title>
-      <link>https://somax.me/memo/export-from-teambition/</link>
+      <link>https://somax.me/memo/export-from-teambition.html</link>
       <pubDate>Wed, 23 May 2018 23:06:25 +0800</pubDate>
       
-      <guid>https://somax.me/memo/export-from-teambition/</guid>
+      <guid>https://somax.me/memo/export-from-teambition.html</guid>
       <description>Teambition 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。
 经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 somax/teambition-sync 。
-虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。</description>
+虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传到 这里。</description>
     </item>
     
     <item>
       <title>建站笔记 - 使用 hugo 建立我的博客</title>
-      <link>https://somax.me/memo/building-soblog-with-hugo/</link>
+      <link>https://somax.me/memo/building-soblog-with-hugo.html</link>
       <pubDate>Mon, 21 May 2018 14:01:10 +0800</pubDate>
       
-      <guid>https://somax.me/memo/building-soblog-with-hugo/</guid>
-      <description>这是 开篇 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
+      <guid>https://somax.me/memo/building-soblog-with-hugo.html</guid>
+      <description>这是 开篇 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
  前言 其实很久之前就有看到别人使用 Github Pages + jekyll 来免费搭建自己的博客网站，不过最近由于工作的原因接触 go 语言的项目越来越多，所以特意查了一下 Go 语言相关的建站工具，发现了 hugo 这个项目。 就毫不犹豫的（其实还是纠结了一下）选择了 hugo。原因主要是 开源，跨平台，安装简单，渲染速度快！官方自称：&amp;rdquo;The world’s fastest framework for building websites&amp;ldquo;
-使用 Hugo 建立网站 过程中参考了官方文档，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
+使用 Hugo 建立网站 过程中参考了官方文档，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
 不过作为学习总结，还是记录一下自己的操作过程。
 安装 Hugo hugo 官网访问很慢，还是直接 github release 下载比较快。根据操作系统选择合适版本下载即可（由于 Go语言的特性，天生跨平台，可以选择 ARM 版本来安装到树莓派上玩耍），具体过程就略了。
 新建站点 按照 快速手册 一步步下来，基本上没什么问题。

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Css on So&#39;Blog</title>
-    <link>https://somax.me/tags/css/</link>
+    <link>https://somax.me/tags/css.html</link>
     <description>Recent content in Css on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 30 Nov 2015 02:07:46 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>CSS3 选择器</title>
-      <link>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</link>
+      <link>https://somax.me/teambition/tb_565baf720317841b6e0ec363.html</link>
       <pubDate>Mon, 30 Nov 2015 02:07:46 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</guid>
+      <guid>https://somax.me/teambition/tb_565baf720317841b6e0ec363.html</guid>
       <description>这篇文章（565baf720317841b6e0ec363）是从 Teambition 迁移过来的
  CSS3 选择器在 CSS 中，选择器是一种模式，用于选择需要添加样式的元素。
 &amp;ldquo;CSS&amp;rdquo; 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）

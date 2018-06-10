@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>基本技能 on So&#39;Blog</title>
-    <link>https://somax.me/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD/</link>
+    <link>https://somax.me/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD.html</link>
     <description>Recent content in 基本技能 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 09 Apr 2015 10:23:49 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>git简介</title>
-      <link>https://somax.me/teambition/tb_55265335879013c64ac090a2/</link>
+      <link>https://somax.me/teambition/tb_55265335879013c64ac090a2.html</link>
       <pubDate>Thu, 09 Apr 2015 10:23:49 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55265335879013c64ac090a2/</guid>
+      <guid>https://somax.me/teambition/tb_55265335879013c64ac090a2.html</guid>
       <description>这篇文章（55265335879013c64ac090a2）是从 Teambition 迁移过来的
  更新 (20160429)：最好的Git 电子书&amp;nbsp;https://git-scm.com/book/&amp;nbsp;（在线或下载）什么是 GitGIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。
 Git vs SVNGit 是分布式的，SVN不是&amp;nbsp;SVN 必须连接服务器才能提交变更； Git 在本地有完整版本库的 &amp;ldquo;clone&amp;rdquo;,允许离线提交变更和管理分支，然后push到远程库

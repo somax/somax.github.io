@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>运维 on So&#39;Blog</title>
-    <link>https://somax.me/tags/%E8%BF%90%E7%BB%B4/</link>
+    <link>https://somax.me/tags/%E8%BF%90%E7%BB%B4.html</link>
     <description>Recent content in 运维 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 May 2018 13:08:30 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>k8s 学习笔记</title>
-      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</link>
+      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</link>
       <pubDate>Thu, 17 May 2018 13:08:30 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</guid>
+      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</guid>
       <description>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
  安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
  If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
@@ -27,10 +27,10 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     
     <item>
       <title>内部并联网络打通配置方法</title>
-      <link>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</link>
+      <link>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa.html</link>
       <pubDate>Thu, 17 May 2018 09:29:35 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</guid>
+      <guid>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa.html</guid>
       <description>这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的
  网络拓扑  [192.168.126.0] / \ [wan: 192.168.126.200] [wan: 192.168.126.233] TP-Link | | MiRoute Pro [lan: 192.168.123.0] [lan: 192.168.120.0]  目的 将 192.168.123.0网段与 192.168.120.0 网段相互打通。
 配置方案 在两个子网路由器上分别设置静态路由，192.168.123.0 网段访问 192.168.120.0 配置路由指向 192.168.126.233 ，同理 192.168.120.0 网段访问 192.168.123.0 网段则配置路由指向 192.168.126.200
@@ -42,24 +42,25 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     
     <item>
       <title>Gitlab 备份到 Minio 的配置方法</title>
-      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</link>
+      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0.html</link>
       <pubDate>Mon, 07 May 2018 16:28:44 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</guid>
+      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0.html</guid>
       <description>这篇文章（5af07ebce98ef93186181ac0）是从 Teambition 迁移过来的
   进入 Gitlab 容器操作：docker exec -it &amp;lt;container-id&amp;gt; bash
  编辑 /etc/gitlab/gitlab.rb
-   gitlab_rails[&#39;backup_upload_connection&#39;] = { &#39;provider&#39; =&amp;gt; &#39;AWS&#39;, &#39;aws_access_key_id&#39; =&amp;gt; &#39;xxxxxxxxxxxxx&#39;, &#39;aws_secret_access_key&#39; =&amp;gt; &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;, &#39;endpoint&#39; =&amp;gt; &#39;http://minio-server-host:9000&#39;, &#39;path_style&#39; =&amp;gt; true } gitlab_rails[&#39;backup_upload_remote_directory&#39;] = &#39;bucket-name&#39;  注意事项：
+  gitlab_rails[&amp;#39;backup_upload_connection&amp;#39;] = { &amp;#39;provider&amp;#39; =&amp;gt; &amp;#39;AWS&amp;#39;, &amp;#39;aws_access_key_id&amp;#39; =&amp;gt; &amp;#39;xxxxxxxxxxxxx&amp;#39;, &amp;#39;aws_secret_access_key&amp;#39; =&amp;gt; &amp;#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;#39;, &amp;#39;endpoint&amp;#39; =&amp;gt; &amp;#39;http://minio-server-host:9000&amp;#39;, &amp;#39;path_style&amp;#39; =&amp;gt; true } gitlab_rails[&amp;#39;backup_upload_remote_directory&amp;#39;] = &amp;#39;bucket-name&amp;#39; 注意事项：
  必须设置 &#39;path_style&#39; =&amp;gt; true aws_access_key_id 和 aws_secret_access_key 对应的是 Minio 的 Access Key 与 Secret Key，注意这两个值必须足够复杂，否则可能会导致 403 错误   重新配置 gitlab：gitlab-ctl reconfigure，配置正确的话会自动重启 Gitlab
- 运行备份命令：gitlab-rake gitlab:backup:create</description>
+ 运行备份命令：gitlab-rake gitlab:backup:create
+  如果反馈中有 Uploading backup archive to remote storage mybucket .</description>
     </item>
     
     <item>
       <title>容器中运行的 Gitlab 备份方法</title>
-      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</link>
+      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa.html</link>
       <pubDate>Thu, 26 Apr 2018 16:09:20 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</guid>
+      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa.html</guid>
       <description>  这篇文章（5ae1f9b051c9c600182a40aa）是从 Teambition 迁移过来的
  原文： https://docs.gitlab.com/omnibus/settings/backups.html#creating-backups-for-gitlab-instances-in-docker-containers
 备份 Gitlab 数据 docker exec -t &amp;lt;your container name&amp;gt; gitlab-rake gitlab:backup:create 备份配置文件 docker exec -t &amp;lt;your container name&amp;gt; /bin/sh -c &amp;#39;umask 0077; tar cfz /secret/gitlab/backups/$(date &amp;#34;+etc-gitlab-%s.tgz&amp;#34;) -C / etc/gitlab&amp;#39;</description>
@@ -67,31 +68,31 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     
     <item>
       <title>使用容器部署 openvpn</title>
-      <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</link>
+      <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337.html</link>
       <pubDate>Tue, 17 Apr 2018 14:06:43 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</guid>
+      <guid>https://somax.me/teambition/tb_5ad5ff7346021671da825337.html</guid>
       <description>这篇文章（5ad5ff7346021671da825337）是从 Teambition 迁移过来的
 部署过程使用了开源项目：kylemanna/docker-openvpn，详细文档请访问 https://github.com/kylemanna/docker-openvpn
-  为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。   OVPN_DATA=&amp;quot;ovpn-data-example&amp;quot;   初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。   docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki   启动容器   docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn   生成客户端证书（无密码）   docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass   导出客户端配置文件（包含证书）   docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &amp;gt; CLIENTNAME.</description>
+  为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。  OVPN_DATA=&amp;#34;ovpn-data-example&amp;#34;  初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。  docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki  启动容器  docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn  生成客户端证书（无密码）  docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass  导出客户端配置文件（包含证书）  docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &amp;gt; CLIENTNAME.</description>
     </item>
     
     <item>
       <title>Rancher 中 RethinkDB 集群节点无法启动故障排除</title>
-      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</link>
+      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</link>
       <pubDate>Sat, 18 Nov 2017 07:46:02 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</guid>
+      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</guid>
       <description>这篇文章（5a0fe53a4da5ce0928d5f28d）是从 Teambition 迁移过来的
  故障描述  之前 RethinkDB 按照 1 + 3 的模式集群部署成功，每个节点分别部署在不同的 host 上。由于某种未知原因，其中一台 host 在 Rancher 中失联，在连接恢复后该 host 上的 RethinkDB 就一直无法正常启动。  解决过程  首先检查了 RethinkDB 节点的日志，发现一切正常，但 Rancher UI 上的状态却一直显示不正常 在 RethinkDB 管理界面上有一瞬间看到了第三个节点加入，然后忽然又没了，推断该节点容器在被 Rancher 一直重启 检查 Rancher 基础服务，发现 Rancher/HealthCheck 处于不正常状态，尝试重启、删除都没有成功。 远程进入容器所在主机，用 docker 命令 kill，竟然没用 🤷‍♂️ Rancher 中停止主机，再删，还是没有用 🤷‍♀️ 要不重启主机？等下&amp;hellip;&amp;hellip; 还是先试试重启 docker 吧&amp;hellip;  解决方案  重启 Docker sudo systemctl restart docker  成功👌，Rancher 会帮我们把余下的事情做掉，所有的容器不出意外都会自动起来（事实上的确没出意外）。来再检查一下，HealthCheck ✅， RethinkDB ✅，搞定！</description>
     </item>
     
     <item>
-      <title>ShadowSock 安装方法</title>
-      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</link>
+      <title>ShadowSock 快速上手</title>
+      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</link>
       <pubDate>Fri, 13 Nov 2015 03:17:57 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</guid>
+      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</guid>
       <description>这篇文章（5645566510638ccf2327a70e）是从 Teambition 迁移过来的
  Server Install Debian / Ubuntu:
 apt-get install python-pip pip install shadowsocks  CentOS:
@@ -103,48 +104,62 @@ sudo ssserver -d stop  To check the log:</description>
     </item>
     
     <item>
+      <title>Nginx 源码安装</title>
+      <link>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</link>
+      <pubDate>Sat, 10 Oct 2015 04:55:13 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</guid>
+      <description>这篇文章（56189a31e7a72b1965b6df12）是从 Teambition 迁移过来的
+ 安装准备 首先由于nginx的一些模块依赖一些lib库，所以在安装nginx之前，必须先安装这些lib库，这些依赖库主要有g++、gcc、openssl-devel、pcre-devel和zlib-devel ，执行如下命令安装。
+$ yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  安装Nginx # 安装之前，最好检查一下是否已经安装有nginx $ find -name nginx # 如果系统已经通过 yum 安装了nginx，那么就先卸载 $ yum remove nginx # 从官网下载最新版的nginx $ wget http://nginx.org/download/nginx-1.9.3.tar.gz # 解压nginx压缩包 $ tar -zxvf nginx-1.9.3.tar.gz # 这时进入nginx-1.9.3目录 $ cd nginx-1.9.3 # --prefix参数指定nginx安装的目录, 加上 --with-http_ssl_module 使支持https，加上--with-http_v2_module 支持 http/2（1.9.5 以上） # 如果安装过程中说系统没有安装 Openssl，重新安装`yum install openssl openssl--devel `， 也可以加上--with-openssl=/usr/local/openssl-0.x.x 参数 $ ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_v2_module # 或者加载更多模块 # .</description>
+    </item>
+    
+    <item>
       <title>Rsync 在非标ssh端口(22) 中用法</title>
-      <link>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</link>
+      <link>https://somax.me/teambition/tb_560e1356d908de0d2585d058.html</link>
       <pubDate>Fri, 02 Oct 2015 05:17:10 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</guid>
-      <description>这篇文章（560e1356d908de0d2585d058）是从 Teambition 迁移过来的
- 问题 使用rsync拷贝文件，有个主机的ssh端口使用的并非标准端口(22)，查看rsync的文档，看到有种带有端口的用法： rsync [OPTION]&amp;hellip; SRC [SRC]&amp;hellip; rsync://[USER@]HOST[:PORT]/DEST
-但使用会返回错误： rsync: server sent &amp;ldquo;SSH-2.0-OpenSSH_5.3&amp;rdquo; rather than greeting rsync error: error starting client-server protocol (code 5) at main.c(1534) [sender=3.0.9]
-解决 开始以为是客户端服务器rsync版本不兼容，后来发现对于非标准ssh端口(22)的使用方法是使用-e参数： rsync [OPTION]&amp;hellip; -e &amp;ldquo;ssh -p 2222&amp;rdquo; SRC [SRC]&amp;hellip; [USER@]HOST[:PORT]/DEST</description>
+      <guid>https://somax.me/teambition/tb_560e1356d908de0d2585d058.html</guid>
+      <description>  这篇文章（560e1356d908de0d2585d058）是从 Teambition 迁移过来的
+ 问题 使用rsync拷贝文件，有个主机的ssh端口使用的并非标准端口(22)，查看rsync的文档，看到有种带有端口的用法：
+rsync [OPTION]... SRC [SRC]... rsync://[USER@]HOST[:PORT]/DEST 但使用会返回错误：
+rsync: server sent &amp;#34;SSH-2.0-OpenSSH_5.3&amp;#34; rather than greeting rsync error: error starting client-server protocol (code 5) at main.c(1534) [sender=3.0.9] 解决 开始以为是客户端服务器rsync版本不兼容，后来发现对于非标准ssh端口(22)的使用方法是使用-e参数：
+rsync [OPTION]... -e &amp;#34;ssh -p 2222&amp;#34; SRC [SRC]... [USER@]HOST[:PORT]/DEST</description>
     </item>
     
     <item>
       <title>iptables 配置范例</title>
-      <link>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</link>
+      <link>https://somax.me/teambition/tb_560b7b14262a98424070c7a7.html</link>
       <pubDate>Wed, 30 Sep 2015 06:03:00 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</guid>
+      <guid>https://somax.me/teambition/tb_560b7b14262a98424070c7a7.html</guid>
       <description>这篇文章（560b7b14262a98424070c7a7）是从 Teambition 迁移过来的
  linux 系统中使用 iptables 配置防火墙
 修改文件：/etc/sysconfig/iptables
-*filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -s 127.0.0.1/32 -d 127.0.0.1/32 -j ACCEPT -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT -A INPUT -p tcp -m tcp --dport 20 -j ACCEPT -A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT -A INPUT -j REJECT --reject-with icmp-port-unreachable -A FORWARD -j REJECT --reject-with icmp-port-unreachable -A OUTPUT -j ACCEPT COMMIT  重新启动 service iptables restart</description>
+*filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -s 127.0.0.1/32 -d 127.0.0.1/32 -j ACCEPT -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT -A INPUT -p tcp -m tcp --dport 20 -j ACCEPT -A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT -A INPUT -j REJECT --reject-with icmp-port-unreachable -A FORWARD -j REJECT --reject-with icmp-port-unreachable -A OUTPUT -j ACCEPT COMMIT 重新启动 service iptables restart</description>
     </item>
     
     <item>
-      <title>Linux Netcat 命令——网络工具中的瑞士军刀</title>
-      <link>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</link>
-      <pubDate>Mon, 22 Jun 2015 15:29:42 +0000</pubDate>
+      <title>理解Linux系统负荷</title>
+      <link>https://somax.me/teambition/tb_558232c63dd208c010934638.html</link>
+      <pubDate>Thu, 18 Jun 2015 02:53:58 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</guid>
-      <description>这篇文章（558829e6ddf0439e275133fa）是从 Teambition 迁移过来的
- http://www.oschina.net/translate/linux-netcat-command
-快看，绝对值得学习！</description>
-    </item>
-    
-    <item>
-      <title>修正 虚拟机中 CentOS7 系统时间</title>
-      <link>https://somax.me/teambition/tb_5555a840886052772bc70db3/</link>
-      <pubDate>Fri, 15 May 2015 08:03:12 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5555a840886052772bc70db3/</guid>
-      <description>这篇文章（5555a840886052772bc70db3）是从 Teambition 迁移过来的
- 刚才在虚拟机中（ Centos） 安装后提示系统时间不正确，通过 date 命令查看返回：2015年2月1日（原因不明），通过hwclock 查硬件时间，返回是正确的，查了一下hwclock 帮助，其中有一条：-s, --hctosys 从硬件时钟设置系统时间。运行后，再用 date 检查，系统时间正确了！</description>
+      <guid>https://somax.me/teambition/tb_558232c63dd208c010934638.html</guid>
+      <description>这篇文章（558232c63dd208c010934638）是从 Teambition 迁移过来的
+ 查看系统负荷 在Linux系统中，使用uptime命令查看（w命令和top命令也行）。（另外，它们在苹果公司的Mac电脑上也适用。）
+ 10:39 up 1 day, 21:03, 4 users, load averages: 2.99 2.94 2.92  这行信息的后半部分，显示&amp;rdquo;load average&amp;rdquo;，它的意思是&amp;rdquo;系统的平均负荷&amp;rdquo;，分别是1分钟、5分钟、15分钟内系统的平均负荷。
+如果你继续看手册，它还会告诉你，当CPU完全空闲的时候，平均负荷为0；当CPU工作量饱和的时候，平均负荷为1。 那么很显然，&amp;rdquo;load average&amp;rdquo;的值越低，比如等于0.2或0.3，就说明电脑的工作量越小，系统负荷比较轻。
+一个类比 判断系统负荷是否过重，必须理解load average的真正含义。 假设最简单的情况，你的电脑只有一个CPU，所有的运算都必须由这个CPU来完成。 我们把这个CPU想象成一座大桥，桥上只有一根车道，所有车辆都必须从这根车道上通过。 系统负荷为0，意味着大桥上一辆车也没有。 系统负荷为0.5，意味着大桥一半的路段有车。 系统负荷为1.0，意味着大桥的所有路段都有车，也就是说大桥已经&amp;rdquo;满&amp;rdquo;了。但是必须注意的是，直到此时大桥还是能顺畅通行的。 系统负荷为1.7，意味着车辆太多了，大桥已经被占满了（100%），后面等着上桥的车辆为桥面车辆的70%。以此类推，系统负荷2.0，意味着等待上桥的车辆与桥面的车辆一样多；系统负荷3.0，意味着等待上桥的车辆是桥面车辆的2倍。总之，当系统负荷大于1，后面的车辆就必须等待了；系统负荷越大，过桥就必须等得越久。
+CPU的系统负荷，基本上等同于上面的类比。大桥的通行能力，就是CPU的最大工作量；桥梁上的车辆，就是一个个等待CPU处理的进程（process）。
+如果CPU每分钟最多处理100个进程，那么系统负荷0.2，意味着CPU在这1分钟里只处理20个进程；系统负荷1.0，意味着CPU在这1分钟里正好处理100个进程；系统负荷1.7，意味着除了CPU正在处理的100个进程以外，还有70个进程正排队等着CPU处理。
+为了电脑顺畅运行，系统负荷最好不要超过1.0，这样就没有进程需要等待了，所有进程都能第一时间得到处理。很显然，1.0是一个关键值，超过这个值，系统就不在最佳状态了，你要动手干预了。
+系统负荷的经验法则 1.0是系统负荷的理想值吗？ 不一定，系统管理员往往会留一点余地，当这个值达到0.7，就应当引起注意了。经验法则是这样的： 当系统负荷持续大于0.7，你必须开始调查了，问题出在哪里，防止情况恶化。 当系统负荷持续大于1.0，你必须动手寻找解决办法，把这个值降下来。 当系统负荷达到5.0，就表明你的系统有很严重的问题，长时间没有响应，或者接近死机了。你不应该让系统达到这个值。
+多处理器 如果你的电脑装了2个CPU，会发生什么情况呢？ 2个CPU，意味着电脑的处理能力翻了一倍。
+所以，2个CPU表明系统负荷可以达到2.0，此时每个CPU都达到100%的工作量。推广开来，n个CPU的电脑，可接受的系统负荷最大为n.0。
+多核处理器 芯片厂商往往在一个CPU内部，包含多个CPU核心，这被称为多核CPU。 在系统负荷方面，多核CPU与多CPU效果类似，所以考虑系统负荷的时候，必须考虑这台电脑有几个CPU、每个CPU有几个核心。然后，把系统负荷除以总的核心数，只要每个核心的负荷不超过1.0，就表明电脑正常运行。
+怎么知道电脑有多少个CPU核心呢？
+cat /proc/cpuinfo命令，可以查看CPU信息。grep -c &#39;model name&#39; /proc/cpuinfo命令，直接返回CPU的总核心数。
+最佳观察时长 最后一个问题，&amp;rdquo;load average&amp;rdquo;一共返回三个平均值&amp;mdash;-1分钟系统负荷、5分钟系统负荷，15分钟系统负荷，&amp;mdash;-应该参考哪个值？ 如果只有1分钟的系统负荷大于1.0，其他两个时间段都小于1.0，这表明只是暂时现象，问题不大。 如果15分钟内，平均系统负荷大于1.0（调整CPU核心数之后），表明问题持续存在，不是暂时现象。所以，你应该主要观察&amp;rdquo;15分钟系统负荷&amp;rdquo;，将它作为电脑正常运行的指标。</description>
     </item>
     
   </channel>

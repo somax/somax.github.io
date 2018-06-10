@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>HTTP on So&#39;Blog</title>
+    <link>https://somax.me/tags/http.html</link>
+    <description>Recent content in HTTP on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 09 Oct 2015 05:01:25 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/http/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>HTTP协议状态码详解（HTTP Status Code）</title>
+      <link>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</link>
+      <pubDate>Fri, 09 Oct 2015 05:01:25 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</guid>
+      <description>这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的
+ 常用代码 |代码 | 说明 | |-|-| |200| 服务器成功返回网页 | |404| 请求的网页不存在 | |401|（未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。| |500| 服务器内部错误 |
+1XX 临时响应  表示临时响应并需要请求者继续执行操作的状态代码
+    代码 说明     100 （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。   101 （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。    2xx 成功  表示成功处理了请求的状态代码
+    代码 说明     200 （成功） 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。   201 （已创建） 请求成功并且服务器创建了新的资源。   202 （已接受） 服务器已接受请求，但尚未处理。   203 （非授权信息） 服务器已成功处理了请求，但返回的信息可能来自另一来源。   204 （无内容） 服务器成功处理了请求，但没有返回任何内容。   205 （重置内容） 服务器成功处理了请求，但没有返回任何内容。   206 （部分内容） 服务器成功处理了部分 GET 请求。    3xx 重定向  表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</description>
+    </item>
+    
+  </channel>
+</rss>

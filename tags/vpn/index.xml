@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>VPN on So&#39;Blog</title>
+    <link>https://somax.me/tags/vpn.html</link>
+    <description>Recent content in VPN on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 13 Nov 2015 03:17:57 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ShadowSock 快速上手</title>
+      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</link>
+      <pubDate>Fri, 13 Nov 2015 03:17:57 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</guid>
+      <description>这篇文章（5645566510638ccf2327a70e）是从 Teambition 迁移过来的
+ Server Install Debian / Ubuntu:
+apt-get install python-pip pip install shadowsocks  CentOS:
+yum install python-setuptools &amp;amp;&amp;amp; easy_install pip pip install shadowsocks  Windows:
+See [Install Server on Windows]
+Usage ssserver -p 443 -k password -m aes-256-cfb  To run in the background:
+sudo ssserver -p 443 -k password -m aes-256-cfb --user nobody -d start  To stop:
+sudo ssserver -d stop  To check the log:</description>
+    </item>
+    
+  </channel>
+</rss>

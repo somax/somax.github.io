@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>K8s on So&#39;Blog</title>
-    <link>https://somax.me/tags/k8s/</link>
+    <link>https://somax.me/tags/k8s.html</link>
     <description>Recent content in K8s on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 17 May 2018 13:08:30 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>k8s 学习笔记</title>
-      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</link>
+      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</link>
       <pubDate>Thu, 17 May 2018 13:08:30 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</guid>
+      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</guid>
       <description>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
  安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
  If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on So&#39;Blog</title>
+    <link>https://somax.me/tags/nginx.html</link>
+    <description>Recent content in Nginx on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sat, 10 Oct 2015 04:55:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Nginx 源码安装</title>
+      <link>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</link>
+      <pubDate>Sat, 10 Oct 2015 04:55:13 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</guid>
+      <description>这篇文章（56189a31e7a72b1965b6df12）是从 Teambition 迁移过来的
+ 安装准备 首先由于nginx的一些模块依赖一些lib库，所以在安装nginx之前，必须先安装这些lib库，这些依赖库主要有g++、gcc、openssl-devel、pcre-devel和zlib-devel ，执行如下命令安装。
+$ yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  安装Nginx # 安装之前，最好检查一下是否已经安装有nginx $ find -name nginx # 如果系统已经通过 yum 安装了nginx，那么就先卸载 $ yum remove nginx # 从官网下载最新版的nginx $ wget http://nginx.org/download/nginx-1.9.3.tar.gz # 解压nginx压缩包 $ tar -zxvf nginx-1.9.3.tar.gz # 这时进入nginx-1.9.3目录 $ cd nginx-1.9.3 # --prefix参数指定nginx安装的目录, 加上 --with-http_ssl_module 使支持https，加上--with-http_v2_module 支持 http/2（1.9.5 以上） # 如果安装过程中说系统没有安装 Openssl，重新安装`yum install openssl openssl--devel `， 也可以加上--with-openssl=/usr/local/openssl-0.x.x 参数 $ ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_v2_module # 或者加载更多模块 # .</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>3D on So&#39;Blog</title>
-    <link>https://somax.me/tags/3d/</link>
+    <link>https://somax.me/tags/3d.html</link>
     <description>Recent content in 3D on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 28 Aug 2015 02:08:59 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>3D模型转换与烘培贴图</title>
-      <link>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</link>
+      <link>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d.html</link>
       <pubDate>Fri, 28 Aug 2015 02:08:59 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</guid>
+      <guid>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d.html</guid>
       <description>这篇文章（55dfc2bb44b37a5b19c7a35d）是从 Teambition 迁移过来的
  工具：
 SketchUp 2014Blender 2.74流程：

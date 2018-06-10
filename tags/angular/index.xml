@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Angular on So&#39;Blog</title>
-    <link>https://somax.me/tags/angular/</link>
+    <link>https://somax.me/tags/angular.html</link>
     <description>Recent content in Angular on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Fri, 30 Oct 2015 03:13:13 +0000</lastBuildDate>
@@ -12,24 +12,23 @@
     
     <item>
       <title>AngularJs 代码风格指南</title>
-      <link>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</link>
+      <link>https://somax.me/teambition/tb_5632e0496fec47d05396a864.html</link>
       <pubDate>Fri, 30 Oct 2015 03:13:13 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</guid>
+      <guid>https://somax.me/teambition/tb_5632e0496fec47d05396a864.html</guid>
       <description>这篇文章（5632e0496fec47d05396a864）是从 Teambition 迁移过来的
  Controller 的别名 使用这种风格编写代码，可以增强可读性，便于维护及减少出错的可能
 app.js (function(global) { &amp;#39;use strict&amp;#39;; var __appname = &amp;#39;myApp&amp;#39; angular.module(__appname, [&amp;#39;myModule&amp;#39;]) .config(__config) .run(__run); function __config($somethingInject) { // ...  } __config.$inject = [&amp;#39;$somethingInject&amp;#39;]; function __run($somethingInject){ //...  } __run.$inject = [&amp;#39;$somethingInject&amp;#39;] // 启动 App  angular.element(document).ready(function() { // { strictDi:true} 为可选参数  // 在 AngularJs 1.3 版本以后，使用静态注入(strictDi)可以提高性能  angular.bootstrap(document, [__appname],{ strictDi:true}); }); })();  myModule.js (function(global) { &amp;#39;use strict&amp;#39;; angular.module(&amp;#39;myModule&amp;#39;, [&amp;#39;subModule&amp;#39;]) .</description>
     </item>
     
     <item>
-      <title>Angular 视频精选</title>
-      <link>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</link>
-      <pubDate>Tue, 15 Sep 2015 15:45:12 +0000</pubDate>
+      <title>$http 统一资源封装方案</title>
+      <link>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0.html</link>
+      <pubDate>Fri, 16 Oct 2015 08:09:41 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</guid>
-      <description>这篇文章（55f83d08a415a44077c73551）是从 Teambition 迁移过来的
- ng-conf 2015 The New Router Creating Container Components with Web Components and Angular
-附带一个国外视频网站下载工具：http://en.savefrom.net</description>
+      <guid>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0.html</guid>
+      <description>这篇文章（5620b0c5079a12ff3c4b2fe0）是从 Teambition 迁移过来的
+ 封装 (function () { &amp;#39;use strict&amp;#39;; angular.module(&amp;#39;UM.comm&amp;#39;,[]) .factory(&amp;#39;Resources&amp;#39;,Resources); /** * 统一资源生成器 * @param {$http} $http angular 内置方法 */ function Resources($http){ function ResourceConstructor(options){ var _uri = options.uri; var _isArray = options.isArray; var _res = _isArray ? [] : {}; Object.defineProperties( _res, { &amp;#39;setData&amp;#39; : { value : _defineSetDataFunction(_isArray) }, &amp;#39;get&amp;#39; : { value : _get }, &amp;#39;add&amp;#39; : { value : _add }, &amp;#39;delete&amp;#39; : { value : _delete } } ); function _defineSetDataFunction(_isArray) { if (_isArray) { return function (_data) { _res.</description>
     </item>
     
   </channel>

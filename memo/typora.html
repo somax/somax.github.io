@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang='zh'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Typora 使用小技巧 Typora 是一款非常好用跨平台 Markdown 编辑器，和很多类似的软件一样使用 Web 技术开发，并使用 Electron 封装成桌面应用，目前 beta 版可以免费下载使用，写这篇博客的时版本是 0.9.9.16.2。Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。
+命令行启动 为了在命令行快速启动 Typora，我在 ~/.bash_profile 中添加了 alias t=&quot;open -a typora&quot;，执行source ~/.bash_profile后，就可以在命令行中运行 t path/to/filename.md 以快速打开并开始编辑文件。
+新版 Typora 支持文档模式，所以可以运行t path 打开整个目录，或者 用t . 打开当前目录。
+偏好设置 还有一些偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好。
+ 按 Ctrl &#43; , 打开偏好设置面板。
+ 自定义主题  可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：https://support.typora.io/Add-Custom-CSS/
+ 我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 github.user.css文件，添加如下代码：
+body{ background-color: #f3f2ee; } 然后在新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
+/* 添加自动序号样式 */ /** initialize css counter */ #write { counter-reset: h1 } h1 { counter-reset: h2 } h2 { counter-reset: h3 } h3 { counter-reset: h4 } h4 { counter-reset: h5 } h5 { counter-reset: h6 } /** put counter result into headings */ #write h1:before { counter-increment: h1; /* content: counter(h1) &#34;.'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='Typora 使用小技巧 • Somax'>
+<meta property='og:description' content='Typora 使用小技巧 Typora 是一款非常好用跨平台 Markdown 编辑器，和很多类似的软件一样使用 Web 技术开发，并使用 Electron 封装成桌面应用，目前 beta 版可以免费下载使用，写这篇博客的时版本是 0.9.9.16.2。Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。
+命令行启动 为了在命令行快速启动 Typora，我在 ~/.bash_profile 中添加了 alias t=&quot;open -a typora&quot;，执行source ~/.bash_profile后，就可以在命令行中运行 t path/to/filename.md 以快速打开并开始编辑文件。
+新版 Typora 支持文档模式，所以可以运行t path 打开整个目录，或者 用t . 打开当前目录。
+偏好设置 还有一些偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好。
+ 按 Ctrl &#43; , 打开偏好设置面板。
+ 自定义主题  可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：https://support.typora.io/Add-Custom-CSS/
+ 我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 github.user.css文件，添加如下代码：
+body{ background-color: #f3f2ee; } 然后在新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
+/* 添加自动序号样式 */ /** initialize css counter */ #write { counter-reset: h1 } h1 { counter-reset: h2 } h2 { counter-reset: h3 } h3 { counter-reset: h4 } h4 { counter-reset: h5 } h5 { counter-reset: h6 } /** put counter result into headings */ #write h1:before { counter-increment: h1; /* content: counter(h1) &#34;.'>
+<meta property='og:url' content='https://somax.me/memo/typora.html'>
+<meta property='og:site_name' content='So&#39;Blog'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Memo'><meta property='article:tag' content='tips'><meta property='article:published_time' content='2018-06-10T14:36:06&#43;08:00'/><meta property='article:modified_time' content='2018-06-10T14:36:06&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+  <title>Typora 使用小技巧 • Somax</title>
+  <link rel='canonical' href='https://somax.me/memo/typora.html'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.67e9c12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-119531833-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+
+<body class='page type-memo has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>跳到主页</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='https://avatars2.githubusercontent.com/u/5010811?s=460&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    So&#39;Blog
+    </h2>
+    <div class='desc'>
+    知识就像空气，学习如同呼吸。
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>标签</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/3d' style='font-size:1em'>3D</a>
+      </li><li>
+        <a href='/tags/linux' style='font-size:1.5em'>Linux</a>
+      </li><li>
+        <a href='/tags/rethinkdb' style='font-size:1em'>RethinkDB</a>
+      </li><li>
+        <a href='/tags/angular' style='font-size:1.1em'>Angular</a>
+      </li><li>
+        <a href='/tags/animation' style='font-size:1em'>Animation</a>
+      </li><li>
+        <a href='/tags/css' style='font-size:1em'>Css</a>
+      </li><li>
+        <a href='/tags/develop' style='font-size:1em'>Develop</a>
+      </li><li>
+        <a href='/tags/docker' style='font-size:1.2em'>Docker</a>
+      </li><li>
+        <a href='/tags/git' style='font-size:1.3em'>Git</a>
+      </li><li>
+        <a href='/tags/gitlab' style='font-size:1.3em'>Gitlab</a>
+      </li><li>
+        <a href='/tags/golang' style='font-size:1em'>Golang</a>
+      </li><li>
+        <a href='/tags/gulp' style='font-size:1.1em'>Gulp</a>
+      </li><li>
+        <a href='/tags/html5' style='font-size:1.1em'>Html5</a>
+      </li><li>
+        <a href='/tags/hugo' style='font-size:1.1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/ide' style='font-size:1em'>Ide</a>
+      </li><li>
+        <a href='/tags/javascript' style='font-size:1.8em'>Javascript</a>
+      </li><li>
+        <a href='/tags/k8s' style='font-size:1em'>K8s</a>
+      </li><li>
+        <a href='/tags/mocha' style='font-size:1em'>Mocha</a>
+      </li><li>
+        <a href='/tags/nodejs' style='font-size:1.4em'>Nodejs</a>
+      </li><li>
+        <a href='/tags/openvpn' style='font-size:1em'>Openvpn</a>
+      </li><li>
+        <a href='/tags/osx' style='font-size:1.1em'>Osx</a>
+      </li><li>
+        <a href='/tags/proxy' style='font-size:1.1em'>Proxy</a>
+      </li><li>
+        <a href='/tags/rancher' style='font-size:1em'>Rancher</a>
+      </li><li>
+        <a href='/tags/sublime' style='font-size:1em'>Sublime</a>
+      </li><li>
+        <a href='/tags/tips' style='font-size:1em'>Tips</a>
+      </li><li>
+        <a href='/tags/%E4%BF%A1%E6%81%AF' style='font-size:1em'>信息</a>
+      </li><li>
+        <a href='/tags/%E5%8E%9F%E5%88%9B' style='font-size:1.3em'>原创</a>
+      </li><li>
+        <a href='/tags/%E5%9D%91' style='font-size:1em'>坑</a>
+      </li><li>
+        <a href='/tags/%E5%9F%BA%E6%9C%AC%E6%8A%80%E8%83%BD' style='font-size:1em'>基本技能</a>
+      </li><li>
+        <a href='/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE' style='font-size:1em'>大数据</a>
+      </li><li>
+        <a href='/tags/%E5%B7%A5%E5%85%B7' style='font-size:1.2em'>工具</a>
+      </li><li>
+        <a href='/tags/%E5%BB%BA%E7%AB%99' style='font-size:1.1em'>建站</a>
+      </li><li>
+        <a href='/tags/%E6%8F%92%E4%BB%B6' style='font-size:1em'>插件</a>
+      </li><li>
+        <a href='/tags/%E6%90%9C%E7%B4%A2' style='font-size:1em'>搜索</a>
+      </li><li>
+        <a href='/tags/%E6%B5%81%E5%AA%92%E4%BD%93' style='font-size:1em'>流媒体</a>
+      </li><li>
+        <a href='/tags/%E8%B5%84%E6%BA%90' style='font-size:1em'>资源</a>
+      </li><li>
+        <a href='/tags/%E8%BF%90%E7%BB%B4' style='font-size:2em'>运维</a>
+      </li></ul>
+</div>
+
+
+</section>
+<section class='widget widget-recent_posts sep-after'>
+  <header>
+    <h4 class='title widget-title'>最近文章</h4>
+  </header>
+
+  <ul class='list'>
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-06-10T14:36:06&#43;08:00'>2018-06-10</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/typora.html'>Typora 使用小技巧</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/export-from-teambition.html'>将 Teambition 分享迁移到 hugo</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/host-on-github.html'>建站笔记 - 将网站托管到 Github</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/building-soblog-with-hugo.html'>建站笔记 - 使用 hugo 建立我的博客</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/post/first.html'>开篇</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-17T13:08:30Z'>2018-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5afd7ecef496bb0018d2e144.html'>k8s 学习笔记</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-17T09:29:35Z'>2018-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5afd4b7f8fb0b000189366aa.html'>内部并联网络打通配置方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-07T16:28:44Z'>2018-05-07</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5af07ebce98ef93186181ac0.html'>Gitlab 备份到 Minio 的配置方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-04-26T16:12:59Z'>2018-04-26</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5ae1fa8b2f381a0018f1b77a.html'>免费的视频流媒体相关软件</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-04-26T16:09:20Z'>2018-04-26</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5ae1f9b051c9c600182a40aa.html'>容器中运行的 Gitlab 备份方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+  </ul>
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='主菜单'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>跳到文章</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>切换侧边栏</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>起点</a>
+      </li><li class='item'>
+        <a href='/memo.html'>备忘录</a>
+      </li><li class='item'>
+        <a href='/post.html'>碎语</a>
+      </li><li class='item'>
+        <a href='/teambition.html'>TB</a>
+      </li><li class='item'>
+        <a href='/about.html'>关于</a>
+      </li><li class='item'>
+        <a href='https://www.google.com/search?q=site%3Asomax.me'> 搜索</a>
+      </li><li class="item">
+
+          </li>
+    </ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>So&#39;Blog</p><p class='desc site-desc'>知识就像空气，学习如同呼吸。</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>Typora 使用小技巧</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2018-06-10T14:36:06&#43;08:00'>2018-06-10</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要2分钟读完
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<h1 id="typora-使用小技巧">Typora 使用小技巧</h1>
+
+<p><a href="https://typora.io" target="_blank">Typora</a> 是一款非常好用跨平台 Markdown 编辑器，和很多类似的软件一样使用 Web 技术开发，并使用 Electron 封装成桌面应用，目前 beta 版可以免费下载使用，写这篇博客的时版本是 <code>0.9.9.16.2</code>。Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。</p>
+
+<h2 id="命令行启动">命令行启动</h2>
+
+<p>为了在命令行快速启动 Typora，我在 <code>~/.bash_profile</code> 中添加了  <code>alias t=&quot;open -a typora&quot;</code>，执行<code>source ~/.bash_profile</code>后，就可以在命令行中运行 <code>t path/to/filename.md</code> 以快速打开并开始编辑文件。</p>
+
+<p>新版 Typora 支持文档模式，所以可以运行<code>t path</code> 打开整个目录，或者 用<code>t .</code> 打开当前目录。</p>
+
+<h2 id="偏好设置">偏好设置</h2>
+
+<p>还有一些偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好。</p>
+
+<blockquote>
+<p>按 <kbd>Ctrl</kbd> + <kbd>,</kbd> 打开偏好设置面板。</p>
+</blockquote>
+
+<p><img src="assets/image-20180610142815910-8616380.png" alt="" /></p>
+
+<h3 id="自定义主题">自定义主题</h3>
+
+<blockquote>
+<p>可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：<a href="https://support.typora.io/Add-Custom-CSS/" target="_blank">https://support.typora.io/Add-Custom-CSS/</a></p>
+</blockquote>
+
+<p>我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 <code>github.user.css</code>文件，添加如下代码：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#f92672">body</span>{
+  <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#f3f2ee</span>;
+}</code></pre></div>
+<p>然后在新增 <code>base.user.css</code> 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS"><span style="color:#75715e">/* 添加自动序号样式 */</span>
+<span style="color:#75715e">/** initialize css counter */</span>
+#write {
+    <span style="color:#66d9ef">counter-reset</span>: h1
+}
+
+<span style="color:#f92672">h1</span> {
+    <span style="color:#66d9ef">counter-reset</span>: h2
+}
+
+<span style="color:#f92672">h2</span> {
+    <span style="color:#66d9ef">counter-reset</span>: h3
+}
+
+<span style="color:#f92672">h3</span> {
+    <span style="color:#66d9ef">counter-reset</span>: h4
+}
+
+<span style="color:#f92672">h4</span> {
+    <span style="color:#66d9ef">counter-reset</span>: h5
+}
+
+<span style="color:#f92672">h5</span> {
+    <span style="color:#66d9ef">counter-reset</span>: h6
+}
+
+<span style="color:#75715e">/** put counter result into headings */</span>
+#write <span style="color:#f92672">h1</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h1;
+    <span style="color:#75715e">/* content: counter(h1) &#34;. &#34; */</span>
+}
+
+#write <span style="color:#f92672">h2</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h2;
+    <span style="color:#66d9ef">content</span>: counter(h2) <span style="color:#e6db74">&#34;. &#34;</span>
+}
+
+#write <span style="color:#f92672">h3</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h3</span>.<span style="color:#a6e22e">md-focus</span>.<span style="color:#a6e22e">md-heading</span>:<span style="color:#a6e22e">before</span> <span style="color:#75715e">/** override the default style for focused headings */</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h3;
+    <span style="color:#66d9ef">content</span>: counter(h2) <span style="color:#e6db74">&#34;.&#34;</span> counter(h3) <span style="color:#e6db74">&#34;. &#34;</span>
+}
+
+#write <span style="color:#f92672">h4</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h4</span>.<span style="color:#a6e22e">md-focus</span>.<span style="color:#a6e22e">md-heading</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h4;
+    <span style="color:#66d9ef">content</span>: counter(h2) <span style="color:#e6db74">&#34;.&#34;</span> counter(h3) <span style="color:#e6db74">&#34;.&#34;</span> counter(h4) <span style="color:#e6db74">&#34;. &#34;</span>
+}
+
+#write <span style="color:#f92672">h5</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h5</span>.<span style="color:#a6e22e">md-focus</span>.<span style="color:#a6e22e">md-heading</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h5;
+    <span style="color:#66d9ef">content</span>: counter(h2) <span style="color:#e6db74">&#34;.&#34;</span> counter(h3) <span style="color:#e6db74">&#34;.&#34;</span> counter(h4) <span style="color:#e6db74">&#34;.&#34;</span> counter(h5) <span style="color:#e6db74">&#34;. &#34;</span>
+}
+
+#write <span style="color:#f92672">h6</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h6</span>.<span style="color:#a6e22e">md-focus</span>.<span style="color:#a6e22e">md-heading</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">counter-increment</span>: h6;
+    <span style="color:#66d9ef">content</span>: counter(h2) <span style="color:#e6db74">&#34;.&#34;</span> counter(h3) <span style="color:#e6db74">&#34;.&#34;</span> counter(h4) <span style="color:#e6db74">&#34;.&#34;</span> counter(h5) <span style="color:#e6db74">&#34;.&#34;</span> counter(h6) <span style="color:#e6db74">&#34;. &#34;</span>
+}
+
+<span style="color:#75715e">/** override the default style for focused headings */</span>
+#write<span style="color:#f92672">&gt;</span><span style="color:#f92672">h3</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+#write<span style="color:#f92672">&gt;</span><span style="color:#f92672">h4</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+#write<span style="color:#f92672">&gt;</span><span style="color:#f92672">h5</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+#write<span style="color:#f92672">&gt;</span><span style="color:#f92672">h6</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h3</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h4</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h5</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span><span style="color:#f92672">,</span>
+<span style="color:#f92672">h6</span>.<span style="color:#a6e22e">md-focus</span>:<span style="color:#a6e22e">before</span> {
+    <span style="color:#66d9ef">color</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">left</span>:<span style="color:#66d9ef">initial</span>;
+    <span style="color:#66d9ef">float</span>: <span style="color:#66d9ef">none</span>;
+    <span style="color:#66d9ef">top</span>:<span style="color:#66d9ef">initial</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">padding-left</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">padding-right</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">vertical-align</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">font-weight</span>: <span style="color:#66d9ef">inherit</span>;
+    <span style="color:#66d9ef">line-height</span>: <span style="color:#66d9ef">inherit</span>;
+}
+
+<span style="color:#75715e">/* 自定义强制换号符，使得在导出PDF 或打印时强制换行 */</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">print</span> {
+    <span style="color:#75715e">/* 这是自定义标签, 在需要换行的地方插入：&lt;pb&gt; */</span>
+    <span style="color:#f92672">pb</span> {
+        <span style="color:#66d9ef">display</span>: <span style="color:#66d9ef">block</span>;
+        <span style="color:#66d9ef">page-break-after</span>: <span style="color:#66d9ef">always</span>;
+    }
+    <span style="color:#f92672">h1</span> {
+        <span style="color:#66d9ef">page-break-before</span>: <span style="color:#66d9ef">always</span>;
+    }
+    <span style="color:#f92672">h1</span>:<span style="color:#a6e22e">first-of-type</span> {
+        <span style="color:#66d9ef">page-break-before</span>: <span style="color:#66d9ef">avoid</span>;
+    }
+}	
+
+<span style="color:#75715e">/* 完成的 Task 添加删除线 */</span>
+.<span style="color:#a6e22e">task-list-done</span> {
+    <span style="color:#66d9ef">text-decoration</span>: <span style="color:#66d9ef">line-through</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#777</span>;
+}
+.<span style="color:#a6e22e">task-list-not-done</span> {
+
+}
+
+<span style="color:#75715e">/* 添加键盘样式 */</span>
+<span style="color:#f92672">kbd</span>{
+    <span style="color:#66d9ef">box-shadow</span>: <span style="color:#66d9ef">inset</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">-2</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">#c6cbd1</span>;
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#66d9ef">white</span>;
+}</code></pre></div>
+<h3 id="打开和关闭">打开和关闭</h3>
+
+<p>我希望关闭最后一个文档时自动退出 Typora，并且在重新运行 Typroa 时可以自动帮我打开上一次使用的文件或者目录，在偏好设置中的通用面板中做如下选择：</p>
+
+<ul>
+<li>退出 - 勾上 Quit Typora when last window close</li>
+<li>启动选项 - 选择『重新打开上次使用的文件和目录』</li>
+</ul>
+
+<h3 id="图片处理">图片处理</h3>
+
+<p>新版本增强的 Markdown 文档嵌入图片的体验，现在可以直接从文件夹或者网页拖放图片到文档中，也可以通过截图黏贴到文档，Typora 可以自动帮我把图片复制到指定的目录，在偏好设置的编辑器面板中：</p>
+
+<ul>
+<li>图片插入 - 选择『复制图片到 ./assets 文件夹』</li>
+</ul>
+
+<p>当然还有其他选择，比如通过 IPic 上传到云平台，不过我暂时还没有尝试。</p>
+
+<h3 id="其他">其他</h3>
+
+<p>还有很多其他的功能，比如开启触发自动完成 Emoji 🚀，复制 Markdown 源码等等，可以慢慢摸索。</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  <div class='tags'>
+  <span class='taxonomy-icon'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M20.59,13.41l-7.17,7.17a2,2,0,0,1-2.83,0L2,12V2H12l8.59,8.59A2,2,0,0,1,20.59,13.41Z"/>
+  <line x1="7" y1="7" x2="7" y2="7"/>
+  
+</svg>
+</span>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/tips'>Tips</a></div>
+
+  </div>
+</footer>
+
+
+</article>
+
+<nav class='entry-nav'>
+  <div class='container'><div class='prev-entry sep-before'>
+      <a href='/memo/export-from-teambition.html'>
+        <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="20" y1="12" x2="4" y2="12"/>
+  <polyline points="10 18 4 12 10 6"/>
+  
+</svg>
+ 上一个</span>
+        <span class='screen-reader-text'>上一篇文章: </span>将 Teambition 分享迁移到 hugo</a>
+    </div></div>
+</nav>
+
+
+
+
+<div id="git-comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    
+    id: 'typora',
+    owner: 'somax',
+    repo: 'somax.github.io',
+    oauth: {
+      client_id: '10c302c020aa50878afd',
+      client_secret: '3ae426ae0ab176d0c6ec7861b649431ff09d1a42',
+    }
+  })
+  gitment.render('git-comments')
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</script>
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'>
+          <section class='widget widget-social_menu sep-after'><nav aria-label='社交菜单'>
+    <ul><li>
+        <a href='mailto:somaxj@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>通过邮件联系</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/somax.me' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Instagram的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Github的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Codepen的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section>
+          <div class='copyright'>
+  <p> &copy; 2018 Somax </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.0d92f56c.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+
+

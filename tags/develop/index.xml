@@ -2,45 +2,37 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Develop on So&#39;Blog</title>
-    <link>https://somax.me/tags/develop/</link>
+    <link>https://somax.me/tags/develop.html</link>
     <description>Recent content in Develop on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sat, 11 Jul 2015 16:03:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2015 05:01:25 +0000</lastBuildDate>
     
 	<atom:link href="https://somax.me/tags/develop/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>【译】NodeJS错误处理最佳实践 — OneAPM</title>
-      <link>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</link>
-      <pubDate>Sat, 11 Jul 2015 16:03:12 +0000</pubDate>
+      <title>HTTP协议状态码详解（HTTP Status Code）</title>
+      <link>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</link>
+      <pubDate>Fri, 09 Oct 2015 05:01:25 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</guid>
-      <description>这篇文章（55a13e4027aadebf0ac9510c）是从 Teambition 迁移过来的
- 【译】NodeJS错误处理最佳实践 — OneAPM http://code.oneapm.com/nodejs/2015/04/13/nodejs-errorhandling/
-
-
-NodeJS的错误处理让人痛苦，在很长的一段时间里，大量的错误被放任不管。但是要想建立一个健壮的Node.js程序就必须正确的处理这些错误，而且这并不难学。如果你实在没有耐心，那就直接绕过长篇大论跳到“总结”部分吧。
-原文
-这篇文章会回答NodeJS初学者的若干问题：
-我写的函数里什么时候该抛出异常，什么时候该传给callback, 什么时候触发EventEmitter等等。
-我的函数对参数该做出怎样的假设？我应该检查更加具体的约束么？例如参数是否非空，是否大于零，是不是看起来像个IP地址，等等等。
-我该如何处理那些不符合预期的参数？我是应该抛出一个异常，还是把错误传递给一个callback。
-我该怎么在程序里区分不同的异常（比如“请求错误”和“服务不可用”）？
-我怎么才能提供足够的信息让调用者知晓错误细节。
-我该怎么处理未预料的出错？我是应该用 try/catch ，domains 还是其它什么方式呢？
-这篇文章可以划分成互相为基础的几个部分：
-背景：希望你所具备的知识。
-操作失败和程序员的失误：介绍两种基本的异常。
-编写新函数的实践：关于怎么让函数产生有用报错的基本原则。
-编写新函数的具体推荐：编写能产生有用报错的、健壮的函数需要的一个检查列表
-例子：以connect函数为例的文档和序言。
-总结：全文至此的观点总结。
-附录：Error对象属性约定：用标准方式提供一个属性列表，以提供更多信息。
-背景本文假设：
-你已经熟悉了JavaScript、Java、 Python、 C++ 或者类似的语言中异常的概念，而且你知道抛出异常和捕获异常是什么意思。
-你熟悉怎么用NodeJS编写代码。你使用异步操作的时候会很自在，并能用callback(err,result)模式去完成异步操作。你得知道下面的代码不能正确处理异常的原因是什么[脚注1]
-function myApiFunc(callback) { /* * This pattern does NOT work! */ try { doSomeAsynchronousOperation(function (err) { &amp;nbsp; if (err) &amp;nbsp; &amp;nbsp; throw (err); &amp;nbsp; /* continue as normal */ }); } catch (ex) { callback(ex); } }你还要熟悉三种传递错误的方式: - 作为异常抛出。 - 把错误传给一个callback，这个函数正是为了处理异常和处理异步操作返回结果的。 - 在EventEmitter上触发一个Error事件。</description>
+      <guid>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</guid>
+      <description>这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的
+ 常用代码 |代码 | 说明 | |-|-| |200| 服务器成功返回网页 | |404| 请求的网页不存在 | |401|（未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。| |500| 服务器内部错误 |
+1XX 临时响应  表示临时响应并需要请求者继续执行操作的状态代码
+    代码 说明     100 （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。   101 （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。    2xx 成功  表示成功处理了请求的状态代码
+    代码 说明     200 （成功） 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。   201 （已创建） 请求成功并且服务器创建了新的资源。   202 （已接受） 服务器已接受请求，但尚未处理。   203 （非授权信息） 服务器已成功处理了请求，但返回的信息可能来自另一来源。   204 （无内容） 服务器成功处理了请求，但没有返回任何内容。   205 （重置内容） 服务器成功处理了请求，但没有返回任何内容。   206 （部分内容） 服务器成功处理了部分 GET 请求。    3xx 重定向  表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</description>
+    </item>
+    
+    <item>
+      <title>参数排序混合算法及性能测试</title>
+      <link>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5.html</link>
+      <pubDate>Sat, 22 Aug 2015 05:49:05 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5.html</guid>
+      <description> 这篇文章（55d80d51dcc2954b0a0159e5）是从 Teambition 迁移过来的
+ JavaScript:
+console.time(&amp;#39;time&amp;#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .map(function(a){return a+obj[a]}) .join(&amp;#39;&amp;#39;); //console.log(result); } console.timeEnd(&amp;#39;time&amp;#39;)  使用 .reduce()方法
+console.time(&amp;#39;time&amp;#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .reduce(function(a,b,i){return a+(i==1?obj[a]:&amp;#39;&amp;#39;)+b+obj[b]}); //console.log(result); } console.timeEnd(&amp;#39;time&amp;#39;) </description>
     </item>
     
   </channel>

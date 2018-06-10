@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rancher on So&#39;Blog</title>
-    <link>https://somax.me/tags/rancher/</link>
+    <link>https://somax.me/tags/rancher.html</link>
     <description>Recent content in Rancher on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 18 Nov 2017 07:46:02 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Rancher 中 RethinkDB 集群节点无法启动故障排除</title>
-      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</link>
+      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</link>
       <pubDate>Sat, 18 Nov 2017 07:46:02 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</guid>
+      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</guid>
       <description>这篇文章（5a0fe53a4da5ce0928d5f28d）是从 Teambition 迁移过来的
  故障描述  之前 RethinkDB 按照 1 + 3 的模式集群部署成功，每个节点分别部署在不同的 host 上。由于某种未知原因，其中一台 host 在 Rancher 中失联，在连接恢复后该 host 上的 RethinkDB 就一直无法正常启动。  解决过程  首先检查了 RethinkDB 节点的日志，发现一切正常，但 Rancher UI 上的状态却一直显示不正常 在 RethinkDB 管理界面上有一瞬间看到了第三个节点加入，然后忽然又没了，推断该节点容器在被 Rancher 一直重启 检查 Rancher 基础服务，发现 Rancher/HealthCheck 处于不正常状态，尝试重启、删除都没有成功。 远程进入容器所在主机，用 docker 命令 kill，竟然没用 🤷‍♂️ Rancher 中停止主机，再删，还是没有用 🤷‍♀️ 要不重启主机？等下&amp;hellip;&amp;hellip; 还是先试试重启 docker 吧&amp;hellip;  解决方案  重启 Docker sudo systemctl restart docker  成功👌，Rancher 会帮我们把余下的事情做掉，所有的容器不出意外都会自动起来（事实上的确没出意外）。来再检查一下，HealthCheck ✅， RethinkDB ✅，搞定！</description>
     </item>

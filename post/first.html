@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang='zh'>
+
+<head>
+  <meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<meta name='description' content='Finally!! 🎉 为了鼓励儿子利用博客做学习笔记（儿子的博客)，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
+经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
+第一篇，就这样。'>
+<meta name='theme-color' content='#ffcd00'>
+
+<meta property='og:title' content='开篇 • Somax'>
+<meta property='og:description' content='Finally!! 🎉 为了鼓励儿子利用博客做学习笔记（儿子的博客)，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
+经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
+第一篇，就这样。'>
+<meta property='og:url' content='https://somax.me/post/first.html'>
+<meta property='og:site_name' content='So&#39;Blog'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Post'><meta property='article:published_time' content='2018-05-20T09:52:51&#43;08:00'/><meta property='article:modified_time' content='2018-05-20T09:52:51&#43;08:00'/><meta name='twitter:card' content='summary'>
+
+<meta name="generator" content="Hugo 0.40.3" />
+
+  <title>开篇 • Somax</title>
+  <link rel='canonical' href='https://somax.me/post/first.html'>
+  
+  
+  <link rel='icon' href='/favicon.ico'>
+<link rel='stylesheet' href='/assets/css/main.67e9c12b.css'><link rel='stylesheet' href='/css/custom.css'><style>
+:root{--color-accent:#ffcd00;}
+</style>
+
+<script>
+window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+ga('create', 'UA-119531833-1', 'auto');
+ga('send', 'pageview');
+</script>
+<script async src='//www.google-analytics.com/analytics.js'></script>
+
+</head>
+
+
+<body class='page type-post has-sidebar'>
+
+  <div class='site'>
+
+    <div id='sidebar' class='sidebar'>
+  <a class='screen-reader-text' href='#main-menu'>跳到主页</a>
+
+  <div class='container'><section class='widget widget-about sep-after'>
+  <header>
+    
+    <div class='logo'>
+      <a href='/'>
+        <img src='https://avatars2.githubusercontent.com/u/5010811?s=460&amp;v=4'>
+      </a>
+    </div>
+    
+    <h2 class='title site-title '>
+    So&#39;Blog
+    </h2>
+    <div class='desc'>
+    知识就像空气，学习如同呼吸。
+    </div>
+  </header>
+
+</section>
+<section class='widget widget-taxonomy_cloud sep-after'>
+  <header>
+    <h4 class='title widget-title'>标签</h4>
+  </header>
+
+  <div class='container list-container'>
+  <ul class='list taxonomy-cloud'><li>
+        <a href='/tags/3d.html' style='font-size:1em'>3D</a>
+      </li><li>
+        <a href='/tags/develop.html' style='font-size:1.1em'>Develop</a>
+      </li><li>
+        <a href='/tags/http.html' style='font-size:1em'>HTTP</a>
+      </li><li>
+        <a href='/tags/linux.html' style='font-size:1.1em'>Linux</a>
+      </li><li>
+        <a href='/tags/nginx.html' style='font-size:1em'>Nginx</a>
+      </li><li>
+        <a href='/tags/rethinkdb.html' style='font-size:1em'>RethinkDB</a>
+      </li><li>
+        <a href='/tags/vpn.html' style='font-size:1em'>VPN</a>
+      </li><li>
+        <a href='/tags/angular.html' style='font-size:1.1em'>Angular</a>
+      </li><li>
+        <a href='/tags/docker.html' style='font-size:1.1em'>Docker</a>
+      </li><li>
+        <a href='/tags/git.html' style='font-size:1.4em'>Git</a>
+      </li><li>
+        <a href='/tags/gitlab.html' style='font-size:1.1em'>Gitlab</a>
+      </li><li>
+        <a href='/tags/gulp.html' style='font-size:1em'>Gulp</a>
+      </li><li>
+        <a href='/tags/hugo.html' style='font-size:1.1em'>Hugo</a>
+      </li><li>
+        <a href='/tags/javascript.html' style='font-size:1.3em'>Javascript</a>
+      </li><li>
+        <a href='/tags/k8s.html' style='font-size:1em'>K8s</a>
+      </li><li>
+        <a href='/tags/mocha.html' style='font-size:1em'>Mocha</a>
+      </li><li>
+        <a href='/tags/nodejs.html' style='font-size:1.1em'>Nodejs</a>
+      </li><li>
+        <a href='/tags/openvpn.html' style='font-size:1em'>Openvpn</a>
+      </li><li>
+        <a href='/tags/rancher.html' style='font-size:1em'>Rancher</a>
+      </li><li>
+        <a href='/tags/tips.html' style='font-size:1em'>Tips</a>
+      </li><li>
+        <a href='/tags/%E5%BB%BA%E7%AB%99.html' style='font-size:1.1em'>建站</a>
+      </li><li>
+        <a href='/tags/%E8%BF%90%E7%BB%B4.html' style='font-size:2em'>运维</a>
+      </li></ul>
+</div>
+
+
+</section>
+<section class='widget widget-recent_posts sep-after'>
+  <header>
+    <h4 class='title widget-title'>最近文章</h4>
+  </header>
+
+  <ul class='list'>
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-06-10T14:36:06&#43;08:00'>2018-06-10</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/typora-tips.html'>Typora 使用小技巧</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-23T23:06:25&#43;08:00'>2018-05-23</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/export-from-teambition.html'>将 Teambition 分享迁移到 hugo</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T16:41:58&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/host-on-github.html'>建站笔记 - 将网站托管到 Github</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-21T14:01:10&#43;08:00'>2018-05-21</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/building-soblog-with-hugo.html'>建站笔记 - 使用 hugo 建立我的博客</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/post/first.html'>开篇</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-17T13:08:30Z'>2018-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5afd7ecef496bb0018d2e144.html'>k8s 学习笔记</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-17T09:29:35Z'>2018-05-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5afd4b7f8fb0b000189366aa.html'>内部并联网络打通配置方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-05-07T16:28:44Z'>2018-05-07</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5af07ebce98ef93186181ac0.html'>Gitlab 备份到 Minio 的配置方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-04-26T16:09:20Z'>2018-04-26</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5ae1f9b051c9c600182a40aa.html'>容器中运行的 Gitlab 备份方法</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-04-17T14:06:43Z'>2018-04-17</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/teambition/tb_5ad5ff7346021671da825337.html'>使用容器部署 openvpn</a>
+    </h3>
+  </header>
+</li>
+
+  
+  </ul>
+</section>
+</div>
+
+  <div class='sidebar-overlay'></div>
+</div>
+
+    <div class='main'>
+
+      <nav id='main-menu' class='menu main-menu' aria-label='主菜单'>
+  <div class='container'>
+    <a class='screen-reader-text' href='#content'>跳到文章</a>
+
+<button id='sidebar-toggler' class='sidebar-toggler' aria-controls='sidebar'>
+  <span class='screen-reader-text'>切换侧边栏</span>
+  <span class='open'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="3" y1="12" x2="21" y2="12" />
+  <line x1="3" y1="6" x2="21" y2="6" />
+  <line x1="3" y1="18" x2="21" y2="18" />
+  
+</svg>
+</span>
+  <span class='close'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <line x1="18" y1="6" x2="6" y2="18" />
+  <line x1="6" y1="6" x2="18" y2="18" />
+  
+</svg>
+</span>
+</button>
+    <ul><li class='item'>
+        <a href='/'>起点</a>
+      </li><li class='item'>
+        <a href='/memo.html'>备忘录</a>
+      </li><li class='item'>
+        <a href='/post.html'>碎语</a>
+      </li><li class='item'>
+        <a href='/teambition.html'>TB</a>
+      </li><li class='item'>
+        <a href='/about.html'>关于</a>
+      </li><li class='item'>
+        <a href='https://www.google.com/search?q=site%3Asomax.me'> 搜索</a>
+      </li><li class="item">
+
+          </li>
+    </ul>
+  </div>
+</nav>
+
+      <header id='header' class='header site-header'>
+        <div class='container sep-after'>
+          <div class='header-info'><p class='site-title title'>So&#39;Blog</p><p class='desc site-desc'>知识就像空气，学习如同呼吸。</p>
+          </div>
+        </div>
+      </header>
+
+      <main id='content'>
+
+
+<article lang='zh' class='entry'>
+  <header class='header entry-header'>
+  <div class='container sep-after'>
+    <div class='header-info'>
+      <h1 class='title'>开篇</h1>
+      
+
+    </div>
+    
+<div class='entry-meta'>
+  <span class='posted-on'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+  <line x1="16" y1="2" x2="16" y2="6"/>
+  <line x1="8" y1="2" x2="8" y2="6"/>
+  <line x1="3" y1="10" x2="21" y2="10"/>
+  
+</svg>
+<span class='screen-reader-text'>发布 </span>
+  <time class='entry-date' datetime='2018-05-20T09:52:51&#43;08:00'>2018-05-20</time>
+</span>
+
+  <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M21,21V20c0-2.76-4-5-9-5s-9,2.24-9,5v1"/>
+  <path d="M16,6.37A4,4,0,1,1,12.63,3,4,4,0,0,1,16,6.37Z"/>
+  
+</svg>
+<span class='screen-reader-text'> by </span><a href='/authors/somax'>Somax</a></span>
+  
+<span class='reading-time'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <circle cx="12" cy="12" r="10"/>
+  <polyline points="12 6 12 12 15 15"/>
+  
+</svg>
+需要1分钟读完
+</span>
+
+
+</div>
+
+
+  </div>
+</header>
+
+  
+  
+
+  <div class='container entry-content'>
+  
+
+<h2 id="finally">Finally!! 🎉</h2>
+
+<p>为了鼓励儿子利用博客做学习笔记（<a href="https://blowuptnt.github.io" target="_blank">儿子的博客</a>)，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！</p>
+
+<p>经过了<strong>精心</strong>的挑选，最后选择了 <a href="https://gohugo.io" target="_blank">hugo</a> 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。</p>
+
+<p>第一篇，就这样。</p>
+
+</div>
+
+  
+<footer class='entry-footer'>
+  <div class='container sep-before'>
+  
+  </div>
+</footer>
+
+
+</article>
+
+
+
+
+<div id="git-comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    
+    id: 'first',
+    owner: 'somax',
+    repo: 'somax.github.io',
+    oauth: {
+      client_id: '10c302c020aa50878afd',
+      client_secret: '3ae426ae0ab176d0c6ec7861b649431ff09d1a42',
+    }
+  })
+  gitment.render('git-comments')
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</script>
+
+
+
+      </main>
+
+      <footer id='footer' class='footer'>
+        <div class='container sep-before'>
+          <section class='widget widget-social_menu sep-after'><nav aria-label='社交菜单'>
+    <ul><li>
+        <a href='mailto:somaxj@163.com' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>通过邮件联系</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+  <polyline points="22,6 12,13 2,6"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://instagram.com/somax.me' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Instagram的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+  <line x1="17.5" y1="6.5" x2="17.5" y2="6.5"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://github.com/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Github的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+  
+</svg>
+</a>
+      </li><li>
+        <a href='https://codepen.io/somax' target='_blank' rel='noopener'>
+          <span class='screen-reader-text'>在新标签打开Codepen的账户</span><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+  
+  <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"/>
+  <line x1="12" y1="22" x2="12" y2="15.5"/>
+  <polyline points="22 8.5 12 15.5 2 8.5"/>
+  <polyline points="2 15.5 12 8.5 22 15.5"/>
+  <line x1="12" y1="2" x2="12" y2="8.5"/>
+  
+</svg>
+</a>
+      </li></ul>
+  </nav>
+</section>
+          <div class='copyright'>
+  <p> &copy; 2018 Somax </p>
+</div>
+
+        </div>
+      </footer>
+
+    </div>
+  </div><script>window.__public_path__='\/assets\/js\/'</script>
+
+<script src='/assets/js/main.0d92f56c.js'></script><script src='/js/custom.js'></script>
+</body>
+
+</html>
+
+
+

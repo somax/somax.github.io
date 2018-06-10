@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Authors on So&#39;Blog</title>
-    <link>https://somax.me/authors/</link>
+    <link>https://somax.me/authors.html</link>
     <description>Recent content in Authors on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     
@@ -11,10 +11,10 @@
     
     <item>
       <title>Somax</title>
-      <link>https://somax.me/authors/somax/</link>
+      <link>https://somax.me/authors/somax.html</link>
       <pubDate>Wed, 23 May 2018 17:29:49 +0800</pubDate>
       
-      <guid>https://somax.me/authors/somax/</guid>
+      <guid>https://somax.me/authors/somax.html</guid>
       <description></description>
     </item>
     

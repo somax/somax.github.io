@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Somax on So&#39;Blog</title>
-    <link>https://somax.me/authors/somax/</link>
+    <link>https://somax.me/authors/somax.html</link>
     <description>Recent content in Somax on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 23 May 2018 17:29:49 +0800</lastBuildDate>
@@ -12,33 +12,51 @@
     
     <item>
       <title> 从 Teambition 迁移过来的文档</title>
-      <link>https://somax.me/teambition/</link>
+      <link>https://somax.me/teambition.html</link>
       <pubDate>Wed, 23 May 2018 17:29:49 +0800</pubDate>
       
-      <guid>https://somax.me/teambition/</guid>
+      <guid>https://somax.me/teambition.html</guid>
       <description> 这里的文章都是从 Teambition 迁移过来的，迁移说明在这里。
  </description>
     </item>
     
     <item>
+      <title>Typora 使用小技巧</title>
+      <link>https://somax.me/memo/typora-tips.html</link>
+      <pubDate>Sun, 10 Jun 2018 14:36:06 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/typora-tips.html</guid>
+      <description>Typora 是一款非常好用跨平台 Markdown 编辑器。和很多类似的软件一样使用 Web 技术开发，并使用 Electron 封装成桌面应用，目前 beta 版可以免费下载使用，写这篇博客的时版本是 0.9.9.16.2。
+Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。
+命令行启动 很多时候工作流程会使用 git 命令对文档进行版本管理，为了快速的在命令行启动 Typora，我通过添加别名t来快速启动 Typora。在 ~/.bash_profile 中添加 alias t=&amp;quot;open -a typora&amp;quot;，执行source ~/.bash_profile后，就可以在命令行中运行 t path/to/filename.md 以快速打开并开始编辑文件。
+新版 Typora 支持了文件夹模式，所以可以运行t path 打开整个文件夹，或者 用t . 打开当前文件夹。
+偏好设置 按 Ctrl + , 打开偏好设置面板。
+ 偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好，也许在今后的深入使用过程中会更改这些设置。
+ 自定义主题  可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：https://support.typora.io/Add-Custom-CSS/
+ 我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 github.user.css文件，添加如下代码：
+body{ background-color: #f3f2ee; } 然后在新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
+/* 添加自动序号样式 */ #write { counter-reset: h2 } h1 { counter-reset: h2 } h2 { counter-reset: h3 } h3 { counter-reset: h4 } h4 { counter-reset: h5 } h5 { counter-reset: h6 } #write h2:before { counter-increment: h2; content: counter(h2) &amp;#34;.</description>
+    </item>
+    
+    <item>
       <title>将 Teambition 分享迁移到 hugo</title>
-      <link>https://somax.me/memo/export-from-teambition/</link>
+      <link>https://somax.me/memo/export-from-teambition.html</link>
       <pubDate>Wed, 23 May 2018 23:06:25 +0800</pubDate>
       
-      <guid>https://somax.me/memo/export-from-teambition/</guid>
+      <guid>https://somax.me/memo/export-from-teambition.html</guid>
       <description>Teambition 是一个非常好的团队协作工具，公司内部一直使用它做项目管理和知识分享的平台。
 经过几年的积累，在公司 TB 知识管理项目中已经发布了三百来条分享记录（自己都没想到有这么多了），其中有很多是可以公开的，所以利用之前研究 TB API 的项目的基础上，完成了批量导出并自动生成 hugo 格式文档的工具 somax/teambition-sync 。
-虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传。</description>
+虽然 hugo 生成 300 篇文章只需要 2250ms，不过还是需要人工筛选一下，后续会慢慢（也许很快）上传到 这里。</description>
     </item>
     
     <item>
       <title>建站笔记 - 将网站托管到 Github</title>
-      <link>https://somax.me/memo/host-on-github/</link>
+      <link>https://somax.me/memo/host-on-github.html</link>
       <pubDate>Mon, 21 May 2018 16:41:58 +0800</pubDate>
       
-      <guid>https://somax.me/memo/host-on-github/</guid>
+      <guid>https://somax.me/memo/host-on-github.html</guid>
       <description>有很多使用 github pages 功能免费发布网站的教程，也可以直接看 官方文档，就不再赘述了。
-有一些注意事项这里提一下，根据 github 的规定，使用 &amp;lt;用户名&amp;gt;.github.io 作为项目名称，就可以通过 &amp;lt;用户名&amp;gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
+github 设定 有一些注意事项这里提一下，根据 github 的规定，使用 &amp;lt;用户名&amp;gt;.github.io 作为项目名称，就可以通过 &amp;lt;用户名&amp;gt;.github.io 这个域名访问到网站，所以我的是就是 somax.github.io。
 hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源文件和最终静态网站文件：
  在项目中建立 master 及 src 两个分支，master 分支用来放最终静态网站文件，而 src 分支存放源文件 在 src 分支上，添加 public 目录到 .gitignore 以便提交源码时忽略它 然后在 public 目录中重新 git init 并存放 master 分支  这样就很方便了，源码在主目录操作，hugo 命令渲染好在进入 public 提交静态页面代码。
 域名设置 想要 .IO 或者 .ME 的域名，找了一下国内域名供应商视乎没有提供。最后在 godaddy.com 购买了 somax.me，第一年 6 折，2年共 ￥150.99。
@@ -48,13 +66,13 @@ hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源�
     
     <item>
       <title>建站笔记 - 使用 hugo 建立我的博客</title>
-      <link>https://somax.me/memo/building-soblog-with-hugo/</link>
+      <link>https://somax.me/memo/building-soblog-with-hugo.html</link>
       <pubDate>Mon, 21 May 2018 14:01:10 +0800</pubDate>
       
-      <guid>https://somax.me/memo/building-soblog-with-hugo/</guid>
-      <description>这是 开篇 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
+      <guid>https://somax.me/memo/building-soblog-with-hugo.html</guid>
+      <description>这是 开篇 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
  前言 其实很久之前就有看到别人使用 Github Pages + jekyll 来免费搭建自己的博客网站，不过最近由于工作的原因接触 go 语言的项目越来越多，所以特意查了一下 Go 语言相关的建站工具，发现了 hugo 这个项目。 就毫不犹豫的（其实还是纠结了一下）选择了 hugo。原因主要是 开源，跨平台，安装简单，渲染速度快！官方自称：&amp;rdquo;The world’s fastest framework for building websites&amp;ldquo;
-使用 Hugo 建立网站 过程中参考了官方文档，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
+使用 Hugo 建立网站 过程中参考了官方文档，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
 不过作为学习总结，还是记录一下自己的操作过程。
 安装 Hugo hugo 官网访问很慢，还是直接 github release 下载比较快。根据操作系统选择合适版本下载即可（由于 Go语言的特性，天生跨平台，可以选择 ARM 版本来安装到树莓派上玩耍），具体过程就略了。
 新建站点 按照 快速手册 一步步下来，基本上没什么问题。
@@ -66,21 +84,21 @@ hugo 渲染页面默认会输出到 public 目录，想了个方案来管理源�
     
     <item>
       <title>开篇</title>
-      <link>https://somax.me/post/first/</link>
+      <link>https://somax.me/post/first.html</link>
       <pubDate>Sun, 20 May 2018 09:52:51 +0800</pubDate>
       
-      <guid>https://somax.me/post/first/</guid>
-      <description>Finally!! 🎉 为了鼓励儿子利用博客做学习笔记，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
+      <guid>https://somax.me/post/first.html</guid>
+      <description>Finally!! 🎉 为了鼓励儿子利用博客做学习笔记（儿子的博客)，拖延了很久之后，自己的博客终于上线了！一起加油吧儿子💪！
 经过了精心的挑选，最后选择了 hugo 作为我的博客静态网站生成工具，主要原因还是 go 语言的那些特性带来的优势。后面的文章我会记录一下用 hugo 建立博客的过程。
 第一篇，就这样。</description>
     </item>
     
     <item>
       <title>k8s 学习笔记</title>
-      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</link>
+      <link>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</link>
       <pubDate>Thu, 17 May 2018 13:08:30 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144/</guid>
+      <guid>https://somax.me/teambition/tb_5afd7ecef496bb0018d2e144.html</guid>
       <description>这篇文章（5afd7ecef496bb0018d2e144）是从 Teambition 迁移过来的
  安装 kubectl 启用命令自动补完 Zsh  官方文档： https://kubernetes.io/docs/tasks/tools/install-kubectl/
  If you are using zsh edit the ~/.zshrc file and add the following code to enable kubectl autocompletion:
@@ -92,10 +110,10 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     
     <item>
       <title>内部并联网络打通配置方法</title>
-      <link>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</link>
+      <link>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa.html</link>
       <pubDate>Thu, 17 May 2018 09:29:35 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa/</guid>
+      <guid>https://somax.me/teambition/tb_5afd4b7f8fb0b000189366aa.html</guid>
       <description>这篇文章（5afd4b7f8fb0b000189366aa）是从 Teambition 迁移过来的
  网络拓扑  [192.168.126.0] / \ [wan: 192.168.126.200] [wan: 192.168.126.233] TP-Link | | MiRoute Pro [lan: 192.168.123.0] [lan: 192.168.120.0]  目的 将 192.168.123.0网段与 192.168.120.0 网段相互打通。
 配置方案 在两个子网路由器上分别设置静态路由，192.168.123.0 网段访问 192.168.120.0 配置路由指向 192.168.126.233 ，同理 192.168.120.0 网段访问 192.168.123.0 网段则配置路由指向 192.168.126.200
@@ -107,37 +125,25 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     
     <item>
       <title>Gitlab 备份到 Minio 的配置方法</title>
-      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</link>
+      <link>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0.html</link>
       <pubDate>Mon, 07 May 2018 16:28:44 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0/</guid>
+      <guid>https://somax.me/teambition/tb_5af07ebce98ef93186181ac0.html</guid>
       <description>这篇文章（5af07ebce98ef93186181ac0）是从 Teambition 迁移过来的
   进入 Gitlab 容器操作：docker exec -it &amp;lt;container-id&amp;gt; bash
  编辑 /etc/gitlab/gitlab.rb
-   gitlab_rails[&#39;backup_upload_connection&#39;] = { &#39;provider&#39; =&amp;gt; &#39;AWS&#39;, &#39;aws_access_key_id&#39; =&amp;gt; &#39;xxxxxxxxxxxxx&#39;, &#39;aws_secret_access_key&#39; =&amp;gt; &#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#39;, &#39;endpoint&#39; =&amp;gt; &#39;http://minio-server-host:9000&#39;, &#39;path_style&#39; =&amp;gt; true } gitlab_rails[&#39;backup_upload_remote_directory&#39;] = &#39;bucket-name&#39;  注意事项：
+  gitlab_rails[&amp;#39;backup_upload_connection&amp;#39;] = { &amp;#39;provider&amp;#39; =&amp;gt; &amp;#39;AWS&amp;#39;, &amp;#39;aws_access_key_id&amp;#39; =&amp;gt; &amp;#39;xxxxxxxxxxxxx&amp;#39;, &amp;#39;aws_secret_access_key&amp;#39; =&amp;gt; &amp;#39;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&amp;#39;, &amp;#39;endpoint&amp;#39; =&amp;gt; &amp;#39;http://minio-server-host:9000&amp;#39;, &amp;#39;path_style&amp;#39; =&amp;gt; true } gitlab_rails[&amp;#39;backup_upload_remote_directory&amp;#39;] = &amp;#39;bucket-name&amp;#39; 注意事项：
  必须设置 &#39;path_style&#39; =&amp;gt; true aws_access_key_id 和 aws_secret_access_key 对应的是 Minio 的 Access Key 与 Secret Key，注意这两个值必须足够复杂，否则可能会导致 403 错误   重新配置 gitlab：gitlab-ctl reconfigure，配置正确的话会自动重启 Gitlab
- 运行备份命令：gitlab-rake gitlab:backup:create</description>
-    </item>
-    
-    <item>
-      <title>免费的视频流媒体相关软件</title>
-      <link>https://somax.me/teambition/tb_5ae1fa8b2f381a0018f1b77a/</link>
-      <pubDate>Thu, 26 Apr 2018 16:12:59 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5ae1fa8b2f381a0018f1b77a/</guid>
-      <description>这篇文章（5ae1fa8b2f381a0018f1b77a）是从 Teambition 迁移过来的
- https://obsproject.com/zh-cn 录屏软件
-https://www.videolan.org/vlc/index.zh.html 媒体播放器
-https://github.com/tiangolo/nginx-rtmp-docker 流媒体服务器
-&amp;hellip;</description>
+ 运行备份命令：gitlab-rake gitlab:backup:create
+  如果反馈中有 Uploading backup archive to remote storage mybucket .</description>
     </item>
     
     <item>
       <title>容器中运行的 Gitlab 备份方法</title>
-      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</link>
+      <link>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa.html</link>
       <pubDate>Thu, 26 Apr 2018 16:09:20 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa/</guid>
+      <guid>https://somax.me/teambition/tb_5ae1f9b051c9c600182a40aa.html</guid>
       <description>  这篇文章（5ae1f9b051c9c600182a40aa）是从 Teambition 迁移过来的
  原文： https://docs.gitlab.com/omnibus/settings/backups.html#creating-backups-for-gitlab-instances-in-docker-containers
 备份 Gitlab 数据 docker exec -t &amp;lt;your container name&amp;gt; gitlab-rake gitlab:backup:create 备份配置文件 docker exec -t &amp;lt;your container name&amp;gt; /bin/sh -c &amp;#39;umask 0077; tar cfz /secret/gitlab/backups/$(date &amp;#34;+etc-gitlab-%s.tgz&amp;#34;) -C / etc/gitlab&amp;#39;</description>
@@ -145,31 +151,31 @@ https://github.com/tiangolo/nginx-rtmp-docker 流媒体服务器
     
     <item>
       <title>使用容器部署 openvpn</title>
-      <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</link>
+      <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337.html</link>
       <pubDate>Tue, 17 Apr 2018 14:06:43 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5ad5ff7346021671da825337/</guid>
+      <guid>https://somax.me/teambition/tb_5ad5ff7346021671da825337.html</guid>
       <description>这篇文章（5ad5ff7346021671da825337）是从 Teambition 迁移过来的
 部署过程使用了开源项目：kylemanna/docker-openvpn，详细文档请访问 https://github.com/kylemanna/docker-openvpn
-  为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。   OVPN_DATA=&amp;quot;ovpn-data-example&amp;quot;   初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。   docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki   启动容器   docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn   生成客户端证书（无密码）   docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass   导出客户端配置文件（包含证书）   docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &amp;gt; CLIENTNAME.</description>
+  为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。  OVPN_DATA=&amp;#34;ovpn-data-example&amp;#34;  初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。  docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki  启动容器  docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn  生成客户端证书（无密码）  docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass  导出客户端配置文件（包含证书）  docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &amp;gt; CLIENTNAME.</description>
     </item>
     
     <item>
       <title>Rancher 中 RethinkDB 集群节点无法启动故障排除</title>
-      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</link>
+      <link>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</link>
       <pubDate>Sat, 18 Nov 2017 07:46:02 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d/</guid>
+      <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</guid>
       <description>这篇文章（5a0fe53a4da5ce0928d5f28d）是从 Teambition 迁移过来的
  故障描述  之前 RethinkDB 按照 1 + 3 的模式集群部署成功，每个节点分别部署在不同的 host 上。由于某种未知原因，其中一台 host 在 Rancher 中失联，在连接恢复后该 host 上的 RethinkDB 就一直无法正常启动。  解决过程  首先检查了 RethinkDB 节点的日志，发现一切正常，但 Rancher UI 上的状态却一直显示不正常 在 RethinkDB 管理界面上有一瞬间看到了第三个节点加入，然后忽然又没了，推断该节点容器在被 Rancher 一直重启 检查 Rancher 基础服务，发现 Rancher/HealthCheck 处于不正常状态，尝试重启、删除都没有成功。 远程进入容器所在主机，用 docker 命令 kill，竟然没用 🤷‍♂️ Rancher 中停止主机，再删，还是没有用 🤷‍♀️ 要不重启主机？等下&amp;hellip;&amp;hellip; 还是先试试重启 docker 吧&amp;hellip;  解决方案  重启 Docker sudo systemctl restart docker  成功👌，Rancher 会帮我们把余下的事情做掉，所有的容器不出意外都会自动起来（事实上的确没出意外）。来再检查一下，HealthCheck ✅， RethinkDB ✅，搞定！</description>
     </item>
     
     <item>
       <title>NodeJS监测module是被直接执行还是被require</title>
-      <link>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2/</link>
+      <link>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2.html</link>
       <pubDate>Mon, 07 Dec 2015 06:50:28 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2/</guid>
+      <guid>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2.html</guid>
       <description> 这篇文章（56652c34bb9364076f95e8a2）是从 Teambition 迁移过来的
  通常用在模块可以直接运行，也可以被其他项目引用的情况下
 // Check if run directly if (require.main === module) { console.log(&#39;run directly...&#39;); main(); } else { console.log(&#39;require on module....&#39;); module.exports = servermon; }  </description>
@@ -177,32 +183,20 @@ https://github.com/tiangolo/nginx-rtmp-docker 流媒体服务器
     
     <item>
       <title>Mocha test-runner with gulp</title>
-      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</link>
+      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html</link>
       <pubDate>Sun, 06 Dec 2015 12:56:36 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</guid>
+      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html</guid>
       <description>这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
- Mocha test-runner with gulp Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
+ Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
     </item>
     
     <item>
-      <title>CSS3 选择器</title>
-      <link>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</link>
-      <pubDate>Mon, 30 Nov 2015 02:07:46 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_565baf720317841b6e0ec363/</guid>
-      <description>这篇文章（565baf720317841b6e0ec363）是从 Teambition 迁移过来的
- CSS3 选择器在 CSS 中，选择器是一种模式，用于选择需要添加样式的元素。
-&amp;ldquo;CSS&amp;rdquo; 列指示该属性是在哪个 CSS 版本中定义的。（CSS1、CSS2 还是 CSS3。）
-选择器例子例子描述CSS.class.intro选择 class=&amp;ldquo;intro&amp;rdquo; 的所有元素。1#id#firstname选择 id=&amp;ldquo;firstname&amp;rdquo; 的所有元素。1选择所有元素。2elementp选择所有 &amp;lt;p&amp;gt; 元素。1element,elementdiv,p选择所有 &amp;lt;div&amp;gt; 元素和所有 &amp;lt;p&amp;gt; 元素。1element&amp;nbsp;elementdiv p选择 &amp;lt;div&amp;gt; 元素内部的所有 &amp;lt;p&amp;gt; 元素。1element&amp;gt;elementdiv&amp;gt;p选择父元素为 &amp;lt;div&amp;gt; 元素的所有 &amp;lt;p&amp;gt; 元素。2element+elementdiv+p选择紧接在 &amp;lt;div&amp;gt; 元素之后的所有 &amp;lt;p&amp;gt; 元素。2[attribute][target]选择带有 target 属性所有元素。2[attribute=value][target=_blank]选择 target=&amp;rdquo;_blank&amp;rdquo; 的所有元素。2[attribute~=value][title~=flower]选择 title 属性包含单词 &amp;ldquo;flower&amp;rdquo; 的所有元素。2[attribute|=value][lang|=en]选择 lang 属性值以 &amp;ldquo;en&amp;rdquo; 开头的所有元素。2:linka:link选择所有未被访问的链接。1:visiteda:visited选择所有已被访问的链接。1:activea:active选择活动链接。1:hovera:hover选择鼠标指针位于其上的链接。1:focusinput:focus选择获得焦点的 input 元素。2:first-letterp:first-letter选择每个 &amp;lt;p&amp;gt; 元素的首字母。1:first-linep:first-line选择每个 &amp;lt;p&amp;gt; 元素的首行。1:first-childp:first-child选择属于父元素的第一个子元素的每个 &amp;lt;p&amp;gt; 元素。2:beforep:before在每个 &amp;lt;p&amp;gt; 元素的内容之前插入内容。2:afterp:after在每个 &amp;lt;p&amp;gt; 元素的内容之后插入内容。2:lang(language)p:lang(it)选择带有以 &amp;ldquo;it&amp;rdquo; 开头的 lang 属性值的每个 &amp;lt;p&amp;gt; 元素。2element1~element2p~ul选择前面有 &amp;lt;p&amp;gt; 元素的每个 &amp;lt;ul&amp;gt; 元素。3[attribute^=value]a[src^=&amp;ldquo;https&amp;rdquo;]选择其 src 属性值以 &amp;ldquo;https&amp;rdquo; 开头的每个 &amp;lt;a&amp;gt; 元素。3[attribute$=value]a[src$=&amp;ldquo;.</description>
-    </item>
-    
-    <item>
-      <title>ShadowSock 安装方法</title>
-      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</link>
+      <title>ShadowSock 快速上手</title>
+      <link>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</link>
       <pubDate>Fri, 13 Nov 2015 03:17:57 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e/</guid>
+      <guid>https://somax.me/teambition/tb_5645566510638ccf2327a70e.html</guid>
       <description>这篇文章（5645566510638ccf2327a70e）是从 Teambition 迁移过来的
  Server Install Debian / Ubuntu:
 apt-get install python-pip pip install shadowsocks  CentOS:
@@ -214,257 +208,92 @@ sudo ssserver -d stop  To check the log:</description>
     </item>
     
     <item>
-      <title>Gulp挑战Grunt，背后的哲学</title>
-      <link>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</link>
-      <pubDate>Wed, 11 Nov 2015 09:37:32 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</guid>
-      <description>这篇文章（56430c5c9aa4fb332ec87d72）是从 Teambition 迁移过来的
- 原文链接： http://www.jianshu.com/p/3779f708f5d7/
- [按：网上介绍Gulp和Grunt安装使用的文章很多，甚少比较二者的思路，连官方文档都语焉不详。我在此做一个粗陋的对比，希望能提纲挈领，加深读者对这两个工具的理解。]
- 做过点儿正经开发的同学都知道，构建工具必不可少。C时代的Make、Java的Ant、Ruby的Rake……没有这些工具，一遍遍地点选输入，准烦死你。
-在前端和Node JS的开发中，最普及的构建工具就是Grunt。它的功能说来简单，就是管理一系列的Task。大部分的Task都是第三方的插件，安装好对应的NPM包，再loadNpmTasks就可以用了。
-Grunt的配置文件Gruntfile，主要包含两部分：
-配置每个Task，包括文件从哪里，到哪里去，还有一些处理的选项
-自己写一些简单的Task，把第三方插件提供的Task组合起来
-别看这两个事儿，轻轻松松几百行出来了。每个Task的配置，各有各的规矩，还牵扯到插件间的配合。反正我从seed库开始做新项目的时候，基本不敢改原来的Gruntfile，很多用不上的功能也搁那儿。留意了一下很多开源项目的Gruntfile，也都臃肿杂乱，好不到哪儿去。
-Gruntfile维护起来那么困难，有几个原因：
-配置和运行分离 程序员都知道，变量的声明和使用挨在一起，最方便理解和修改。但Gruntfile里，配置Task和调用它们的地方离得很远，极大地增加了心智负担。
-每个插件做的事太多 每个Task的结果必须写到磁盘文件，另一个Task再读，损害性能倒是小事，更麻烦的是让整个过程变复杂了。 就像一个个小作坊，来料加工又返回给客户，这中间的沟通成本、出错机会都大大增加。
-配置项过多 做事多了，配置项自然也多。至少输入和输出的位置得配吧。每个插件的配置规则还不尽相同。用每个插件，都得去学习一番。
-Gulp应运而生。
-恐怕没几个IT人不知道Unix管道的概念。前一级的输出，直接变成后一级的输入。把简单的工具组合起来，优雅地解决复杂的问题。听起来那么熟悉呢？是的，Gulp就把这种思维用在构建过程中。
-Gulp基于Node JS的一个机制，叫做stream，有点类似C++中的stream。在Node中，文件访问、输入输出、HTTP连接，都是stream。Gulp的每个插件从stream中读取输入，做一些处理，再输出到stream中。
-每个插件不是拿来独立使用的。相反，它专注于完成单一职责。只有把合适的插件组合起来，才能完成具体的Task。引用官方的例子，看看一个典型的Task长什么样(略有删减)：
-var paths = { scripts: [&#39;client/js/**/*.coffee&#39;, &#39;!client/external/**/*.coffee&#39;] }; gulp.task(&#39;scripts&#39;, [&#39;clean&#39;], function() { // 可以依赖于其它task return gulp.src(paths.scripts) // 指定输入 .pipe(coffee()) // 环节一 .pipe(uglify()) // 环节二 .pipe(concat(&#39;all.min.js&#39;)) // 环节三 .pipe(gulp.dest(&#39;build/js&#39;)); // 指定输出 });  配置呢？不需要了。是不是行云流水，一气呵成？
-那我们再回头来看看前面Grunt的几个问题，Gulp是怎么解决的：
-配置和运行分离 code over configuration，直接就在调用的地方配置。
-每个插件做的事太多 单一职责，依靠组合来发挥作用。就像一条自动化生产线，上一道工序的产出直接交给下一步，效率不要太高。</description>
-    </item>
-    
-    <item>
       <title>如何在Git项目中添加空目录</title>
-      <link>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec/</link>
+      <link>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec.html</link>
       <pubDate>Tue, 03 Nov 2015 05:20:19 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec/</guid>
+      <guid>https://somax.me/teambition/tb_5638441326ad9cd2130a33ec.html</guid>
       <description>这篇文章（5638441326ad9cd2130a33ec）是从 Teambition 迁移过来的
  在要添加的目录下新建 .gitignore 文件，文件中添加以下信息：
-# Ignore everything in this directory * # Except this file !.gitignore 更新 20160429：这里可以找到针对各种开发语言的模板：github.com/github/gitignore</description>
+# Ignore everything in this directory * # Except this file !.gitignore 更新 20160429：这里可以找到针对各种开发语言的 .gitignore 模板：github.com/github/gitignore</description>
     </item>
     
     <item>
       <title>AngularJs 代码风格指南</title>
-      <link>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</link>
+      <link>https://somax.me/teambition/tb_5632e0496fec47d05396a864.html</link>
       <pubDate>Fri, 30 Oct 2015 03:13:13 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5632e0496fec47d05396a864/</guid>
+      <guid>https://somax.me/teambition/tb_5632e0496fec47d05396a864.html</guid>
       <description>这篇文章（5632e0496fec47d05396a864）是从 Teambition 迁移过来的
  Controller 的别名 使用这种风格编写代码，可以增强可读性，便于维护及减少出错的可能
 app.js (function(global) { &amp;#39;use strict&amp;#39;; var __appname = &amp;#39;myApp&amp;#39; angular.module(__appname, [&amp;#39;myModule&amp;#39;]) .config(__config) .run(__run); function __config($somethingInject) { // ...  } __config.$inject = [&amp;#39;$somethingInject&amp;#39;]; function __run($somethingInject){ //...  } __run.$inject = [&amp;#39;$somethingInject&amp;#39;] // 启动 App  angular.element(document).ready(function() { // { strictDi:true} 为可选参数  // 在 AngularJs 1.3 版本以后，使用静态注入(strictDi)可以提高性能  angular.bootstrap(document, [__appname],{ strictDi:true}); }); })();  myModule.js (function(global) { &amp;#39;use strict&amp;#39;; angular.module(&amp;#39;myModule&amp;#39;, [&amp;#39;subModule&amp;#39;]) .</description>
     </item>
     
     <item>
-      <title>Mac SSH免密码登入远程服务器</title>
-      <link>https://somax.me/teambition/tb_5629fd3b3dafcdab3046119a/</link>
-      <pubDate>Fri, 23 Oct 2015 09:26:19 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5629fd3b3dafcdab3046119a/</guid>
-      <description> 这篇文章（5629fd3b3dafcdab3046119a）是从 Teambition 迁移过来的
- 生成密钥。在终端下执行命令： ssh-keygen -t rsa 一路回车，各种提示按默认不要改，等待执行完毕。然后执行： ls ~/.ssh #可以看到两个密钥文件：id_rsa（私钥） id_rsa.pub（公钥） 放置公钥到Linux服务器。使用scp命令： 安装 ssh-copy-id 脚本：https://github.com/beautifulcode/ssh-copy-id-for-OSX 拷贝到远程服务器 ssh-copy-id username@hostname  
-另一种方法 直接在服务器上将公钥追加进authorized_keys 文件：cat id_rsa.pub&amp;gt;&amp;gt;~./ssh/authorized_keys 修改权限 chmod 600 ~./ssh/authorized_keys 
- 会出现的问题 执行了以上还是会发生需要密码的情况发生 查看系统日志：cat /var/log/secure 发现其中有显示  说明目录 /home/jk 的权限是不安全的，经测试，只能赋予自己读写执行权限  chmod 700 /home/jk 实际修改目录按日志内信息为准！ 
- 
- 
- </description>
-    </item>
-    
-    <item>
       <title>$http 统一资源封装方案</title>
-      <link>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0/</link>
+      <link>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0.html</link>
       <pubDate>Fri, 16 Oct 2015 08:09:41 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0/</guid>
+      <guid>https://somax.me/teambition/tb_5620b0c5079a12ff3c4b2fe0.html</guid>
       <description>这篇文章（5620b0c5079a12ff3c4b2fe0）是从 Teambition 迁移过来的
  封装 (function () { &amp;#39;use strict&amp;#39;; angular.module(&amp;#39;UM.comm&amp;#39;,[]) .factory(&amp;#39;Resources&amp;#39;,Resources); /** * 统一资源生成器 * @param {$http} $http angular 内置方法 */ function Resources($http){ function ResourceConstructor(options){ var _uri = options.uri; var _isArray = options.isArray; var _res = _isArray ? [] : {}; Object.defineProperties( _res, { &amp;#39;setData&amp;#39; : { value : _defineSetDataFunction(_isArray) }, &amp;#39;get&amp;#39; : { value : _get }, &amp;#39;add&amp;#39; : { value : _add }, &amp;#39;delete&amp;#39; : { value : _delete } } ); function _defineSetDataFunction(_isArray) { if (_isArray) { return function (_data) { _res.</description>
     </item>
     
     <item>
-      <title>Nginx 优化</title>
-      <link>https://somax.me/teambition/tb_5618eb1b372166b47510f66e/</link>
-      <pubDate>Sat, 10 Oct 2015 10:40:27 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5618eb1b372166b47510f66e/</guid>
-      <description>  这篇文章（5618eb1b372166b47510f66e）是从 Teambition 迁移过来的
- gzip gzip_disable &amp;quot;msie6&amp;quot;;  gzip_comp_level 6; gzip_min_length 1100; gzip_buffers 16 8k; gzip_proxied any; gzip_types text/plain text/css text/js text/xml text/javascript application/javascript application/x-javascript application/json application/xml application/xml+rss;
-缓存： </description>
-    </item>
-    
-    <item>
       <title>Nginx 源码安装</title>
-      <link>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12/</link>
+      <link>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</link>
       <pubDate>Sat, 10 Oct 2015 04:55:13 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12/</guid>
+      <guid>https://somax.me/teambition/tb_56189a31e7a72b1965b6df12.html</guid>
       <description>这篇文章（56189a31e7a72b1965b6df12）是从 Teambition 迁移过来的
- 一、安装准备 首先由于nginx的一些模块依赖一些lib库，所以在安装nginx之前，必须先安装这些lib库，这些依赖库主要有g++、gcc、openssl-devel、pcre-devel和zlib-devel ，执行如下命令安装。
-$ yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  二、安装Nginx # 安装之前，最好检查一下是否已经安装有nginx $ find -name nginx # 如果系统已经通过 yum 安装了nginx，那么就先卸载 $ yum remove nginx # 从官网下载最新版的nginx $ wget http://nginx.org/download/nginx-1.9.3.tar.gz # 解压nginx压缩包 $ tar -zxvf nginx-1.9.3.tar.gz # 这时进入nginx-1.9.3目录 $ cd nginx-1.9.3 # --prefix参数指定nginx安装的目录, 加上 --with-http_ssl_module 使支持https，加上--with-http_v2_module 支持 http/2（1.9.5 以上） # 如果安装过程中说系统没有安装 Openssl，重新安装`yum install openssl openssl--devel `， 也可以加上--with-openssl=/usr/local/openssl-0.x.x 参数 $ ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_v2_module # 或者加载更多模块 # .</description>
+ 安装准备 首先由于nginx的一些模块依赖一些lib库，所以在安装nginx之前，必须先安装这些lib库，这些依赖库主要有g++、gcc、openssl-devel、pcre-devel和zlib-devel ，执行如下命令安装。
+$ yum install gcc-c++ pcre pcre-devel zlib zlib-devel openssl openssl-devel  安装Nginx # 安装之前，最好检查一下是否已经安装有nginx $ find -name nginx # 如果系统已经通过 yum 安装了nginx，那么就先卸载 $ yum remove nginx # 从官网下载最新版的nginx $ wget http://nginx.org/download/nginx-1.9.3.tar.gz # 解压nginx压缩包 $ tar -zxvf nginx-1.9.3.tar.gz # 这时进入nginx-1.9.3目录 $ cd nginx-1.9.3 # --prefix参数指定nginx安装的目录, 加上 --with-http_ssl_module 使支持https，加上--with-http_v2_module 支持 http/2（1.9.5 以上） # 如果安装过程中说系统没有安装 Openssl，重新安装`yum install openssl openssl--devel `， 也可以加上--with-openssl=/usr/local/openssl-0.x.x 参数 $ ./configure --prefix=/usr/local/nginx --with-http_ssl_module --with-http_v2_module # 或者加载更多模块 # .</description>
     </item>
     
     <item>
       <title>HTTP协议状态码详解（HTTP Status Code）</title>
-      <link>https://somax.me/teambition/tb_56174a257da60c8f224df82b/</link>
+      <link>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</link>
       <pubDate>Fri, 09 Oct 2015 05:01:25 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56174a257da60c8f224df82b/</guid>
+      <guid>https://somax.me/teambition/tb_56174a257da60c8f224df82b.html</guid>
       <description>这篇文章（56174a257da60c8f224df82b）是从 Teambition 迁移过来的
- 200 – 服务器成功返回网页 404 – 请求的网页不存在 503 – 服务不可用&amp;nbsp;
-1xx（临时响应）&amp;nbsp;
-表示临时响应并需要请求者继续执行操作的状态代码。
-代码&amp;nbsp;&amp;nbsp; 说明&amp;nbsp;
-100&amp;nbsp;&amp;nbsp; （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。&amp;nbsp;&amp;nbsp;
-101&amp;nbsp;&amp;nbsp; （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。
-2xx （成功）&amp;nbsp;
-表示成功处理了请求的状态代码。
-代码&amp;nbsp;&amp;nbsp; 说明&amp;nbsp;
-200&amp;nbsp;&amp;nbsp; （成功）&amp;nbsp; 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。&amp;nbsp;
-201&amp;nbsp;&amp;nbsp; （已创建）&amp;nbsp; 请求成功并且服务器创建了新的资源。&amp;nbsp;
-202&amp;nbsp;&amp;nbsp; （已接受）&amp;nbsp; 服务器已接受请求，但尚未处理。&amp;nbsp;
-203&amp;nbsp;&amp;nbsp; （非授权信息）&amp;nbsp; 服务器已成功处理了请求，但返回的信息可能来自另一来源。&amp;nbsp;
-204&amp;nbsp;&amp;nbsp; （无内容）&amp;nbsp; 服务器成功处理了请求，但没有返回任何内容。&amp;nbsp;
-205&amp;nbsp;&amp;nbsp; （重置内容） 服务器成功处理了请求，但没有返回任何内容。&amp;nbsp;
-206&amp;nbsp;&amp;nbsp; （部分内容）&amp;nbsp; 服务器成功处理了部分 GET 请求。
-3xx （重定向）&amp;nbsp;
-表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。
-代码&amp;nbsp;&amp;nbsp; 说明&amp;nbsp;
-300&amp;nbsp;&amp;nbsp; （多种选择）&amp;nbsp; 针对请求，服务器可执行多种操作。 服务器可根据请求者 (user agent) 选择一项操作，或提供操作列表供请求者选择。&amp;nbsp;
-301&amp;nbsp;&amp;nbsp; （永久移动）&amp;nbsp; 请求的网页已永久移动到新位置。 服务器返回此响应（对 GET 或 HEAD 请求的响应）时，会自动将请求者转到新位置。&amp;nbsp;</description>
-    </item>
-    
-    <item>
-      <title>chrome 无法网页定位的问题</title>
-      <link>https://somax.me/teambition/tb_56172c5e6de963d23969d33d/</link>
-      <pubDate>Fri, 09 Oct 2015 02:54:22 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_56172c5e6de963d23969d33d/</guid>
-      <description>这篇文章（56172c5e6de963d23969d33d）是从 Teambition 迁移过来的
- HTML5 规范中可以支持定位，但在chrome中出现了无法定位的问题！在知乎上找到一篇解答： http://www.zhihu.com/question/20473051?sort=created
-答案是： chrome 使用 google 自己的定位服务器，然而&amp;hellip;&amp;hellip;被无情的墙了！
-解决方案：  翻墙 用 IE  扩展阅读： Google WiFi 定位的原理 （转） 以前我不了解Google WiFi 定位时，一直对这技术嗤之以鼻，我想说从IP Address 哪里能定位到很精准，最多就是从一些公开的IP to GEO 资料库可以查询到这个IP 是在那个城市，是没办法精准定位的。可是随着我发现没有GPS 卫星定位功能的iPod Touch 在打开WiFi 的情况下竟然可以在Google 地图上精准到我所在地的附近，这就引起了我很大的好奇心，到底这是怎么做到的？显然不可能是靠IP Address 去查询啊？
-看了一些简体与繁体的文件，实在是觉得扯太远扯太多，还是没看到精髓处，所以直接从英文去查吧！果然查到了不少资料，也就了解Google WiFi 定位的原理了。在这之前先把几个名词给解释一下。
-GPS卫星定位：靠的是环绕在地球四周的数颗卫星发送讯号到地面，交叉连集出所在地的方法。从十几年前开始出现汽车导航产品，就是使用这种技术。初次定位时常要花上一分钟以上的时间，这也是目前汽车导航和智慧型手机都有提供的定位方式。当有遮蔽物阻挡来自天空的讯号时就会发生定位的困难。
-A-GPS定位：靠着事先下载星历资料，能够加速上述GPS定位的初次定位速度。由于一般车用导航机都不具备网路连线能力因此无法事先下载星历资料，所以也都不具备A-GPS定位。
-手机基地台定位：靠的是侦测到的手机基地台(Cell Tower)，比对资料库以及信号强度，交叉连集出所在地的方法。也因为要能够侦测手机基地台，所以一般车用导航机因不具备手机电话能力而无法 ​​提供，几乎可以说手机基地台定位是智慧型手机或者能够插手机SIM卡的平板电脑才可以提供的功能。此法尚须有网路连线做资料库查询才能完成定位。
-WiFi定位：靠的是侦测附近周围所有的无线网路基地台(WiFi Access Point)的MAC Address (类似10-78-D2-93-58-C2这样的格式)，去比对资料库中该MAC Address的座标，交叉连集出所在地。此法尚须有网路连线做资料库查询才能完成定位。
-所以问题来了：这份无线网路基地台MAC Address 对应到经纬度的资料库，是怎么建立起来的呢？
-基础建设靠的是Google街景车。Google街景车除了拍下街景以外，另外还做了两件事情：(讯息来源：Google blog )
-沿路搜集所有公开的无线网路MAC​​ Address，与当时的经纬度一并记录。 根据拍下的街景来建立建筑物3D模型资料。(此效果截至本文刊出时仅能在Google Android手机上看到) 但资料库一定会面临过期与需要更新的问题，这时候全世界有在使用行动装置+ Google定位程式的人，等于是在不知不觉中帮忙做这件事情。更新的方法是当WiFi与手机基地台定位或GPS定位同时开启时，手持装置藉由手机基地台定位或GPS定位这两种方式可以获得目前的座标，再透过WiFi搜寻到附近所有的MAC Address，背后向Google的资料库做更新。(讯息来源：Google员工Christopher的公开说法 ) 说穿了技术其实不难，但这么庞大的资料库，又能够不痛不痒的号召每个行动装置帮忙更新维护这份资料库，大概也只有Google 做得来了。</description>
+ 常用代码 |代码 | 说明 | |-|-| |200| 服务器成功返回网页 | |404| 请求的网页不存在 | |401|（未授权） 请求要求身份验证。 对于需要登录的网页，服务器可能返回此响应。| |500| 服务器内部错误 |
+1XX 临时响应  表示临时响应并需要请求者继续执行操作的状态代码
+    代码 说明     100 （继续） 请求者应当继续提出请求。 服务器返回此代码表示已收到请求的第一部分，正在等待其余部分。   101 （切换协议） 请求者已要求服务器切换协议，服务器已确认并准备切换。    2xx 成功  表示成功处理了请求的状态代码
+    代码 说明     200 （成功） 服务器已成功处理了请求。 通常，这表示服务器提供了请求的网页。   201 （已创建） 请求成功并且服务器创建了新的资源。   202 （已接受） 服务器已接受请求，但尚未处理。   203 （非授权信息） 服务器已成功处理了请求，但返回的信息可能来自另一来源。   204 （无内容） 服务器成功处理了请求，但没有返回任何内容。   205 （重置内容） 服务器成功处理了请求，但没有返回任何内容。   206 （部分内容） 服务器成功处理了部分 GET 请求。    3xx 重定向  表示要完成请求，需要进一步操作。 通常，这些状态代码用来重定向。</description>
     </item>
     
     <item>
       <title>Rsync 在非标ssh端口(22) 中用法</title>
-      <link>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</link>
+      <link>https://somax.me/teambition/tb_560e1356d908de0d2585d058.html</link>
       <pubDate>Fri, 02 Oct 2015 05:17:10 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_560e1356d908de0d2585d058/</guid>
-      <description>这篇文章（560e1356d908de0d2585d058）是从 Teambition 迁移过来的
- 问题 使用rsync拷贝文件，有个主机的ssh端口使用的并非标准端口(22)，查看rsync的文档，看到有种带有端口的用法： rsync [OPTION]&amp;hellip; SRC [SRC]&amp;hellip; rsync://[USER@]HOST[:PORT]/DEST
-但使用会返回错误： rsync: server sent &amp;ldquo;SSH-2.0-OpenSSH_5.3&amp;rdquo; rather than greeting rsync error: error starting client-server protocol (code 5) at main.c(1534) [sender=3.0.9]
-解决 开始以为是客户端服务器rsync版本不兼容，后来发现对于非标准ssh端口(22)的使用方法是使用-e参数： rsync [OPTION]&amp;hellip; -e &amp;ldquo;ssh -p 2222&amp;rdquo; SRC [SRC]&amp;hellip; [USER@]HOST[:PORT]/DEST</description>
+      <guid>https://somax.me/teambition/tb_560e1356d908de0d2585d058.html</guid>
+      <description>  这篇文章（560e1356d908de0d2585d058）是从 Teambition 迁移过来的
+ 问题 使用rsync拷贝文件，有个主机的ssh端口使用的并非标准端口(22)，查看rsync的文档，看到有种带有端口的用法：
+rsync [OPTION]... SRC [SRC]... rsync://[USER@]HOST[:PORT]/DEST 但使用会返回错误：
+rsync: server sent &amp;#34;SSH-2.0-OpenSSH_5.3&amp;#34; rather than greeting rsync error: error starting client-server protocol (code 5) at main.c(1534) [sender=3.0.9] 解决 开始以为是客户端服务器rsync版本不兼容，后来发现对于非标准ssh端口(22)的使用方法是使用-e参数：
+rsync [OPTION]... -e &amp;#34;ssh -p 2222&amp;#34; SRC [SRC]... [USER@]HOST[:PORT]/DEST</description>
     </item>
     
     <item>
       <title>iptables 配置范例</title>
-      <link>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</link>
+      <link>https://somax.me/teambition/tb_560b7b14262a98424070c7a7.html</link>
       <pubDate>Wed, 30 Sep 2015 06:03:00 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_560b7b14262a98424070c7a7/</guid>
+      <guid>https://somax.me/teambition/tb_560b7b14262a98424070c7a7.html</guid>
       <description>这篇文章（560b7b14262a98424070c7a7）是从 Teambition 迁移过来的
  linux 系统中使用 iptables 配置防火墙
 修改文件：/etc/sysconfig/iptables
-*filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -s 127.0.0.1/32 -d 127.0.0.1/32 -j ACCEPT -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT -A INPUT -p tcp -m tcp --dport 20 -j ACCEPT -A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT -A INPUT -j REJECT --reject-with icmp-port-unreachable -A FORWARD -j REJECT --reject-with icmp-port-unreachable -A OUTPUT -j ACCEPT COMMIT  重新启动 service iptables restart</description>
-    </item>
-    
-    <item>
-      <title>安装 Privoxy 让手机通过代理上网</title>
-      <link>https://somax.me/teambition/tb_560287ecc9f16c3203300619/</link>
-      <pubDate>Wed, 23 Sep 2015 11:07:24 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_560287ecc9f16c3203300619/</guid>
-      <description>这篇文章（560287ecc9f16c3203300619）是从 Teambition 迁移过来的
-更新（2015-10-2）： Mac 升级到 EL Capitan 正式版，发现原先按装的不能使用了 在安装目录中找到 uninstall.command, 执行卸载 用 home-brew 重新安装，brew install privoxy 或者升级到最新版本 brew upgrade
- Privoxy是一款带过滤功能的代理服务器，针对HTTP、HTTPS协议。通过Privoxy的过滤功能，用户可以保护隐私、对网页内容进行过滤、管理cookies，以及拦阻各种广告等。Privoxy可以用作单机，也可以应用到多用户的网络。 这里我只用他来做代理转换，让手机通过http代理来使用sockt代理。
- 安装 Shadowsocks 客户端
- http://www.privoxy.org 下载安装privoxy，安装完毕会自动打开文档。
- 修改 config 配置文件位置： /usr/local/etc/privoxy/config listen-address 0.0.0.0:8118 ＃privacy 监听地址及端口 forward-socks5 / 127.0.0.1:1080 . ＃shadow socks 代理地址及端口
- 启动/停止 sudo /Applications/Privoxy/startPrivoxy.sh sudo /Applications/Privoxy/stopPrivoxy.sh
- 修改 proxy.pac var proxy = &amp;ldquo;PROXY 192.168.31.180:8118&amp;rdquo;; ip改为安装服务的地址，放到http 服务器上
- 设置手机 网络设置 -&amp;gt; 代理 -&amp;gt; 自动,输入： http://xx.</description>
-    </item>
-    
-    <item>
-      <title>MAC 好用软件推荐</title>
-      <link>https://somax.me/teambition/tb_56024fee95ccc78d092c7c0a/</link>
-      <pubDate>Wed, 23 Sep 2015 07:08:30 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_56024fee95ccc78d092c7c0a/</guid>
-      <description>  这篇文章（56024fee95ccc78d092c7c0a）是从 Teambition 迁移过来的
- 词典：  欧陆词典（免费）App Store 搜索安装  系统清理：  Dr.Cleaner（免费）App Store 搜索安装  NTFS 读写：  Tuxera NTFS  开发:  iterm2 sublime-text vs-code (🚀最新补充)  </description>
-    </item>
-    
-    <item>
-      <title>OS X El Capitan 中 ProxyChains 失效的问题</title>
-      <link>https://somax.me/teambition/tb_56011e450a68929f0910710a/</link>
-      <pubDate>Tue, 22 Sep 2015 09:24:21 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_56011e450a68929f0910710a/</guid>
-      <description>这篇文章（56011e450a68929f0910710a）是从 Teambition 迁移过来的
- OS X El Capitan v10.11 之后，Apple 推出了一个叫&amp;nbsp;System Integrity Protection&amp;nbsp;的新功能：
-A new security policy that applies to every running process, including privileged code and code that runs out of the sandbox. The policy extends additional protections to components on disk and at run-time, only allowing system binaries to be modified by the system installer and software updates.&amp;nbsp;Code injection and runtime attachments to system binaries are no longer permitted.</description>
-    </item>
-    
-    <item>
-      <title>CSS禅意花园——CSS设计的绝美境界</title>
-      <link>https://somax.me/teambition/tb_55fba60953b745de0902a1d5/</link>
-      <pubDate>Fri, 18 Sep 2015 05:50:01 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55fba60953b745de0902a1d5/</guid>
-      <description>这篇文章（55fba60953b745de0902a1d5）是从 Teambition 迁移过来的
- http://blog.csdn.net/yousuosi/article/details/8043029
-http://www.csszengarden.com/</description>
-    </item>
-    
-    <item>
-      <title>服务器上时区引起的问题</title>
-      <link>https://somax.me/teambition/tb_55fb8da623de26634d8794d5/</link>
-      <pubDate>Fri, 18 Sep 2015 04:05:58 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55fb8da623de26634d8794d5/</guid>
-      <description>这篇文章（55fb8da623de26634d8794d5）是从 Teambition 迁移过来的
- 尝试将 CamU 应用部署到在美国租用的服务器，发现查询当日的照片却没有出现，经过分析发现是服务器时区与本地测试环境不同
-解决方案有两种， 1. 改变服务器时区 2. 改代码适应不同时区
-我采用了第一个方案，改时区（现在未知是否会造成其他应用的问题）
-那么，来改时区： $ cp &amp;ndash;remove-destination /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-搞定！</description>
-    </item>
-    
-    <item>
-      <title>Angular 视频精选</title>
-      <link>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</link>
-      <pubDate>Tue, 15 Sep 2015 15:45:12 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55f83d08a415a44077c73551/</guid>
-      <description>这篇文章（55f83d08a415a44077c73551）是从 Teambition 迁移过来的
- ng-conf 2015 The New Router Creating Container Components with Web Components and Angular
-附带一个国外视频网站下载工具：http://en.savefrom.net</description>
+*filter :INPUT ACCEPT [0:0] :FORWARD ACCEPT [0:0] :OUTPUT ACCEPT [0:0] -A INPUT -s 127.0.0.1/32 -d 127.0.0.1/32 -j ACCEPT -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT -A INPUT -p tcp -m tcp --dport 80 -j ACCEPT -A INPUT -p tcp -m tcp --dport 443 -j ACCEPT -A INPUT -p tcp -m tcp --dport 21 -j ACCEPT -A INPUT -p tcp -m tcp --dport 20 -j ACCEPT -A INPUT -p tcp -m tcp --dport 8080 -j ACCEPT -A INPUT -j REJECT --reject-with icmp-port-unreachable -A FORWARD -j REJECT --reject-with icmp-port-unreachable -A OUTPUT -j ACCEPT COMMIT 重新启动 service iptables restart</description>
     </item>
     
     <item>
       <title>3D模型转换与烘培贴图</title>
-      <link>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</link>
+      <link>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d.html</link>
       <pubDate>Fri, 28 Aug 2015 02:08:59 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d/</guid>
+      <guid>https://somax.me/teambition/tb_55dfc2bb44b37a5b19c7a35d.html</guid>
       <description>这篇文章（55dfc2bb44b37a5b19c7a35d）是从 Teambition 迁移过来的
  工具：
 SketchUp 2014Blender 2.74流程：
@@ -474,598 +303,105 @@ SketchUp 2014Blender 2.74流程：
     
     <item>
       <title>参数排序混合算法及性能测试</title>
-      <link>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5/</link>
+      <link>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5.html</link>
       <pubDate>Sat, 22 Aug 2015 05:49:05 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5/</guid>
+      <guid>https://somax.me/teambition/tb_55d80d51dcc2954b0a0159e5.html</guid>
       <description> 这篇文章（55d80d51dcc2954b0a0159e5）是从 Teambition 迁移过来的
  JavaScript:
-console.time(&#39;time&#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .map(function(a){return a+obj[a]}) .join(&#39;&#39;); //console.log(result); } console.timeEnd(&#39;time&#39;)  使用 .reduce()方法
-console.time(&#39;time&#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .reduce(function(a,b,i){return a+(i==1?obj[a]:&#39;&#39;)+b+obj[b]}); //console.log(result); } console.timeEnd(&#39;time&#39;)  </description>
-    </item>
-    
-    <item>
-      <title>Elasticsearch 权威指南（中文版）</title>
-      <link>https://somax.me/teambition/tb_55d285f20e47290071ed151f/</link>
-      <pubDate>Tue, 18 Aug 2015 01:10:10 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55d285f20e47290071ed151f/</guid>
-      <description>这篇文章（55d285f20e47290071ed151f）是从 Teambition 迁移过来的
- 入门
-Elasticsearch是一个实时分布式搜索和分析引擎。它让你以前所未有的速度处理大数据成为可能。
-它用于全文搜索、结构化搜索、分析以及将这三者混合使用：
-维基百科使用Elasticsearch提供全文搜索并高亮关键字，以及输入实时搜索(search-as-you-type)和搜索纠错(did-you-mean)等搜索建议功能。
-英国卫报使用Elasticsearch结合用户日志和社交网络数据提供给他们的编辑以实时的反馈，以便及时了解公众对新发表的文章的回应。
-StackOverflow结合全文搜索与地理位置查询，以及more-like-this功能来找到相关的问题和答案。
-Github使用Elasticsearch检索1300亿行的代码。
-但是Elasticsearch不仅用于大型企业，它还让像DataDog以及Klout这样的创业公司将最初的想法变成可扩展的解决方案。Elasticsearch可以在你的笔记本上运行，也可以在数以百计的服务器上处理PB级别的数据。
-Elasticsearch所涉及到的每一项技术都不是创新或者革命性的，全文搜索，分析系统以及分布式数据库这些早就已经存在了。它的革命性在于将这些独立且有用的技术整合成一个一体化的、实时的应用。它对新用户的门槛很低，当然它也会跟上你技能和需求增长的步伐。
-如果你打算看这本书，说明你已经有数据了，但光有数据是不够的，除非你能对这些数据做些什么事情。
-很不幸，现在大部分数据库在提取可用知识方面显得异常无能。的确，它们能够通过时间戳或者精确匹配做过滤，但是它们能够进行全文搜索，处理同义词和根据相关性给文档打分吗？它们能根据同一份数据生成分析和聚合的结果吗？最重要的是，它们在没有大量工作进程（线程）的情况下能做到对数据的实时处理吗？
-这就是Elasticsearch存在的理由：Elasticsearch鼓励你浏览并利用你的数据，而不是让它烂在数据库里，因为在数据库里实在太难查询了。
-Elasticsearch是你新认识的最好的朋友。
-
-继续阅读：&amp;nbsp;http://es.xiaoleilu.com/index.html 或&amp;nbsp;https://www.gitbook.com/book/looly/elasticsearch-the-definitive-guide-cn/details</description>
-    </item>
-    
-    <item>
-      <title>2015年值得关注的几个WEB技术</title>
-      <link>https://somax.me/teambition/tb_55b89f57a6be8f5722e39178/</link>
-      <pubDate>Wed, 29 Jul 2015 09:39:35 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55b89f57a6be8f5722e39178/</guid>
-      <description>这篇文章（55b89f57a6be8f5722e39178）是从 Teambition 迁移过来的
- http://www.jianshu.com/p/d31cc869bd54
-HTTP2HTTP2在今年中应该就可以定稿，这无疑是web界的一个大事。HTTP2从google的SPDY中借鉴了很多特性，重点改善了之前HTTP协议在当前的网络环境下的性能。简单地来讲，HTTP2更快。为什么呢，有几个主要改变：
-首先是来自于同一个domain的HTTP请求可以共享同一个TCP连接了，这样可以很大程度上解决网络延时带来的性能问题。比如你有很多图片，现在也不用sprite化了，因为反正它们会用同一个连接的。HTTP2的出现让之前的很多web前端优化技术可能不再需要了。HTTP2不再是纯文本的了，而是二进制的协议了，这样协议的解析也更简单，而传输也更快。缺点是debug的时候需要费点功夫了。HTTP2还有其他一些特性，例如header压缩等，大家可以到这里集中学习一下。或者看看这个FAQ。
-Firefox已经开始支持HTTP2，不少浏览器包括chrome之前就支持SPDY，估计对HTTP2的支持也会迅速开始，而nginx目前已经支持SPDY，就看什么时候各大主流web服务器开始支持HTTP2了。
-一个不太好的现状就是开发人员可能得面临HTTP2和HTTP 1.1的同时存在。如果享受HTTP2的好处，同时又能向后兼容HTTP1.1，可能是今后开发人员必须长期面临的问题了。
-ECMAScript6我们现在用的javascript（注意，是javascript语言本身，不包含DOM等其他东西）背后的标准是ECMA-262，也叫ECMAScript 5。它的下一个版本ECMAScript 6（简称es6），已经基本上快定稿了。这个版本里加入了很多开发过程中需要的一些功能，例如：
-类定义语法，包括super，继承lambda风格的函数定义，=&amp;gt;&amp;nbsp;block level函数定义内的lexical scope的this，默认参数，rest参数等destructuring, 类似于ruby里的&amp;nbsp;[a, b, c] = [1, 2, 3]，同时也适用于map和set，以及函数参数symboliterator迭代器和generator，以及新的for of循环语法template string，从此可以像在ruby和shell里一样使用多行字符串module语法，从语言层面上支持了模块另外还有一系列新东西例如promise，proxy，unicode支持等目前chrome和firefox已经开始逐步支持es6。不过你不用等到所有浏览器都开始支持es6后才可以使用它，因为目前已经有很多把es6代码编译成es5代码的工具，例如babel和traceur等。有很多js的库已经开始使用es6的各种功能了，其中包括angular 2.0。
-很多人应该在用coffeescript，es6的很多功能弥补了之前es5的缺陷，吸收了很多coffeescript的功能，也许以后我们就可以不用coffeescript了，除非你不喜欢大括号小括号，而喜欢python的语法。不过如果coffeescript不进行升级，估计就享受不到将来es6带来的好处，也难以适应HTML5时代各种数值计算的需求。
-最后给大家一个比较不错的es6学习资源，这本书写得很细，现在还是在线免费的。
-Immutable js and ReactReact相信大家已经不陌生了，它是facebook开源的一个前端view框架，这里之所以提到它是因为它背后的理念所带动的一些技术。React本身虽然只是一个view框架，但是背后的virtual dom以及随之带来的性能优势是吸引人的地方，另外就是它采用的类似web component的封装概念。这里有一个比较js前端框架性能的试验，虽然不是很准确，但是可以作一个参考。
-React的virtual dom以及它管理前端控件数据的方法，和immutable数据结构（immuatble js，&amp;nbsp;remutable）、functional programming是可以很容易结合起来使用的。clojurescript的om框架就是一个例子。想象一下所有的状态都是不可变的，并且统一数据存储（flux架构例如marty），每次数据的更新都可以很容易只传递diff（event source模式），整个数据在前端的流动都是单向的，不仅变成模型变得简单，而且因为所有的历史数据都没有被实际修改过，所以undo和redo的实现也会变得很容易。
-React通过virtual dom实现了immediate模式的UI编程，低成本和快速的UI刷新也带了人们更多启发，并且React这种封装方式也变得不局限于dom view了。例如flipboard团队基于React的封装风格在canvas上封装了一层UI，可以实现精细的动画效果，保证web版和移动版的体验一致。facebook的React团队最近在React会议上也发布了一个可以用js和React API进行原生移动开发的框架。
-React也许只是另外一个web view框架，但是我喜欢它给我带来的一些新想法，这些想法也许可以让我们在前端开发上更容易些。
-Realtime web（实时web技术）现在的web对实时性要求越来越高，这不光是由于现在的技术可以更好地支持实时性，也是由于用户体验的驱动。实时性不光是体现在聊天这种需求上；我们在手机上的操作，web浏览器上最好能够实时体现出来，即便我们不刷新页面，页面也应该能够实时得到更新。
-前端由于HTML5的出现对于实时需求有了更好的技术支持，例如新的WebSocket、WebRTC，long polling以及server push技术。而后端则早就出现了async IO编程技术，能够同时支持大量长连接。但是这些技术的进步从来没有停止过，这里给大家随便介绍几个。
-pushpin是fanout最近开源的一个高性能实时web后端技术，不同于其它的技术，它是一个proxy，本身不提供API编程框架，而是和已有的web API结合起来，让它们变成支持大量长连接的API。从设计概念上，它把维护大量长连接这个功能和实际的API业务功能分离开来，让前一个功能通过proxy的形式来实现，因此对实际API的框架和语言没有要求，如果要支持更多长连接，也可以通过横向扩展这个proxy来实现，而不一定要改动后端API。
-sockjs，是一个websocket的模拟，在支持websocket的浏览器上就会使用原生websocket，而在老的浏览器上则提供替代技术。但是它不止是一个前端js库，它也同时提供了后端的编程框架，目前支持的语言和框架挺多了。
-websocketd是一个有意思的东西，它可以把任何符合接口的程序编程一个websocket后端，你甚至可以用shell来写API。
-很多的web框架都支持异步编程模式，因而可以支持大量并发长连接。也有类似于meteor这种提供整体解决方案的，还有很多近期的firebase，大家有兴趣可以自己去找找看。</description>
-    </item>
-    
-    <item>
-      <title>JavaScript中的this陷阱的最全收集--没有之一</title>
-      <link>https://somax.me/teambition/tb_55b18984a96e291577f01a15/</link>
-      <pubDate>Fri, 24 Jul 2015 00:40:36 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55b18984a96e291577f01a15/</guid>
-      <description>这篇文章（55b18984a96e291577f01a15）是从 Teambition 迁移过来的
- JavaScript中的this陷阱的最全收集&amp;ndash;没有之一 http://segmentfault.com/a/1190000002640298#articleHeader4</description>
-    </item>
-    
-    <item>
-      <title>用FileReader实现图片的本地预览</title>
-      <link>https://somax.me/teambition/tb_55adaa64748df2bf0c5e3556/</link>
-      <pubDate>Tue, 21 Jul 2015 02:11:48 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55adaa64748df2bf0c5e3556/</guid>
-      <description>这篇文章（55adaa64748df2bf0c5e3556）是从 Teambition 迁移过来的
- 在线演示: https://mdn.mozillademos.org/files/3698/image_upload_preview.html FileReader API: https://developer.mozilla.org/zh-CN/docs/Web/API/FileReader
-&amp;lt;!doctype html&amp;gt; &amp;lt;html&amp;gt; &amp;lt;head&amp;gt; &amp;lt;meta content=&amp;quot;text/html; charset=UTF-8&amp;quot; http-equiv=&amp;quot;Content-Type&amp;quot; /&amp;gt; &amp;lt;title&amp;gt;Image preview example&amp;lt;/title&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt; oFReader = new FileReader(), rFilter = /^(?:image\/bmp|image\/cis\-cod|image\/gif|image\/ief|image\/jpeg|image\/jpeg|image\/jpeg|image\/pipeg|image\/png|image\/svg\+xml|image\/tiff|image\/x\-cmu\-raster|image\/x\-cmx|image\/x\-icon|image\/x\-portable\-anymap|image\/x\-portable\-bitmap|image\/x\-portable\-graymap|image\/x\-portable\-pixmap|image\/x\-rgb|image\/x\-xbitmap|image\/x\-xpixmap|image\/x\-xwindowdump)$/i; oFReader.onload = function (oFREvent) { document.getElementById(&amp;quot;uploadPreview&amp;quot;).src = oFREvent.target.result; }; function loadImageFile() { if (document.getElementById(&amp;quot;uploadImage&amp;quot;).files.length === 0) { return; } var oFile = document.getElementById(&amp;quot;uploadImage&amp;quot;).files[0]; if (!rFilter.test(oFile.type)) { alert(&amp;quot;You must select a valid image file!&amp;quot;); return; } oFReader.readAsDataURL(oFile); } &amp;lt;/script&amp;gt; &amp;lt;/head&amp;gt; &amp;lt;body onload=&amp;quot;loadImageFile();&amp;quot;&amp;gt; &amp;lt;form name=&amp;quot;uploadForm&amp;quot;&amp;gt; &amp;lt;table&amp;gt; &amp;lt;tbody&amp;gt; &amp;lt;tr&amp;gt; &amp;lt;td&amp;gt;&amp;lt;img id=&amp;quot;uploadPreview&amp;quot; style=&amp;quot;width: 100px; height: 100px;&amp;quot; src=&amp;quot;data:image/svg+xml,%3C%3Fxml%20version%3D%221.</description>
-    </item>
-    
-    <item>
-      <title>HTML5存储之战 －－ localStorage vs. IndexedDB vs. Web SQL</title>
-      <link>https://somax.me/teambition/tb_55aafb28f85b738a17cdb67d/</link>
-      <pubDate>Sun, 19 Jul 2015 01:19:36 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55aafb28f85b738a17cdb67d/</guid>
-      <description>这篇文章（55aafb28f85b738a17cdb67d）是从 Teambition 迁移过来的
- 2012-11-08 当前，在本地浏览器有三种方式可以比cookies更永久和大量地存储数据： 1. Web Storage 2. Indexed Database API 3. Web SQL Database
-这些名字看起来都差不多，但实现方式是不一样的。接下来会说说，它们能够做什么、优点和缺点、目前我最喜欢的是什么。尽管我的意见会随着技术的不断成熟而改变。
-这几种技术都采用了相同的保护数据访问的方式（例如，javascript只能访问当前域名下的数据）。这些保护方式都很好，并且没有区别，下面我将不再做详细说明。
-Web Storage Web存储（web storage），特别是本地存储（local storage）部分，是一个简单的键值存储系统（key/value persistence system）。
-优点： * 十分简单的API，主流浏览器的新版本都已经获得支持。
-缺点： * 不支持查询语言，模式（schemas），跟平常调用数据库不一样。对于大型数据的组织不能很好的进行扩展。 * 不支持事务安全。如果应用在运行，我想晚上就不能睡个安稳觉了，因为随时可能出现竞争条件（race condition）并出现数据污染的危机。
-Index Database API IndexedDB是基于简单的平面文件（flat-file）数据库，采用了分层的键值存储（key/value persistence）和基本的索引。
-优点： * 如果你熟悉NoSQL，这是再适合不过了。
-缺点： * 还没获得大部分浏览器的支持。 * 不支持SQL，但未来可能会有支持SQL的模块。
-Web SQL Database Web SQL是基于浏览器中嵌入的sqlite。我已经断断续续地使用sqlite有几年了。刚开始由于它的名字和所采用的架构（只是一个平面文件（flat-file)数据库）而看不起它（原谅我的浅薄）。经过深入钻研，我发现它是一个非常稳定的平台，只要你能容忍它的限制，很适合产品的使用。其实它的限制也不是很大（我想存储个1G应该问题不大），继承了平面文件（flat-file）数据库的优点（高并发性）但缺少一些特性（存储过程（stored procs）和其它一些高端数据库特性）。
-优点： * 快速和功能丰富的sql实现（除了select/insert/update/delete，还能使用joins、inner selects等）。
-缺点： * Chrome和基于webkit的浏览器（safari等）支持，但Firefox和IE不支持。 * 那个该死的W3C工作组已经坚持这个标准有一段时间了，他们很久前说过至少会有两个对该标准的独立实现，但到目前为止只有一个，因为每个人都使用sqlite。
-我倒希望标准工作组能够考虑一下sqlite的特殊性并改进一下标准－－这个已经在公共域名上了，对每个人都可用，没有附加条款。Sqlite非常适合浏览器，它的限制不是问题。一次只有一个用户使用浏览器，没有并发问题。在简单没有管理的数据库中，没人需要高端数据库的一些特性。我想这是为什么Android和iOS都使用sqlite来存储。
-总结 如果需要部署在移动平台，Web SQL是没有异议的。如果是桌面环境并使用Chrome或Safari作为你的浏览器，Web SQL也是合适的。当前我不会在大型应用中使用其他两种标准。</description>
-    </item>
-    
-    <item>
-      <title>New in ECMAScript 5</title>
-      <link>https://somax.me/teambition/tb_55a50f1ed15bb57a08f0f788/</link>
-      <pubDate>Tue, 14 Jul 2015 13:31:10 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55a50f1ed15bb57a08f0f788/</guid>
-      <description>这篇文章（55a50f1ed15bb57a08f0f788）是从 Teambition 迁移过来的
- http://speakingjs.com/es5/ch25.html
-New in ECMAScript&amp;nbsp;5
-This&amp;nbsp;chapter lists features that are available only in ECMAScript&amp;nbsp;5. Should you have to work with older JavaScript engines, you should avoid these features or enable some of them via a library (how is described later). Note that normally, this book assumes that you are working with modern engines, which fully support ECMAScript&amp;nbsp;5.
-The ECMAScript&amp;nbsp;5 specification contains the following description of its scope:</description>
-    </item>
-    
-    <item>
-      <title>【译】NodeJS错误处理最佳实践 — OneAPM</title>
-      <link>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</link>
-      <pubDate>Sat, 11 Jul 2015 16:03:12 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</guid>
-      <description>这篇文章（55a13e4027aadebf0ac9510c）是从 Teambition 迁移过来的
- 【译】NodeJS错误处理最佳实践 — OneAPM http://code.oneapm.com/nodejs/2015/04/13/nodejs-errorhandling/
-
-
-NodeJS的错误处理让人痛苦，在很长的一段时间里，大量的错误被放任不管。但是要想建立一个健壮的Node.js程序就必须正确的处理这些错误，而且这并不难学。如果你实在没有耐心，那就直接绕过长篇大论跳到“总结”部分吧。
-原文
-这篇文章会回答NodeJS初学者的若干问题：
-我写的函数里什么时候该抛出异常，什么时候该传给callback, 什么时候触发EventEmitter等等。
-我的函数对参数该做出怎样的假设？我应该检查更加具体的约束么？例如参数是否非空，是否大于零，是不是看起来像个IP地址，等等等。
-我该如何处理那些不符合预期的参数？我是应该抛出一个异常，还是把错误传递给一个callback。
-我该怎么在程序里区分不同的异常（比如“请求错误”和“服务不可用”）？
-我怎么才能提供足够的信息让调用者知晓错误细节。
-我该怎么处理未预料的出错？我是应该用 try/catch ，domains 还是其它什么方式呢？
-这篇文章可以划分成互相为基础的几个部分：
-背景：希望你所具备的知识。
-操作失败和程序员的失误：介绍两种基本的异常。
-编写新函数的实践：关于怎么让函数产生有用报错的基本原则。
-编写新函数的具体推荐：编写能产生有用报错的、健壮的函数需要的一个检查列表
-例子：以connect函数为例的文档和序言。
-总结：全文至此的观点总结。
-附录：Error对象属性约定：用标准方式提供一个属性列表，以提供更多信息。
-背景本文假设：
-你已经熟悉了JavaScript、Java、 Python、 C++ 或者类似的语言中异常的概念，而且你知道抛出异常和捕获异常是什么意思。
-你熟悉怎么用NodeJS编写代码。你使用异步操作的时候会很自在，并能用callback(err,result)模式去完成异步操作。你得知道下面的代码不能正确处理异常的原因是什么[脚注1]
-function myApiFunc(callback) { /* * This pattern does NOT work! */ try { doSomeAsynchronousOperation(function (err) { &amp;nbsp; if (err) &amp;nbsp; &amp;nbsp; throw (err); &amp;nbsp; /* continue as normal */ }); } catch (ex) { callback(ex); } }你还要熟悉三种传递错误的方式: - 作为异常抛出。 - 把错误传给一个callback，这个函数正是为了处理异常和处理异步操作返回结果的。 - 在EventEmitter上触发一个Error事件。</description>
-    </item>
-    
-    <item>
-      <title>Nginx</title>
-      <link>https://somax.me/teambition/tb_559f36ea11f62399729134d4/</link>
-      <pubDate>Fri, 10 Jul 2015 03:07:22 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_559f36ea11f62399729134d4/</guid>
-      <description>这篇文章（559f36ea11f62399729134d4）是从 Teambition 迁移过来的
- http://note.youdao.com/share/?id=0da9cd4d8c3bf386c0825b3b52c32370&amp;amp;type=note
-nginx安装（Linux）
-
-http://note.youdao.com/share/?id=ab36ac7858567f7aa9271ce3c0d5923d&amp;amp;type=note
-nginx入门</description>
-    </item>
-    
-    <item>
-      <title>JavaScript内存分析</title>
-      <link>https://somax.me/teambition/tb_559dd91a530963757152835c/</link>
-      <pubDate>Thu, 09 Jul 2015 02:14:50 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_559dd91a530963757152835c/</guid>
-      <description>这篇文章（559dd91a530963757152835c）是从 Teambition 迁移过来的
- https://github.com/CN-Chrome-DevTools/CN-Chrome-DevTools/blob/master/md/Performance-Profiling/javascript-memory-profiling.md#supporting_demos
-&amp;lt;图像 看不到 点上面链接&amp;gt;
-JavaScript内存分析 内存泄漏是指计算机可用内存的逐渐减少。当程序持续无法释放其使用的临时内存时就会发生。JavaScript的web应用也会经常遇到在原生应用程序中出现的内存相关的问题，如泄漏和溢出，web应用也需要应对垃圾回收停顿。
-尽管JavaScript使用垃圾回收进行自动内存管理，但有效的(effective)内存管理依然很重要。在这篇文章中我们将探讨分析JavaScript web应用中的内存问题。在学习有关特性时请确保尝试一下相关案例以提高你对这些工具在实践中如何工作的认识。
-请阅读内存 101(Memory 101)页面来帮助你熟悉这篇文章中用到的术语。
-注意：我们将要用到的某些特性目前仅对Chrome Canary版浏览器可用。我们推荐使用这个版本来获得最佳的工具，以分析你的应用程序的内存问题。
-你需要思考的问题 总体来说，当你觉得你遇到了内存泄漏问题时，你需要思考三个问题：
- 我的页面是否占用了过多的内存? - Timeline内存查看工具(Timeline memory view) 和 Chrome任务管理(Chrome task manager) 能帮助你确认你是否使用了过多的内存。Memory view 能跟踪页面渲染过程中DOM节点计数，documents文档计数和JS事件监听计数。作为一个经验法则：避免对不再需要用到的DOM元素的引用，移除不需要的事件监听并且在存储你可能不会用到的大块数据时要留意。
- 我的页面有没有内存泄漏? - 对象分配跟踪(Object allocation tracker)通过实时查看JS对象的分配来帮助你定位泄漏。你也可以使用堆分析仪(Heap Profiler)生成JS堆快照，通过分析内存图和比较快照之间的差异，来找出没有被垃圾回收清理掉的对象。
- 我的页面垃圾强制回收有多频繁? - 如果你的页面垃圾回收很频繁，那说明你的页面可能内存使用分配太频繁了。Timeline内存查看工具(Timeline memory view) 能够帮助你发现感兴趣的停顿。
-  术语和基本概念 本小节介绍在内存分析时使用的常用术语，这些术语在为其它语言做内存分析的工具中也适用。这里的术语和概念用在了堆分析仪(Heap Profiler)UI工具和相关的文档中。
-这些能够帮助我们熟悉如何有效的使用内存分析工具。如果你曾用过像Java、.NET等语言的内存分析工具的话，那么这将是一个复习。
-对象大小(Object sizes) 把内存想象成一个包含基本类型(像数字和字符串)和对象(关联数组)的图表。它可能看起来像下面这幅一系列相关联的点组成的图。
-一个对象有两种使用内存的方法：
- 对象自身直接使用
- 隐含的保持对其它对象的引用，这种方式会阻止垃圾回收(简称GC)对那些对象的自动回收处理。
-  当你使用DevTools中的堆分析仪(Heap Profiler，用来分析内存问题的工具，在DevTools的&amp;rdquo;Profile&amp;rdquo;标签下)时，你可能会惊喜的发现一些显示各种信息的栏目。其中有两项是：直接占用内存(Shallow Size)和占用总内存(Retained Size)，那它们是什么意思呢？
-直接占用内存(Shallow Size，不包括引用的对象占用的内存) 这个是对象本身占用的内存。</description>
-    </item>
-    
-    <item>
-      <title>JS is JS——编写JS独有风格的JS代码</title>
-      <link>https://somax.me/teambition/tb_559da2c5f748a0aa5a675b5f/</link>
-      <pubDate>Wed, 08 Jul 2015 22:23:01 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_559da2c5f748a0aa5a675b5f/</guid>
-      <description>这篇文章（559da2c5f748a0aa5a675b5f）是从 Teambition 迁移过来的
- http://www.infoq.com/cn/presentations/csf-js-style-code&amp;nbsp;</description>
+console.time(&amp;#39;time&amp;#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .map(function(a){return a+obj[a]}) .join(&amp;#39;&amp;#39;); //console.log(result); } console.timeEnd(&amp;#39;time&amp;#39;)  使用 .reduce()方法
+console.time(&amp;#39;time&amp;#39;) for(var i=0;i&amp;lt;10000;i++){ var obj = {abc:1,efg:2,aaa:3,qwe:52,ojj:98,gjd:836}; var result = Object.keys(obj) .sort(function(a,b){return a &amp;gt; b}) .reduce(function(a,b,i){return a+(i==1?obj[a]:&amp;#39;&amp;#39;)+b+obj[b]}); //console.log(result); } console.timeEnd(&amp;#39;time&amp;#39;) </description>
     </item>
     
     <item>
       <title>字符数字混合排序</title>
-      <link>https://somax.me/teambition/tb_559a4842e736a6e544c0bd67/</link>
+      <link>https://somax.me/teambition/tb_559a4842e736a6e544c0bd67.html</link>
       <pubDate>Mon, 06 Jul 2015 09:20:02 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_559a4842e736a6e544c0bd67/</guid>
-      <description>  这篇文章（559a4842e736a6e544c0bd67）是从 Teambition 迁移过来的
- 字符数字混合情况下，如何获得按数字正确排序 这里以 angularjs 的自定义排序作为例子，我使用了正则表达式把所有数字的区段找到，然后paddingZero, 然后replace。 js:
+      <guid>https://somax.me/teambition/tb_559a4842e736a6e544c0bd67.html</guid>
+      <description> 这篇文章（559a4842e736a6e544c0bd67）是从 Teambition 迁移过来的
+ 字符数字混合情况下，如何获得按数字正确排序?
+这里以 angularjs 的自定义排序作为例子，我使用了正则表达式把所有数字的区段找到，然后前面填充0。
+js:
 /** * 设备列表 自定义排序 * * 通过对数字补‘0’来获得正确的排序 * L12-3 -&amp;gt; L0012-0003 * 这里预估序号最大不会超过 9999，所有采用4位填充。 */ $scope.orderByDeviceNo = function(_device) { var _deviceNo = _device.deviceno; _deviceNo = _deviceNo &amp;amp;&amp;amp; _deviceNo.replace(/(\d+)/g, function($1) { return paddingZero($1, 4); }); return _deviceNo; }; function paddingZero(num, n) { return (Array(n).join(0) + num).slice(-n); }  html:
-... &amp;lt;li ng-repeat=&amp;quot;device in deviceList | orderBy:orderByDeviceNo&amp;quot; &amp;gt; ...  </description>
-    </item>
-    
-    <item>
-      <title>JS设计模式开篇-lovenyf-ChinaUnix博客</title>
-      <link>https://somax.me/teambition/tb_55960fac501883ed2b4e59b1/</link>
-      <pubDate>Fri, 03 Jul 2015 04:29:32 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55960fac501883ed2b4e59b1/</guid>
-      <description>这篇文章（55960fac501883ed2b4e59b1）是从 Teambition 迁移过来的
- JS设计模式开篇-lovenyf-ChinaUnix博客 http://m.blog.chinaunix.net/uid-26672038-id-3904513.html</description>
-    </item>
-    
-    <item>
-      <title>Linux Netcat 命令——网络工具中的瑞士军刀</title>
-      <link>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</link>
-      <pubDate>Mon, 22 Jun 2015 15:29:42 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_558829e6ddf0439e275133fa/</guid>
-      <description>这篇文章（558829e6ddf0439e275133fa）是从 Teambition 迁移过来的
- http://www.oschina.net/translate/linux-netcat-command
-快看，绝对值得学习！</description>
+&amp;lt;li ng-repeat=&amp;#34;device in deviceList | orderBy:orderByDeviceNo&amp;#34; &amp;gt;</description>
     </item>
     
     <item>
       <title>理解Linux系统负荷</title>
-      <link>https://somax.me/teambition/tb_558232c63dd208c010934638/</link>
+      <link>https://somax.me/teambition/tb_558232c63dd208c010934638.html</link>
       <pubDate>Thu, 18 Jun 2015 02:53:58 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_558232c63dd208c010934638/</guid>
+      <guid>https://somax.me/teambition/tb_558232c63dd208c010934638.html</guid>
       <description>这篇文章（558232c63dd208c010934638）是从 Teambition 迁移过来的
- 一、查看系统负荷 在Linux系统中，使用uptime命令查看（w命令和top命令也行）。（另外，它们在苹果公司的Mac电脑上也适用。）
+ 查看系统负荷 在Linux系统中，使用uptime命令查看（w命令和top命令也行）。（另外，它们在苹果公司的Mac电脑上也适用。）
  10:39 up 1 day, 21:03, 4 users, load averages: 2.99 2.94 2.92  这行信息的后半部分，显示&amp;rdquo;load average&amp;rdquo;，它的意思是&amp;rdquo;系统的平均负荷&amp;rdquo;，分别是1分钟、5分钟、15分钟内系统的平均负荷。
 如果你继续看手册，它还会告诉你，当CPU完全空闲的时候，平均负荷为0；当CPU工作量饱和的时候，平均负荷为1。 那么很显然，&amp;rdquo;load average&amp;rdquo;的值越低，比如等于0.2或0.3，就说明电脑的工作量越小，系统负荷比较轻。
-二、一个类比 判断系统负荷是否过重，必须理解load average的真正含义。 假设最简单的情况，你的电脑只有一个CPU，所有的运算都必须由这个CPU来完成。 我们把这个CPU想象成一座大桥，桥上只有一根车道，所有车辆都必须从这根车道上通过。 系统负荷为0，意味着大桥上一辆车也没有。 系统负荷为0.5，意味着大桥一半的路段有车。 系统负荷为1.0，意味着大桥的所有路段都有车，也就是说大桥已经&amp;rdquo;满&amp;rdquo;了。但是必须注意的是，直到此时大桥还是能顺畅通行的。 系统负荷为1.7，意味着车辆太多了，大桥已经被占满了（100%），后面等着上桥的车辆为桥面车辆的70%。以此类推，系统负荷2.0，意味着等待上桥的车辆与桥面的车辆一样多；系统负荷3.0，意味着等待上桥的车辆是桥面车辆的2倍。总之，当系统负荷大于1，后面的车辆就必须等待了；系统负荷越大，过桥就必须等得越久。
+一个类比 判断系统负荷是否过重，必须理解load average的真正含义。 假设最简单的情况，你的电脑只有一个CPU，所有的运算都必须由这个CPU来完成。 我们把这个CPU想象成一座大桥，桥上只有一根车道，所有车辆都必须从这根车道上通过。 系统负荷为0，意味着大桥上一辆车也没有。 系统负荷为0.5，意味着大桥一半的路段有车。 系统负荷为1.0，意味着大桥的所有路段都有车，也就是说大桥已经&amp;rdquo;满&amp;rdquo;了。但是必须注意的是，直到此时大桥还是能顺畅通行的。 系统负荷为1.7，意味着车辆太多了，大桥已经被占满了（100%），后面等着上桥的车辆为桥面车辆的70%。以此类推，系统负荷2.0，意味着等待上桥的车辆与桥面的车辆一样多；系统负荷3.0，意味着等待上桥的车辆是桥面车辆的2倍。总之，当系统负荷大于1，后面的车辆就必须等待了；系统负荷越大，过桥就必须等得越久。
 CPU的系统负荷，基本上等同于上面的类比。大桥的通行能力，就是CPU的最大工作量；桥梁上的车辆，就是一个个等待CPU处理的进程（process）。
 如果CPU每分钟最多处理100个进程，那么系统负荷0.2，意味着CPU在这1分钟里只处理20个进程；系统负荷1.0，意味着CPU在这1分钟里正好处理100个进程；系统负荷1.7，意味着除了CPU正在处理的100个进程以外，还有70个进程正排队等着CPU处理。
 为了电脑顺畅运行，系统负荷最好不要超过1.0，这样就没有进程需要等待了，所有进程都能第一时间得到处理。很显然，1.0是一个关键值，超过这个值，系统就不在最佳状态了，你要动手干预了。
-三、系统负荷的经验法则 1.0是系统负荷的理想值吗？ 不一定，系统管理员往往会留一点余地，当这个值达到0.7，就应当引起注意了。经验法则是这样的： 当系统负荷持续大于0.7，你必须开始调查了，问题出在哪里，防止情况恶化。 当系统负荷持续大于1.0，你必须动手寻找解决办法，把这个值降下来。 当系统负荷达到5.0，就表明你的系统有很严重的问题，长时间没有响应，或者接近死机了。你不应该让系统达到这个值。
-四、多处理器 如果你的电脑装了2个CPU，会发生什么情况呢？ 2个CPU，意味着电脑的处理能力翻了一倍。
+系统负荷的经验法则 1.0是系统负荷的理想值吗？ 不一定，系统管理员往往会留一点余地，当这个值达到0.7，就应当引起注意了。经验法则是这样的： 当系统负荷持续大于0.7，你必须开始调查了，问题出在哪里，防止情况恶化。 当系统负荷持续大于1.0，你必须动手寻找解决办法，把这个值降下来。 当系统负荷达到5.0，就表明你的系统有很严重的问题，长时间没有响应，或者接近死机了。你不应该让系统达到这个值。
+多处理器 如果你的电脑装了2个CPU，会发生什么情况呢？ 2个CPU，意味着电脑的处理能力翻了一倍。
 所以，2个CPU表明系统负荷可以达到2.0，此时每个CPU都达到100%的工作量。推广开来，n个CPU的电脑，可接受的系统负荷最大为n.0。
-五、多核处理器 芯片厂商往往在一个CPU内部，包含多个CPU核心，这被称为多核CPU。 在系统负荷方面，多核CPU与多CPU效果类似，所以考虑系统负荷的时候，必须考虑这台电脑有几个CPU、每个CPU有几个核心。然后，把系统负荷除以总的核心数，只要每个核心的负荷不超过1.0，就表明电脑正常运行。
+多核处理器 芯片厂商往往在一个CPU内部，包含多个CPU核心，这被称为多核CPU。 在系统负荷方面，多核CPU与多CPU效果类似，所以考虑系统负荷的时候，必须考虑这台电脑有几个CPU、每个CPU有几个核心。然后，把系统负荷除以总的核心数，只要每个核心的负荷不超过1.0，就表明电脑正常运行。
 怎么知道电脑有多少个CPU核心呢？
 cat /proc/cpuinfo命令，可以查看CPU信息。grep -c &#39;model name&#39; /proc/cpuinfo命令，直接返回CPU的总核心数。
-六、最佳观察时长 最后一个问题，&amp;rdquo;load average&amp;rdquo;一共返回三个平均值&amp;mdash;-1分钟系统负荷、5分钟系统负荷，15分钟系统负荷，&amp;mdash;-应该参考哪个值？ 如果只有1分钟的系统负荷大于1.0，其他两个时间段都小于1.0，这表明只是暂时现象，问题不大。 如果15分钟内，平均系统负荷大于1.0（调整CPU核心数之后），表明问题持续存在，不是暂时现象。所以，你应该主要观察&amp;rdquo;15分钟系统负荷&amp;rdquo;，将它作为电脑正常运行的指标。</description>
+最佳观察时长 最后一个问题，&amp;rdquo;load average&amp;rdquo;一共返回三个平均值&amp;mdash;-1分钟系统负荷、5分钟系统负荷，15分钟系统负荷，&amp;mdash;-应该参考哪个值？ 如果只有1分钟的系统负荷大于1.0，其他两个时间段都小于1.0，这表明只是暂时现象，问题不大。 如果15分钟内，平均系统负荷大于1.0（调整CPU核心数之后），表明问题持续存在，不是暂时现象。所以，你应该主要观察&amp;rdquo;15分钟系统负荷&amp;rdquo;，将它作为电脑正常运行的指标。</description>
     </item>
     
     <item>
       <title>JS 时间格式化函数</title>
-      <link>https://somax.me/teambition/tb_558152efdfd682891f387002/</link>
+      <link>https://somax.me/teambition/tb_558152efdfd682891f387002.html</link>
       <pubDate>Wed, 17 Jun 2015 10:58:55 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_558152efdfd682891f387002/</guid>
-      <description>这篇文章（558152efdfd682891f387002）是从 Teambition 迁移过来的
- 输入毫秒，返回 以 “xx天xx小时xx分xx秒xx毫秒&amp;rdquo; 格式的字符串。 function timeFormat(v) { var r; var S =1000, M = 60 * S, H = 60 * M, D = H * 24;
- function _parse(v,m,n){ return parseInt(v%m/n); } function ms(t) { return _result(_parse(t,S,1),&#39;毫秒&#39;); } function s(t){ return _result(_parse(t,M,S),&#39;秒&#39;); } function m(t){ return _result(_parse(t,H,M),&#39;分钟&#39;); } function h(t){ return _result(_parse(t,D,H),&#39;小时&#39;); } function d (t) { return _result(_parse(t,Infinity,D),&#39;天&#39;); } function _result(v,u){ return (v) ?</description>
-    </item>
-    
-    <item>
-      <title>UI/UX 资料汇总</title>
-      <link>https://somax.me/teambition/tb_557ceb962c7495650cbb2502/</link>
-      <pubDate>Sun, 14 Jun 2015 02:48:54 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_557ceb962c7495650cbb2502/</guid>
-      <description>这篇文章（557ceb962c7495650cbb2502）是从 Teambition 迁移过来的
- http://www.google.com/design/spec/material-design/introduction.html
-开源图标 http://www.google.com/design/icons/&amp;nbsp;</description>
+      <guid>https://somax.me/teambition/tb_558152efdfd682891f387002.html</guid>
+      <description> 这篇文章（558152efdfd682891f387002）是从 Teambition 迁移过来的
+ 输入毫秒，返回 以 “xx天xx小时xx分xx秒xx毫秒&amp;rdquo; 格式的字符串。
+function timeFormat(v) { var r; var S =1000, M = 60 * S, H = 60 * M, D = H * 24; function _parse(v,m,n){ return parseInt(v%m/n); } function ms(t) { return _result(_parse(t,S,1),&amp;#39;毫秒&amp;#39;); } function s(t){ return _result(_parse(t,M,S),&amp;#39;秒&amp;#39;); } function m(t){ return _result(_parse(t,H,M),&amp;#39;分钟&amp;#39;); } function h(t){ return _result(_parse(t,D,H),&amp;#39;小时&amp;#39;); } function d (t) { return _result(_parse(t,Infinity,D),&amp;#39;天&amp;#39;); } function _result(v,u){ return (v) ? v + &amp;#39; &amp;#39; + u + &amp;#39; &amp;#39; : &amp;#39;&amp;#39;; } return d(v) + h(v) + m(v) + s(v) + ms(v) ; }; </description>
     </item>
     
     <item>
       <title>Git 基础 - 撤消操作</title>
-      <link>https://somax.me/teambition/tb_55725a70de2b610a3a774d29/</link>
+      <link>https://somax.me/teambition/tb_55725a70de2b610a3a774d29.html</link>
       <pubDate>Sat, 06 Jun 2015 02:26:56 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55725a70de2b610a3a774d29/</guid>
+      <guid>https://somax.me/teambition/tb_55725a70de2b610a3a774d29.html</guid>
       <description>这篇文章（55725a70de2b610a3a774d29）是从 Teambition 迁移过来的
- 2.4 Git 基础 - 撤消操作 撤消操作 任何时候，你都有可能需要撤消刚才所做的某些操作。接下来，我们会介绍一些基本的撤消操作相关的命令。请注意，有些撤销操作是不可逆的，所以请务必谨慎小心，一旦失误，就有可能丢失部分工作成果。
+ 撤消操作 任何时候，你都有可能需要撤消刚才所做的某些操作。接下来，我们会介绍一些基本的撤消操作相关的命令。请注意，有些撤销操作是不可逆的，所以请务必谨慎小心，一旦失误，就有可能丢失部分工作成果。
 修改最后一次提交 有时候我们提交完了才发现漏掉了几个文件没有加，或者提交信息写错了。想要撤消刚才的提交操作，可以使用 &amp;ndash;amend 选项重新提交： $ git commit &amp;ndash;amend
 此命令将使用当前的暂存区域快照提交。如果刚才提交完没有作任何改动，直接运行此命令的话，相当于有机会重新编辑提交说明，但将要提交的文件快照和之前的一样。
 启动文本编辑器后，会看到上次提交时的说明，编辑它确认没问题后保存退出，就会使用新的提交说明覆盖刚才失误的提交。
 如果刚才提交时忘了暂存某些修改，可以先补上暂存操作，然后再运行 --amend 提交：
 $ git commit -m &#39;initial commit&#39; $ git add forgotten_file $ git commit --amend  上面的三条命令最终只是产生一个提交，第二个提交命令修正了第一个的提交内容。
-下一页
-官方电子书 中文版</description>
-    </item>
-    
-    <item>
-      <title>connect源码分析--基础架构</title>
-      <link>https://somax.me/teambition/tb_5565a8acf5468b8006ed7d8f/</link>
-      <pubDate>Wed, 27 May 2015 11:21:16 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5565a8acf5468b8006ed7d8f/</guid>
-      <description>这篇文章（5565a8acf5468b8006ed7d8f）是从 Teambition 迁移过来的
- connect是TJ tx给node.js社区贡献的一个热门的web基础框架。TJ的另一力作express框架便是在它基础之上构建的。与express不同，connect更加短小精悍，是一个偏向基础设施的框架。
-正如名字所表达的一样，connect框架做的事情很简单，就是把一系列的组件连接到一起，然后让http的请求依次流过这些组件。这些被connect串联起来的组件被称为中间件（middlewire）。在connect中，http请求的处理流程被划分成一个个小片段，每一个小片段代表一项处理任务（如：请求body的解析，session的维护等），由一个中间件负责，前后片段之间靠request，response等对象传递中间数据。connect框架对这些处理细节并不关心，只知道将请求从一个中间件导向下一个中间件。connect的核心代码非常精简，加上注释，也就只有寥寥200来行代码。
-https://cnodejs.org/topic/4fb79b0e06f43b56112b292c</description>
-    </item>
-    
-    <item>
-      <title>Javascript 中的策略模式</title>
-      <link>https://somax.me/teambition/tb_5565a0e9e68ba27e066b6f99/</link>
-      <pubDate>Wed, 27 May 2015 10:48:09 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5565a0e9e68ba27e066b6f99/</guid>
-      <description>这篇文章（5565a0e9e68ba27e066b6f99）是从 Teambition 迁移过来的
- 我喜欢策略设计模式。我尽可能多的试着去使用它。究其本质，策略模式使用委托去解耦使用它们的算法类。
-这样做有几个好处。他可以防止使用大条件语句来决定哪些算法用于特定类型的对象。将关注点分离开来，因此降低了客户端的复杂度，同时还可以促进子类化的组成。它提高了模块化和可测性。每一个算法都可以单独测试。每一个客户端都可以模拟算法。任意的客户端都能使用任何算法。他们可以互调。就像乐高积木一样。
-为了实现策略模式，通常有两个参与者：
-该策略的对象，封装了算法。
-客户端（上下文）对象，以即插即用的方式能使用任何策略。
-这里介绍了我在Javascrip里，怎样使用策略模式，在混乱无序的环境中怎样使用它将库拆成小插件，以及即插即用包的。
-http://www.oschina.net/translate/strategy-design-pattern-in-javascript</description>
-    </item>
-    
-    <item>
-      <title>可以在树梅派上运行的自助Git托管服务 Gogs</title>
-      <link>https://somax.me/teambition/tb_55609bd172999d1b2faf7492/</link>
-      <pubDate>Sat, 23 May 2015 15:25:05 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55609bd172999d1b2faf7492/</guid>
-      <description>这篇文章（55609bd172999d1b2faf7492）是从 Teambition 迁移过来的
- http://gogs.io/
-基于 Go 语言的自助 Git 托管服务易安装、跨平台、轻量级、开源化</description>
+摘自官方电子书 中文版</description>
     </item>
     
     <item>
       <title>写出好的 commit message</title>
-      <link>https://somax.me/teambition/tb_5560695d85e5a3fc64c6ab00/</link>
+      <link>https://somax.me/teambition/tb_5560695d85e5a3fc64c6ab00.html</link>
       <pubDate>Sat, 23 May 2015 11:49:49 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5560695d85e5a3fc64c6ab00/</guid>
+      <guid>https://somax.me/teambition/tb_5560695d85e5a3fc64c6ab00.html</guid>
       <description>这篇文章（5560695d85e5a3fc64c6ab00）是从 Teambition 迁移过来的
  为什么要关注提交信息  加快 Reviewing Code 的过程 帮助我们写好 release note 5年后帮你快速想起来某个分支，tag 或者 commit 增加了什么功能，改变了哪些代码 让其他的开发者在运行 git blame 的时候想跪谢 总之一个好的提交信息，会帮助你提高项目的整体质量  基本要求  第一行应该少于50个字。 随后是一个空行 第一行题目也可以写成：Fix issue #8976 喜欢用 vim 的哥们把下面这行代码加入 .vimrc 文件中，来检查拼写和自动折行 autocmd Filetype gitcommit setlocal spell textwidth=72 永远不在 git commit 上增加 -m &amp;lt;msg&amp;gt; 或 --message=&amp;lt;msg&amp;gt; 参数，而单独写提交信息 一个不好的例子 git commit -m &amp;quot;Fix login bug&amp;quot;  一个推荐的 commit message 应该是这样：
 Redirect user to the requested page after login https://trello.</description>
     </item>
     
     <item>
-      <title>NodeJS 学习资源</title>
-      <link>https://somax.me/teambition/tb_555a9ef195b6e06d2c74150e/</link>
-      <pubDate>Tue, 19 May 2015 02:24:49 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_555a9ef195b6e06d2c74150e/</guid>
-      <description>这篇文章（555a9ef195b6e06d2c74150e）是从 Teambition 迁移过来的
-  官方node学校： http://nodeschool.io/
-&amp;gt;教你 Web 开发技能的开源课程，自学或者参加一个附近的教学活动。 &amp;gt;通过实践学习node编程，有中文语言选择，推荐！  UnitTest in Nodejs 1、http://fengmk2.com/ppt/unittest-and-bdd-in-nodejs-with-mocha.html#slide-0 2、http://html5ify.com/unittesting/slides/index.html#/
-nodejs 实战 http://sfantasy.gitbooks.io/node-in-action/content/zh/index.html#</description>
-    </item>
-    
-    <item>
-      <title>Node 学习资源</title>
-      <link>https://somax.me/teambition/tb_555a99fee47e46912cb5f2eb/</link>
-      <pubDate>Tue, 19 May 2015 02:03:42 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_555a99fee47e46912cb5f2eb/</guid>
-      <description>这篇文章（555a99fee47e46912cb5f2eb）是从 Teambition 迁移过来的
- 官方node学校： http://nodeschool.io/ &amp;nbsp;教你 Web 开发技能的开源课程，自学或者参加一个附近的教学活动。
-通过实践学习node编程，有中文语言选择，推荐！</description>
-    </item>
-    
-    <item>
-      <title>修正 虚拟机中 CentOS7 系统时间</title>
-      <link>https://somax.me/teambition/tb_5555a840886052772bc70db3/</link>
-      <pubDate>Fri, 15 May 2015 08:03:12 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5555a840886052772bc70db3/</guid>
-      <description>这篇文章（5555a840886052772bc70db3）是从 Teambition 迁移过来的
- 刚才在虚拟机中（ Centos） 安装后提示系统时间不正确，通过 date 命令查看返回：2015年2月1日（原因不明），通过hwclock 查硬件时间，返回是正确的，查了一下hwclock 帮助，其中有一条：-s, --hctosys 从硬件时钟设置系统时间。运行后，再用 date 检查，系统时间正确了！</description>
-    </item>
-    
-    <item>
-      <title>NPM 的版本号管理命令 version</title>
-      <link>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</link>
-      <pubDate>Fri, 15 May 2015 05:57:46 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</guid>
-      <description>这篇文章（55558ada886052772bc6fec6）是从 Teambition 迁移过来的
- 利用&amp;nbsp;npm version&amp;nbsp;命令，可以自动更改 package.json 中的版本号
-$ npm version [&amp;lt;newversion&amp;gt; | major | minor | patch | premajor如果项目是基于 git 管理的，运行这个命令会在 git 中用此版本号自动打一个 tag，使用&amp;nbsp;-m&amp;nbsp;参数在添加 tag 时加上注释。
-$ npm version patch -m &#34;Upgrade to %s for reasons&#34;如果不需要在 git 打 tag 使用参数&amp;nbsp;--no-git-tag-version
-$ npm --no-git-tag-version version patch完整文档：&amp;nbsp;https://docs.npmjs.com/cli/version</description>
-    </item>
-    
-    <item>
-      <title>SublimeText 插件推荐</title>
-      <link>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1/</link>
-      <pubDate>Mon, 11 May 2015 14:38:30 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1/</guid>
-      <description>这篇文章（5550bee671cc14b84d827bd1）是从 Teambition 迁移过来的
- 插件安装方法：https://packagecontrol.io/installation
-AutoFileName自动补全文件路径-非常方便。
-DocBlockrDocBlockr会成为你编写代码文档的有效工具。当输入/**并且按下Tab键的时候，这个插件会自动解析任何一个函数并且为你准备好合适的模板
-All Autocomplete传统的Sublime Text自动补全插件仅仅在当前文件下工作。AllAutocomplete 可以搜索全部打开的标签页，这将极大的简化开发进程。当然，还有一个插件叫&amp;nbsp;CodeIntel，实现了一些IDE的功能并且为一些语言提供了“代码情报”： JavaScript, Mason, XBL, XUL, RHTML, SCSS, Python, HTML, Ruby, Python3, XML, Sass, XSLT, Django, HTML5, Perl, CSS, Twig, Less, Smarty, Node.js, Tcl, TemplateToolkit, PHP.
-Emmet编辑器中最流行的插件之一。Emmet，前身Zen Coding也是web开发者提高生产力最有效的方法之一。按下Tab键，Emmet就能把一个缩写展开成一个HTML和CSS代码块，我想提一下Hayaku-集合了方便的层叠样式表缩写。
-
-Bracket​Highlighter
-Feature ListCustomizable to highlight almost any bracket.Customizable bracket highlight style.High visibility bracket highlight mode.Selectively disable or enable specific matching of tags, brackets, or quotes.Selectively whitelist or blacklist matching of specific tags, brackets, or quotes based on language.</description>
-    </item>
-    
-    <item>
-      <title>Polymer - 通往新世界的大门 ： Shadow DOM：简介</title>
-      <link>https://somax.me/teambition/tb_5549eeb1a628604c79b5d231/</link>
-      <pubDate>Wed, 06 May 2015 10:36:33 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5549eeb1a628604c79b5d231/</guid>
-      <description>这篇文章（5549eeb1a628604c79b5d231）是从 Teambition 迁移过来的
- 原文看这里 http://www.tuicool.com/articles/QJF7reA &amp;nbsp;</description>
-    </item>
-    
-    <item>
-      <title>移动开发相关学习资源</title>
-      <link>https://somax.me/teambition/tb_554864e774f9bfb2776b88ac/</link>
-      <pubDate>Tue, 05 May 2015 06:36:23 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_554864e774f9bfb2776b88ac/</guid>
-      <description>这篇文章（554864e774f9bfb2776b88ac）是从 Teambition 迁移过来的
- 原型制作工具
-
-http://www.axure.com/&amp;nbsp; &amp;nbsp;
-国外开源混合模式 APP 开发框架
-http://ionicframework.com/&amp;nbsp;http://ionicmaterial.com/&amp;nbsp;&amp;nbsp;
-http://famous.org/
-国内
-http://ask.dcloud.net.cn/docs/
-http://ApiCloud.com &amp;nbsp;http://AppCan.cn http://www.exmobi.cn/&amp;nbsp;
-HTML5中国产业联盟
-http://www.html5plus.org &amp;nbsp;
-包含:了&amp;nbsp;HTML5+规范 &amp;nbsp;JSDoc+规范&amp;nbsp;&amp;nbsp;案例与工具
-一些文章
-十款不错的Hybrid App移动开发框架
-Hybrid APP开发者一定不要错过的框架和工具
-我是hybrid app的忠实粉丝和大力倡导者，从&amp;nbsp;新浪移动云开始就不断的寻找能帮助Web程序员开发出漂亮又好用的UI层框架。在历经了jqmobile、sencha touch等框架后，一直没能找到一个真正符合我的想法的框架：它应该为hybrid app设计、组件化结构、UI简洁而优美。
-性能、UX、跨平台：移动Web应用UI框架大比拼
-本文作者Tal Gleichger是拥有8年实战经验的资深全栈Web开发者，也是SocialBelong的CTO及联合创始人。在移动开发成为大势所趋之后，转战移动应用开发，在深度接触Hybrid App开发的同时，他也对几大开发者使用最广泛的框架进行了使用与对比，剖析优劣，供开发者们参考。
-真正的Hybrid APP没你想的那么简单
-然而，Hybrid App的精髓在Hybrid，也就是混合上，既然是混合，就要考虑到混合比例，就像钢筋混凝土，如果混合比例不当就会让一个建筑摇摇欲坠。
-使用ionic框架开发移动hybrid应用
-别闯进Hybrid App的误区
-Hybrid App，一种开发模式，兼顾Web和Native的一种开发模式。有人说它把Web App扼杀在摇篮里，有人说它把Native App引向一个新阶段。我说，它是一把双刃剑，千万别闯进它的误区。本文是笔者在实践Hybrid App开发模式过程中总结出的一些经验教训，供读者参考。Hybrid App虽好，可万万不能仓促选择，盲目运用。
-Hybrid App开发实战
-关于UIWebView和PhoneGap的总结
-
-Ionic 资源
-ionic中文社区 http://ionichina.com/&amp;nbsp;&amp;nbsp;http://www.haomou.net/tags/ionic/
-代码范例 http://codepen.io/ionic/public-list/
-youtube视频 https://www.youtube.com/channel/UChYheBnVeCfhCmqZfCUdJQw
-在线编辑器&amp;nbsp;http://creator.ionic.io/</description>
-    </item>
-    
-    <item>
-      <title>一种下载youtube视频的方法</title>
-      <link>https://somax.me/teambition/tb_553b2be7a49cdd4d3010713d/</link>
-      <pubDate>Sat, 25 Apr 2015 05:53:43 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_553b2be7a49cdd4d3010713d/</guid>
-      <description>这篇文章（553b2be7a49cdd4d3010713d）是从 Teambition 迁移过来的
- 梯子什么的不说了，假设已经打开视频页面看到视频播放界面；
-1. chrome浏览器，打开开发工具，选择模拟 iPad，（需要刷新一下）
-2. element select tool 选择视频，源码中找到 &amp;lt;video&amp;gt;
-3. src=&#39;http://xxxxxxxxxx&#39; 右键选择新标签页打开
-4. 在新打开的页面中等待视频加载成功，就可以右键 保存视频
-5. Done!</description>
-    </item>
-    
-    <item>
-      <title>DTrace</title>
-      <link>https://somax.me/teambition/tb_553a6ad746f0256d300f6890/</link>
-      <pubDate>Fri, 24 Apr 2015 16:09:59 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_553a6ad746f0256d300f6890/</guid>
-      <description>这篇文章（553a6ad746f0256d300f6890）是从 Teambition 迁移过来的
- DTrace（全称Dynamic Tracing)，也称为动态跟踪，是由 Sun™ 开发的一个用来在生产和试验性生产系统上找出系统瓶颈的工具，可以对内核(kernel)和用户应用程序(user application)进行动态跟踪并且对系统运行不构成任何危险的技术。在任何情况下它都不是一个调试工具， 而是一个实时系统分析寻找出性能及其他问题的工具。 DTrace 是个特别好的分析工具，带有大量的帮助诊断系统问题的特性。还可以使用预先写好的脚本利用它的功能。 用户也可以通过使用 DTrace D 语言创建他们自己定制的分析工具， 以满足特定的需求。
-简介 1997年，供职于Sun而现已是Solaris内核研发部高级工程师的Bryan Cantrill 和他的工作组在紧张地研究一个性能问题，他出现在刚刚提及的Sun E10000服务器。该服务器在运行基准测试时，速度突然在一段时间内奇怪地降低。工作组经过六天夜以继日的工作后，终于发现了问题的根本原因。某个“愚蠢之极”的配置错误将服务器配置成了路由器。 “我很受震惊，”Cantrill 说到， “这是任何一个客户都可能碰到的问题，但是他们可不敢奢望让内核研发人员为之夜以继日地工作，编写自定义代码以弄清楚问题。我们得找出一个更好的方法。” 经过两年半的紧张研发，Cantrill和他的工作组终于研究出了这个更好的方法： Dtrace 。
-特性 DTrace是过去十年中在操作系统方面最具意义的革新之一。Solaris中分散着30,000多的位置指针，也叫探测器probes，DTrace可激活成千上万的探测器，记录所关注的位置指定的数据，如命中，即可从该地址显示用户进程或系统内核的数据，从而了解系统，包括： 1。任何函数的参数 2。内核的任何全局变量 3。函数调用的时间（NS，十亿分之一秒，无任何其他PC/Unix在ns一级精度） 4。跟踪堆栈，包括指明函数调用的代码 5。函数调用时运行的进程 6。产生函数调用的线程 7。统计调用次数、磁盘占用等信息 Dtrace在追踪之外，也支持对系统的采样。[1] 操作系统
-除Solaris系列以外，Dtrace已先后被移植到FreeBSD、NetBSD及Max OS X等操作系统上[2] 。</description>
-    </item>
-    
-    <item>
-      <title>数据绑定的革命 Object.observe()</title>
-      <link>https://somax.me/teambition/tb_553057b2775a02951cdca69d/</link>
-      <pubDate>Fri, 17 Apr 2015 00:45:38 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_553057b2775a02951cdca69d/</guid>
-      <description>这篇文章（553057b2775a02951cdca69d）是从 Teambition 迁移过来的
- Data-binding Revolutions with Object.observe()IntroductionA revolution is coming. There’s a new addition to JavaScript that’s going to change&amp;nbsp;everything&amp;nbsp;you think you know about data-binding. It’s also going to change how many of your MVC libraries approach observing models for edits and updates. Are you ready for some sweet performance boosts to apps that care about property observation?
-Okay. Okay. Without further delay, I’m happy to announce&amp;nbsp;Object.observe()&amp;nbsp;has landed in&amp;nbsp;Chrome 36&amp;nbsp;stable.</description>
-    </item>
-    
-    <item>
-      <title>微软推出面向Windows的Docker客户端</title>
-      <link>https://somax.me/teambition/tb_5530538bf6c019611ce98bd9/</link>
-      <pubDate>Fri, 17 Apr 2015 00:27:55 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5530538bf6c019611ce98bd9/</guid>
-      <description>这篇文章（5530538bf6c019611ce98bd9）是从 Teambition 迁移过来的
- 在宣布与Docker建立合作伙伴关系后，微软已经构建了一个Windows原生Docker客户端。该命令行接口（CLI）与运行在Linux上的Docker客户端完全兼容。
-10月15日，Azure副总裁Jason Zander宣布了微软与Docker的合作伙伴关系。通过这种合作，微软和Docker计划推动以下几个方面的工作：
-致力于下一代Windows Server的开发以开源方式开发Docker Engine for Windows ServerAzure支持Docker Open Orchestration APIs将Docker Hub映像集成到Azure Gallery和PortalDocker将与下一个版本的Windows Server集成，使在Windows上运行容器更简单。作为迈向那个目标的第一步，微软推出了面向Windows的Docker客户端。开发人员可以使用该客户端管理运行在Linux上的Docker容器。没有该工具，开发人员必须在运行在Windows上的Linux虚拟机上运行Docker客户端和服务器。
-Docker客户端CLI已集成到Docker官方Github库，位于Pull Request#9113下。
-Microsoft Azure团队的Ahmet Alp Balkan已经发布了一份在Windows上编译Docker客户端的分步指南。
-
-安装指南 https://docs.docker.com/installation/windows/
-http://boot2docker.io/</description>
-    </item>
-    
-    <item>
-      <title>一个不错的学习网站 MDN</title>
-      <link>https://somax.me/teambition/tb_55304bb59cc1904e7332db06/</link>
-      <pubDate>Thu, 16 Apr 2015 23:54:29 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55304bb59cc1904e7332db06/</guid>
-      <description>这篇文章（55304bb59cc1904e7332db06）是从 Teambition 迁移过来的
- Mozilla Developer Networkhttps://developer.mozilla.org/zh-CN/
-https://developer.mozilla.org/zh-CN/docs/Web</description>
-    </item>
-    
-    <item>
-      <title>HTML5 高性能动画组件</title>
-      <link>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b/</link>
-      <pubDate>Thu, 16 Apr 2015 03:28:51 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b/</guid>
-      <description>这篇文章（552f2c730ed4ab99504df93b）是从 Teambition 迁移过来的
- Ultra high-performance, professional-grade animation for the modern webhttp://greensock.com/ &amp;nbsp;</description>
-    </item>
-    
-    <item>
-      <title>图灵社区 : 阅读 : 使用Gitbook制作电子书</title>
-      <link>https://somax.me/teambition/tb_552d16ab2d342919406c8edc/</link>
-      <pubDate>Tue, 14 Apr 2015 13:31:23 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552d16ab2d342919406c8edc/</guid>
-      <description>这篇文章（552d16ab2d342919406c8edc）是从 Teambition 迁移过来的
- 图灵社区 : 阅读 : 使用Gitbook制作电子书 http://m.baidu.com/from=1099b/bd_page_type=1/ssid=0/uid=0/pu=usm%400%2Csz%401320_2001%2Cta%40iphone_1_8.3_3_600/baiduid=924F11E18D5C42D997855456FAD5D0F0/w=0_10_gitbook/t=iphone/l=3/tc?m=8&amp;srd=1&amp;dict=30&amp;title=%25u56FE%25u7075%25u793E%25u533A%253A%25u9605%25u8BFB%253A%25u4F7F%25u7528GitBook%25u5E73%25u53F0%25u53D1%25u5E03%25u7535%25u5B50%25u4E66&amp;src=http%3A%2F%2Fwww.ituring.com.cn%2Farticle%2F127645</description>
-    </item>
-    
-    <item>
-      <title>gitbook 开源图书制作工具</title>
-      <link>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</link>
-      <pubDate>Tue, 14 Apr 2015 06:19:50 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</guid>
-      <description>这篇文章（552cb1869c170add4f7fa78f）是从 Teambition 迁移过来的
- Write &amp;amp; Publish with Markdown and Git
-https://www.gitbook.com
-
-免费图书
-https://www.gitbook.com/explore</description>
-    </item>
-    
-    <item>
-      <title>Node嵌入式数据库：NeDB</title>
-      <link>https://somax.me/teambition/tb_5528ba72dbd528fa112c700b/</link>
-      <pubDate>Sat, 11 Apr 2015 06:08:50 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5528ba72dbd528fa112c700b/</guid>
-      <description>这篇文章（5528ba72dbd528fa112c700b）是从 Teambition 迁移过来的
- 用于Node.js应用的嵌入式持久数据库，采用Javascript开发，没有任何依赖(当然除了NPM模块)。你可以把它想象成用于Node.js项目的SQLite数据库。其 API 是MongoDB的一个子集。您可以使用它作为一个持久性或只存在内存中的数据存储。
-NeDB并不旨在替换大型的数据库如MongoDB。它的目标是为你提供一个简洁，简单的方法来查询数据，并坚持久化到磁盘中，适合于那些没有很多并发连接的Web应用，比如一个持续集成和部署服务器与利用Node Webkit构建的桌面应用。
-项目主页：http://www.open-open.com/lib/view/home/1410232143586</description>
-    </item>
-    
-    <item>
       <title>git简介</title>
-      <link>https://somax.me/teambition/tb_55265335879013c64ac090a2/</link>
+      <link>https://somax.me/teambition/tb_55265335879013c64ac090a2.html</link>
       <pubDate>Thu, 09 Apr 2015 10:23:49 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55265335879013c64ac090a2/</guid>
+      <guid>https://somax.me/teambition/tb_55265335879013c64ac090a2.html</guid>
       <description>这篇文章（55265335879013c64ac090a2）是从 Teambition 迁移过来的
- 更新 (20160429)：最好的Git 电子书&amp;nbsp;https://git-scm.com/book/&amp;nbsp;（在线或下载）什么是 GitGIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。
-Git vs SVNGit 是分布式的，SVN不是&amp;nbsp;SVN 必须连接服务器才能提交变更； Git 在本地有完整版本库的 &amp;ldquo;clone&amp;rdquo;,允许离线提交变更和管理分支，然后push到远程库
-GIT把内容按元数据方式存储，而SVN是按文件&amp;nbsp;Git会在本地存储所有东西，包括标签，分支，版本记录 SVN只在本地存储一个工作副本。
-GIT分支和SVN的分支不同&amp;nbsp;SVN中分支就是版本库中的另外的一个目录； GIT的分支可以从同一个工作目录下快速的在几个分支间切换。
-GIT没有一个全局的版本号，而SVN有&amp;nbsp;SVN里使用容易阅读的数字版本号，Git使用SHA-1来唯一的标识一个代码快照
-GIT的内容完整性要优于SVN&amp;nbsp;GIT的内容存储使用的是SHA-1哈希算法,确保在遇到磁盘故障和网络问题时降低对版本库的破坏。
-Internet上开放的git仓库国外：gitHub、gitLab &amp;hellip;国内：coding、gitcafe &amp;hellip;私有gitgitLabCE： http://git.jkr3.com限内部访问，自行注册，注意：确认邮件99%可能会进垃圾邮件
-客户端&amp;ldquo;建议学习命令方式&amp;rdquo;，熟悉之后非常快捷，mac或linux中可以使用自带 git 命令，通过&amp;nbsp;git help&amp;nbsp;获得帮助。
+ 更新 (20160429)：最好的Git 电子书 https://git-scm.com/book/ （在线或下载）
+什么是 Git GIT不仅仅是个版本控制系统，它也是个内容管理系统(CMS),工作管理系统等。
+Git vs SVN  Git 是分布式的，SVN不是 SVN 必须连接服务器才能提交变更； Git 在本地有完整版本库的 “clone”,允许离线提交变更和管理分支，然后push到远程库 GIT把内容按元数据方式存储，而SVN是按文件 Git会在本地存储所有东西，包括标签，分支，版本记录 SVN只在本地存储一个工作副本。 GIT分支和SVN的分支不同 SVN中分支就是版本库中的另外的一个目录； GIT的分支可以从同一个工作目录下快速的在几个分支间切换。 GIT没有一个全局的版本号，而SVN有 SVN里使用容易阅读的数字版本号，Git使用SHA-1来唯一的标识一个代码快照 GIT的内容完整性要优于SVN GIT的内容存储使用的是SHA-1哈希算法,确保在遇到磁盘故障和网络问题时降低对版本库的破坏。  Internet上开放的git仓库  国外：gitHub、gitLab … 国内：coding、gitcafe …  私有git  gitLabCE： http://git.jkr3.com   限内部访问，自行注册，注意：确认邮件99%可能会进垃圾邮件
+ 客户端  “建议学习命令方式”，熟悉之后非常快捷，mac或linux中可以使用自带 git 命令，通过 git help 获得帮助。
 windows系统可以选择tortoiseGit，适合原来使用tortoiseSVN的用户，有中文语言包
-http://git-scm.com/downloadshttp://git-scm.com/downloads/guishttps://code.google.com/p/tortoisegit/Git的基本流程和使用方法这里只介绍命令方式，在线试玩：&amp;nbsp;GitTryIt
-初始化&amp;nbsp;git init查看状态&amp;nbsp;git status&amp;nbsp;添加文件&amp;nbsp;git add README.md&amp;nbsp;/&amp;nbsp;git add *.js提交代码&amp;nbsp;git commit -m &amp;ldquo;添加 Readme&amp;rdquo;&amp;nbsp;&amp;nbsp;{学习:&amp;nbsp;Markdown}查看日志&amp;nbsp;git log远程库添加&amp;nbsp;git remote add origin http://git.jkr3.com/username/demo.git&amp;nbsp;{注意：远程库需要事先在网站上新建好}推送到远程库&amp;nbsp;git push -u origin master从远程库拉回&amp;nbsp;git pull origin master检查改变&amp;nbsp;git diff HEAD放弃提交&amp;nbsp;git reset file.txt恢复到最后版本&amp;nbsp;git checkout &amp;ndash; file.txt建立分支&amp;nbsp;git branch fixbug切换到分支&amp;nbsp;git checkout fixbug删除文件&amp;nbsp;git rm bug.txt合并&amp;nbsp;git checkout master&amp;nbsp;,&amp;nbsp;git merge fixbug删除分支&amp;nbsp;git branch -d fixbug最后推送到服务器&amp;nbsp;git push从SVN迁移到git实际上svn和git在本地是可以共存的</description>
+  http://git-scm.com/downloads http://git-scm.com/downloads/guis https://code.google.com/p/tortoisegit/  Git的基本流程和使用方法 这里只介绍命令方式，在线试玩： GitTryIt
+ 初始化 git init 查看状态 git status 添加文件 git add README.</description>
     </item>
     
   </channel>

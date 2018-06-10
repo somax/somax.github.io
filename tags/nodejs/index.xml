@@ -2,109 +2,33 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on So&#39;Blog</title>
-    <link>https://somax.me/tags/nodejs/</link>
+    <link>https://somax.me/tags/nodejs.html</link>
     <description>Recent content in Nodejs on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 06 Dec 2015 12:56:36 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Dec 2015 06:50:28 +0000</lastBuildDate>
     
 	<atom:link href="https://somax.me/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>NodeJS监测module是被直接执行还是被require</title>
+      <link>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2.html</link>
+      <pubDate>Mon, 07 Dec 2015 06:50:28 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_56652c34bb9364076f95e8a2.html</guid>
+      <description> 这篇文章（56652c34bb9364076f95e8a2）是从 Teambition 迁移过来的
+ 通常用在模块可以直接运行，也可以被其他项目引用的情况下
+// Check if run directly if (require.main === module) { console.log(&#39;run directly...&#39;); main(); } else { console.log(&#39;require on module....&#39;); module.exports = servermon; }  </description>
+    </item>
+    
+    <item>
       <title>Mocha test-runner with gulp</title>
-      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</link>
+      <link>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html</link>
       <pubDate>Sun, 06 Dec 2015 12:56:36 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c/</guid>
+      <guid>https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html</guid>
       <description>这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
- Mocha test-runner with gulp Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
-    </item>
-    
-    <item>
-      <title>Gulp挑战Grunt，背后的哲学</title>
-      <link>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</link>
-      <pubDate>Wed, 11 Nov 2015 09:37:32 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</guid>
-      <description>这篇文章（56430c5c9aa4fb332ec87d72）是从 Teambition 迁移过来的
- 原文链接： http://www.jianshu.com/p/3779f708f5d7/
- [按：网上介绍Gulp和Grunt安装使用的文章很多，甚少比较二者的思路，连官方文档都语焉不详。我在此做一个粗陋的对比，希望能提纲挈领，加深读者对这两个工具的理解。]
- 做过点儿正经开发的同学都知道，构建工具必不可少。C时代的Make、Java的Ant、Ruby的Rake……没有这些工具，一遍遍地点选输入，准烦死你。
-在前端和Node JS的开发中，最普及的构建工具就是Grunt。它的功能说来简单，就是管理一系列的Task。大部分的Task都是第三方的插件，安装好对应的NPM包，再loadNpmTasks就可以用了。
-Grunt的配置文件Gruntfile，主要包含两部分：
-配置每个Task，包括文件从哪里，到哪里去，还有一些处理的选项
-自己写一些简单的Task，把第三方插件提供的Task组合起来
-别看这两个事儿，轻轻松松几百行出来了。每个Task的配置，各有各的规矩，还牵扯到插件间的配合。反正我从seed库开始做新项目的时候，基本不敢改原来的Gruntfile，很多用不上的功能也搁那儿。留意了一下很多开源项目的Gruntfile，也都臃肿杂乱，好不到哪儿去。
-Gruntfile维护起来那么困难，有几个原因：
-配置和运行分离 程序员都知道，变量的声明和使用挨在一起，最方便理解和修改。但Gruntfile里，配置Task和调用它们的地方离得很远，极大地增加了心智负担。
-每个插件做的事太多 每个Task的结果必须写到磁盘文件，另一个Task再读，损害性能倒是小事，更麻烦的是让整个过程变复杂了。 就像一个个小作坊，来料加工又返回给客户，这中间的沟通成本、出错机会都大大增加。
-配置项过多 做事多了，配置项自然也多。至少输入和输出的位置得配吧。每个插件的配置规则还不尽相同。用每个插件，都得去学习一番。
-Gulp应运而生。
-恐怕没几个IT人不知道Unix管道的概念。前一级的输出，直接变成后一级的输入。把简单的工具组合起来，优雅地解决复杂的问题。听起来那么熟悉呢？是的，Gulp就把这种思维用在构建过程中。
-Gulp基于Node JS的一个机制，叫做stream，有点类似C++中的stream。在Node中，文件访问、输入输出、HTTP连接，都是stream。Gulp的每个插件从stream中读取输入，做一些处理，再输出到stream中。
-每个插件不是拿来独立使用的。相反，它专注于完成单一职责。只有把合适的插件组合起来，才能完成具体的Task。引用官方的例子，看看一个典型的Task长什么样(略有删减)：
-var paths = { scripts: [&#39;client/js/**/*.coffee&#39;, &#39;!client/external/**/*.coffee&#39;] }; gulp.task(&#39;scripts&#39;, [&#39;clean&#39;], function() { // 可以依赖于其它task return gulp.src(paths.scripts) // 指定输入 .pipe(coffee()) // 环节一 .pipe(uglify()) // 环节二 .pipe(concat(&#39;all.min.js&#39;)) // 环节三 .pipe(gulp.dest(&#39;build/js&#39;)); // 指定输出 });  配置呢？不需要了。是不是行云流水，一气呵成？
-那我们再回头来看看前面Grunt的几个问题，Gulp是怎么解决的：
-配置和运行分离 code over configuration，直接就在调用的地方配置。
-每个插件做的事太多 单一职责，依靠组合来发挥作用。就像一条自动化生产线，上一道工序的产出直接交给下一步，效率不要太高。</description>
-    </item>
-    
-    <item>
-      <title>【译】NodeJS错误处理最佳实践 — OneAPM</title>
-      <link>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</link>
-      <pubDate>Sat, 11 Jul 2015 16:03:12 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55a13e4027aadebf0ac9510c/</guid>
-      <description>这篇文章（55a13e4027aadebf0ac9510c）是从 Teambition 迁移过来的
- 【译】NodeJS错误处理最佳实践 — OneAPM http://code.oneapm.com/nodejs/2015/04/13/nodejs-errorhandling/
-
-
-NodeJS的错误处理让人痛苦，在很长的一段时间里，大量的错误被放任不管。但是要想建立一个健壮的Node.js程序就必须正确的处理这些错误，而且这并不难学。如果你实在没有耐心，那就直接绕过长篇大论跳到“总结”部分吧。
-原文
-这篇文章会回答NodeJS初学者的若干问题：
-我写的函数里什么时候该抛出异常，什么时候该传给callback, 什么时候触发EventEmitter等等。
-我的函数对参数该做出怎样的假设？我应该检查更加具体的约束么？例如参数是否非空，是否大于零，是不是看起来像个IP地址，等等等。
-我该如何处理那些不符合预期的参数？我是应该抛出一个异常，还是把错误传递给一个callback。
-我该怎么在程序里区分不同的异常（比如“请求错误”和“服务不可用”）？
-我怎么才能提供足够的信息让调用者知晓错误细节。
-我该怎么处理未预料的出错？我是应该用 try/catch ，domains 还是其它什么方式呢？
-这篇文章可以划分成互相为基础的几个部分：
-背景：希望你所具备的知识。
-操作失败和程序员的失误：介绍两种基本的异常。
-编写新函数的实践：关于怎么让函数产生有用报错的基本原则。
-编写新函数的具体推荐：编写能产生有用报错的、健壮的函数需要的一个检查列表
-例子：以connect函数为例的文档和序言。
-总结：全文至此的观点总结。
-附录：Error对象属性约定：用标准方式提供一个属性列表，以提供更多信息。
-背景本文假设：
-你已经熟悉了JavaScript、Java、 Python、 C++ 或者类似的语言中异常的概念，而且你知道抛出异常和捕获异常是什么意思。
-你熟悉怎么用NodeJS编写代码。你使用异步操作的时候会很自在，并能用callback(err,result)模式去完成异步操作。你得知道下面的代码不能正确处理异常的原因是什么[脚注1]
-function myApiFunc(callback) { /* * This pattern does NOT work! */ try { doSomeAsynchronousOperation(function (err) { &amp;nbsp; if (err) &amp;nbsp; &amp;nbsp; throw (err); &amp;nbsp; /* continue as normal */ }); } catch (ex) { callback(ex); } }你还要熟悉三种传递错误的方式: - 作为异常抛出。 - 把错误传给一个callback，这个函数正是为了处理异常和处理异步操作返回结果的。 - 在EventEmitter上触发一个Error事件。</description>
-    </item>
-    
-    <item>
-      <title>connect源码分析--基础架构</title>
-      <link>https://somax.me/teambition/tb_5565a8acf5468b8006ed7d8f/</link>
-      <pubDate>Wed, 27 May 2015 11:21:16 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_5565a8acf5468b8006ed7d8f/</guid>
-      <description>这篇文章（5565a8acf5468b8006ed7d8f）是从 Teambition 迁移过来的
- connect是TJ tx给node.js社区贡献的一个热门的web基础框架。TJ的另一力作express框架便是在它基础之上构建的。与express不同，connect更加短小精悍，是一个偏向基础设施的框架。
-正如名字所表达的一样，connect框架做的事情很简单，就是把一系列的组件连接到一起，然后让http的请求依次流过这些组件。这些被connect串联起来的组件被称为中间件（middlewire）。在connect中，http请求的处理流程被划分成一个个小片段，每一个小片段代表一项处理任务（如：请求body的解析，session的维护等），由一个中间件负责，前后片段之间靠request，response等对象传递中间数据。connect框架对这些处理细节并不关心，只知道将请求从一个中间件导向下一个中间件。connect的核心代码非常精简，加上注释，也就只有寥寥200来行代码。
-https://cnodejs.org/topic/4fb79b0e06f43b56112b292c</description>
-    </item>
-    
-    <item>
-      <title>NPM 的版本号管理命令 version</title>
-      <link>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</link>
-      <pubDate>Fri, 15 May 2015 05:57:46 +0000</pubDate>
-      
-      <guid>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</guid>
-      <description>这篇文章（55558ada886052772bc6fec6）是从 Teambition 迁移过来的
- 利用&amp;nbsp;npm version&amp;nbsp;命令，可以自动更改 package.json 中的版本号
-$ npm version [&amp;lt;newversion&amp;gt; | major | minor | patch | premajor如果项目是基于 git 管理的，运行这个命令会在 git 中用此版本号自动打一个 tag，使用&amp;nbsp;-m&amp;nbsp;参数在添加 tag 时加上注释。
-$ npm version patch -m &#34;Upgrade to %s for reasons&#34;如果不需要在 git 打 tag 使用参数&amp;nbsp;--no-git-tag-version
-$ npm --no-git-tag-version version patch完整文档：&amp;nbsp;https://docs.npmjs.com/cli/version</description>
+ Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); gulp.task(&amp;#39;default&amp;#39;, function() { return gulp.src([&amp;#39;test/test-*.js&amp;#39;], { read: false }) .pipe(mocha({ reporter: &amp;#39;spec&amp;#39;, globals: { should: require(&amp;#39;should&amp;#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&amp;#39;gulp&amp;#39;); var mocha = require(&amp;#39;gulp-mocha&amp;#39;); var gutil = require(&amp;#39;gulp-util&amp;#39;); gulp.</description>
     </item>
     
   </channel>

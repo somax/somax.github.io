@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Osx on So&#39;Blog</title>
-    <link>https://somax.me/tags/osx/</link>
+    <link>https://somax.me/tags/osx.html</link>
     <description>Recent content in Osx on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 23 Sep 2015 11:07:24 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>安装 Privoxy 让手机通过代理上网</title>
-      <link>https://somax.me/teambition/tb_560287ecc9f16c3203300619/</link>
+      <link>https://somax.me/teambition/tb_560287ecc9f16c3203300619.html</link>
       <pubDate>Wed, 23 Sep 2015 11:07:24 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_560287ecc9f16c3203300619/</guid>
+      <guid>https://somax.me/teambition/tb_560287ecc9f16c3203300619.html</guid>
       <description>这篇文章（560287ecc9f16c3203300619）是从 Teambition 迁移过来的
 更新（2015-10-2）： Mac 升级到 EL Capitan 正式版，发现原先按装的不能使用了 在安装目录中找到 uninstall.command, 执行卸载 用 home-brew 重新安装，brew install privoxy 或者升级到最新版本 brew upgrade
  Privoxy是一款带过滤功能的代理服务器，针对HTTP、HTTPS协议。通过Privoxy的过滤功能，用户可以保护隐私、对网页内容进行过滤、管理cookies，以及拦阻各种广告等。Privoxy可以用作单机，也可以应用到多用户的网络。 这里我只用他来做代理转换，让手机通过http代理来使用sockt代理。
@@ -29,10 +29,10 @@
     
     <item>
       <title>OS X El Capitan 中 ProxyChains 失效的问题</title>
-      <link>https://somax.me/teambition/tb_56011e450a68929f0910710a/</link>
+      <link>https://somax.me/teambition/tb_56011e450a68929f0910710a.html</link>
       <pubDate>Tue, 22 Sep 2015 09:24:21 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56011e450a68929f0910710a/</guid>
+      <guid>https://somax.me/teambition/tb_56011e450a68929f0910710a.html</guid>
       <description>这篇文章（56011e450a68929f0910710a）是从 Teambition 迁移过来的
  OS X El Capitan v10.11 之后，Apple 推出了一个叫&amp;nbsp;System Integrity Protection&amp;nbsp;的新功能：
 A new security policy that applies to every running process, including privileged code and code that runs out of the sandbox. The policy extends additional protections to components on disk and at run-time, only allowing system binaries to be modified by the system installer and software updates.&amp;nbsp;Code injection and runtime attachments to system binaries are no longer permitted.</description>

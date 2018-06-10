@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>工具 on So&#39;Blog</title>
-    <link>https://somax.me/tags/%E5%B7%A5%E5%85%B7/</link>
+    <link>https://somax.me/tags/%E5%B7%A5%E5%85%B7.html</link>
     <description>Recent content in 工具 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Wed, 11 Nov 2015 09:37:32 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Gulp挑战Grunt，背后的哲学</title>
-      <link>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</link>
+      <link>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72.html</link>
       <pubDate>Wed, 11 Nov 2015 09:37:32 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72/</guid>
+      <guid>https://somax.me/teambition/tb_56430c5c9aa4fb332ec87d72.html</guid>
       <description>这篇文章（56430c5c9aa4fb332ec87d72）是从 Teambition 迁移过来的
  原文链接： http://www.jianshu.com/p/3779f708f5d7/
  [按：网上介绍Gulp和Grunt安装使用的文章很多，甚少比较二者的思路，连官方文档都语焉不详。我在此做一个粗陋的对比，希望能提纲挈领，加深读者对这两个工具的理解。]
@@ -41,10 +41,10 @@ var paths = { scripts: [&#39;client/js/**/*.coffee&#39;, &#39;!client/external/*
     
     <item>
       <title>NPM 的版本号管理命令 version</title>
-      <link>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</link>
+      <link>https://somax.me/teambition/tb_55558ada886052772bc6fec6.html</link>
       <pubDate>Fri, 15 May 2015 05:57:46 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55558ada886052772bc6fec6/</guid>
+      <guid>https://somax.me/teambition/tb_55558ada886052772bc6fec6.html</guid>
       <description>这篇文章（55558ada886052772bc6fec6）是从 Teambition 迁移过来的
  利用&amp;nbsp;npm version&amp;nbsp;命令，可以自动更改 package.json 中的版本号
 $ npm version [&amp;lt;newversion&amp;gt; | major | minor | patch | premajor如果项目是基于 git 管理的，运行这个命令会在 git 中用此版本号自动打一个 tag，使用&amp;nbsp;-m&amp;nbsp;参数在添加 tag 时加上注释。
@@ -54,10 +54,10 @@ $ npm --no-git-tag-version version patch完整文档：&amp;nbsp;https://docs.np
     
     <item>
       <title>gitbook 开源图书制作工具</title>
-      <link>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</link>
+      <link>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f.html</link>
       <pubDate>Tue, 14 Apr 2015 06:19:50 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f/</guid>
+      <guid>https://somax.me/teambition/tb_552cb1869c170add4f7fa78f.html</guid>
       <description>这篇文章（552cb1869c170add4f7fa78f）是从 Teambition 迁移过来的
  Write &amp;amp; Publish with Markdown and Git
 https://www.gitbook.com

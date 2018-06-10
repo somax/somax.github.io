@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>搜索 on So&#39;Blog</title>
-    <link>https://somax.me/tags/%E6%90%9C%E7%B4%A2/</link>
+    <link>https://somax.me/tags/%E6%90%9C%E7%B4%A2.html</link>
     <description>Recent content in 搜索 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 18 Aug 2015 01:10:10 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>Elasticsearch 权威指南（中文版）</title>
-      <link>https://somax.me/teambition/tb_55d285f20e47290071ed151f/</link>
+      <link>https://somax.me/teambition/tb_55d285f20e47290071ed151f.html</link>
       <pubDate>Tue, 18 Aug 2015 01:10:10 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55d285f20e47290071ed151f/</guid>
+      <guid>https://somax.me/teambition/tb_55d285f20e47290071ed151f.html</guid>
       <description>这篇文章（55d285f20e47290071ed151f）是从 Teambition 迁移过来的
  入门
 Elasticsearch是一个实时分布式搜索和分析引擎。它让你以前所未有的速度处理大数据成为可能。

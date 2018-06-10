@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Animation on So&#39;Blog</title>
-    <link>https://somax.me/tags/animation/</link>
+    <link>https://somax.me/tags/animation.html</link>
     <description>Recent content in Animation on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 16 Apr 2015 03:28:51 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>HTML5 高性能动画组件</title>
-      <link>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b/</link>
+      <link>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b.html</link>
       <pubDate>Thu, 16 Apr 2015 03:28:51 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b/</guid>
+      <guid>https://somax.me/teambition/tb_552f2c730ed4ab99504df93b.html</guid>
       <description>这篇文章（552f2c730ed4ab99504df93b）是从 Teambition 迁移过来的
  Ultra high-performance, professional-grade animation for the modern webhttp://greensock.com/ &amp;nbsp;</description>
     </item>

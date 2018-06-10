@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Golang on So&#39;Blog</title>
-    <link>https://somax.me/tags/golang/</link>
+    <link>https://somax.me/tags/golang.html</link>
     <description>Recent content in Golang on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sat, 23 May 2015 15:25:05 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>可以在树梅派上运行的自助Git托管服务 Gogs</title>
-      <link>https://somax.me/teambition/tb_55609bd172999d1b2faf7492/</link>
+      <link>https://somax.me/teambition/tb_55609bd172999d1b2faf7492.html</link>
       <pubDate>Sat, 23 May 2015 15:25:05 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_55609bd172999d1b2faf7492/</guid>
+      <guid>https://somax.me/teambition/tb_55609bd172999d1b2faf7492.html</guid>
       <description>这篇文章（55609bd172999d1b2faf7492）是从 Teambition 迁移过来的
  http://gogs.io/
 基于 Go 语言的自助 Git 托管服务易安装、跨平台、轻量级、开源化</description>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sublime on So&#39;Blog</title>
-    <link>https://somax.me/tags/sublime/</link>
+    <link>https://somax.me/tags/sublime.html</link>
     <description>Recent content in Sublime on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Mon, 11 May 2015 14:38:30 +0000</lastBuildDate>
@@ -12,10 +12,10 @@
     
     <item>
       <title>SublimeText 插件推荐</title>
-      <link>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1/</link>
+      <link>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1.html</link>
       <pubDate>Mon, 11 May 2015 14:38:30 +0000</pubDate>
       
-      <guid>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1/</guid>
+      <guid>https://somax.me/teambition/tb_5550bee671cc14b84d827bd1.html</guid>
       <description>这篇文章（5550bee671cc14b84d827bd1）是从 Teambition 迁移过来的
  插件安装方法：https://packagecontrol.io/installation
 AutoFileName自动补全文件路径-非常方便。

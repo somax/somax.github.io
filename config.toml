@@ -93,6 +93,8 @@ username = "somax"
 repository = "somax.github.io"
 branch = "master"
 
+[params.gitment]
+
 [taxonomies]
 author = "authors"
 category = "categories"
@@ -120,4 +122,5 @@ lang = "zh"
 languageName = "Chinese"
 weight = 1
 
-
+# 使用 filename.html 的方式，这样才能保证文档内图片相对路径的正确
+uglyURLs=true

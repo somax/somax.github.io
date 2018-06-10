@@ -8,13 +8,13 @@ tags:
   - hugo
 ---
 
-> 这是 [开篇](/post/first/) 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
+> 这是 [开篇](/post/first/) 之后的第一篇博客，记录一下建立这个博客网站的过程应该是个不错的选择。
 
 ### 前言
 其实很久之前就有看到别人使用 Github Pages + jekyll 来免费搭建自己的博客网站，不过最近由于工作的原因接触 go 语言的项目越来越多，所以特意查了一下 Go 语言相关的建站工具，发现了 [hugo](http://gohugo.io) 这个项目。 就毫不犹豫的（其实还是纠结了一下）选择了 hugo。原因主要是 **开源，跨平台，安装简单，渲染速度快**！官方自称："**The world’s fastest framework for building websites**"
 
 ### 使用 Hugo 建立网站
-过程中参考了[官方文档](http://gohugo.io/documentation/)，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
+过程中参考了[官方文档](http://gohugo.io/documentation/)，还有个老兄建立了中文版的网站 http://gohugo.org 也给了很大帮助。
 
 不过作为学习总结，还是记录一下自己的操作过程。
 
@@ -39,24 +39,25 @@ https://themes.gohugo.io/minimo/ 看上去不错，比较简洁，很适合做�
     ```toml
     baseURL = "https://somax.me"
     title = "So'Blog"
-
+    
     theme = "minimo"
-
+    
     Paginate = 10
-
+    
     defaultContentLanguage = "zh"
-
+    
     [params.info]
     description = "知识就像空气，学习如同呼吸。"
-
+    
     [params.copyright]
     holder = "Somax"
     startYear = "2018"
-
+    
     [params.settings]
     dateFormat = "2006-01-02"
     listDateFormat = "2006-01-02"
     archiveDateFormat = "01-02"
+    ```
 
 
     [params.social]
@@ -69,17 +70,42 @@ https://themes.gohugo.io/minimo/ 看上去不错，比较简洁，很适合做�
     [languages.zh]
     lang = "zh"
     languageName = "Chinese"
-
-
+    
+    # 使用 filename.html 的方式，这样才能保证文档内图片相对路径的正确
+    uglyURLs=true
+    
     ```
+
 1. 修改 `static/css/custom.css`，添加自定义样式
     ```css
+    /* Custom CSS */
     .logo img {
-        border-radius: 50%;
+        border-radius: 100%;
     }
-
+    
     .menu li.current a {
         border-bottom: 2px solid #ffcd00;
+    }
+    
+    #sidebar .widget-recent_posts .item-title{
+        font-size: 0.9em;
+    }
+    
+    @media screen and (min-width: 920px){
+        .main {
+            width: 100%;
+        }
+    }
+    
+    /* fix gitment width issue */
+    #git-comments {
+        max-width: 720px;
+    }
+    
+    /* kbd style */
+    kbd{
+        box-shadow: inset 0 -2px 0 #c6cbd1;
+        background-color: white;
     }
     ```
 
@@ -115,7 +141,6 @@ weight: -250
 添加正式文章：`hugo new post/first.md`，本地编辑时开着 `hugo -D server` 可以实时预览，完成后用 `hugo` 命令生成静态网站文件。
 
 要注意一下每篇文章默认都是草稿模式，正常发布时要把 `draft: true` 删除。
-
 
 ---
 好了，如何将网站托管到 Github 留到下一篇再写吧。

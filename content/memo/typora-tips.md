@@ -23,10 +23,10 @@ Typora 新版本增加了很多功能，这里记录一下个人在使用过程�
 
 
 
-### 偏好设置
+### ，偏好设置
 
 
-按 <kbd>Ctrl</kbd> + <kbd>,</kbd> 打开偏好设置面板。
+按 <kbd>Command</kbd> + <kbd>,</kbd> 打开偏好设置面板。
 
 > 偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好，也许在今后的深入使用过程中会更改这些设置。
 
@@ -46,7 +46,7 @@ body{
 
 
 
-然后在新增 `base.user.css` 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
+然后再新增 `base.user.css` 文件，在里面添加一些自定义的样式，这个文件是针对所有主题都起作用的。
 
 ```CSS
 /* 添加自动序号样式 */
@@ -161,6 +161,56 @@ kbd{
 .md-toc-h1,.md-toc-h6 {
   display: none;
 }
+
+/* 添加 TOC 自动序号样式 */
+.md-toc-content {
+    counter-reset: toc-h2
+}
+
+.md-toc-h1 {
+    counter-reset: toc-h2
+}
+
+.md-toc-h2 {
+    counter-reset: toc-h3
+}
+
+.md-toc-h3 {
+    counter-reset: toc-h4
+}
+
+.md-toc-h4 {
+    counter-reset: toc-h5
+}
+
+.md-toc-h5 {
+    counter-reset: toc-h6
+}
+
+.md-toc-content .md-toc-h2 a:before {
+    counter-increment: toc-h2;
+    content: counter(toc-h2) ". "
+}
+
+.md-toc-content .md-toc-h3 a:before {
+    counter-increment: toc-h3;
+    content: counter(toc-h2) "." counter(toc-h3) ". "
+}
+
+.md-toc-content .md-toc-h4 a:before{
+    counter-increment: toc-h4;
+    content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) ". "
+}
+
+.md-toc-content .md-toc-h5 a:before{
+    counter-increment: toc-h5;
+    content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5) ". "
+}
+
+.md-toc-content .md-toc-h6 a:before{
+    counter-increment: toc-h6;
+    content: counter(toc-h2) "." counter(toc-h3) "." counter(toc-h4) "." counter(toc-h5) "." counter(toc-h6) ". "
+}
 ```
 
 
@@ -173,6 +223,11 @@ kbd{
 
 - **退出** - 勾上 Quit Typora when last window close
 - **启动选项** - 选择『重新打开上次使用的文件和目录』
+- **侧边栏** - 切换文件时自动保存上个文件的更改（如果这个选项不能被选中，则需要在『系统偏好设置-通用』中把『关闭文稿是要求保存更改』勾上）
+
+
+
+![image-20180611162541357](assets/image-20180611162541357.png)
 
 
 

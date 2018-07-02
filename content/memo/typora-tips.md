@@ -42,6 +42,11 @@ Typora 新版本增加了很多功能，这里记录一下个人在使用过程�
 body{
   background-color: #f3f2ee;
 }
+@media print {
+  body{
+    background-color: #fff;
+  }
+}
 ```
 
 

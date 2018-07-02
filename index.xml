@@ -5,7 +5,7 @@
     <link>https://somax.me/</link>
     <description>Recent content in 起点 on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 Jun 2018 14:36:06 +0800</lastBuildDate>
+    <lastBuildDate>Mon, 02 Jul 2018 09:52:51 +0800</lastBuildDate>
     
 	<atom:link href="https://somax.me/index.xml" rel="self" type="application/rss+xml" />
     
@@ -22,6 +22,48 @@
     </item>
     
     <item>
+      <title>（译）如何用视觉类比来思考 - 图表</title>
+      <link>https://somax.me/memo/how-to-think-visually.html</link>
+      <pubDate>Mon, 02 Jul 2018 09:52:51 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/how-to-think-visually.html</guid>
+      <description>这是我目前看到最好的一篇关于数据可视化图表的文章，所以花点时间翻译了一下，并在此转发。
+ 水平有限，翻译过程得到了 谷歌翻译 的帮助，如有不妥请在文章底部留言。
+原文：https://blog.adioma.com/how-to-think-visually-using-visual-analogies-infographic/
+原作者：Anna Vital
+ 视觉学习者是那些用图像思考1并用语言与其他人交流那张图片的人。 世界上约有60％ 2的人是视觉学习者。 （我是他们中的一员，我猜，既然你正在阅读这篇文章，你也是一样，我们中的很多人还不知道我们是视觉学习者，因为学校迫使我们大部分时间在基于文本学习。）
+那么，你如何通过图像和文字与我们交谈？ 使用普遍存在的『视觉符号』和『类比』。 下图是它们的排列组合。
+视觉交流的关键在于寻找普遍存在并且无需解释的视觉符号。
+大多数认知科学研究探讨了我们如何看待事物，但很少研究我们如何『理解』我们所看到的。
+『理解』是对你可视化效果的终极考验。 那么，你如何让人们明白？ 展示一些大家熟悉的『 类比』。如果你对可视化并不了解，可是却选择正确的『类比』，那么你已经成功了一大半了。 这就是专业设计师所做的 - 没有其他可以替代『类比』。
+你如何选择正确的『类比』？ 在下面的表格中，我从抽象到具象整理了『类比』的形式。 我将它们按形状相似性分组。 目标是可以让你快速在你的『信息』上『试用』。 随着时间的推移，你将能够在你的脑海中做到这一切。 但现在这是一条捷径。
+让我们从简单和抽象开始。
+图表，图形和示意图 我们从圆形开始。 （宇宙中的大部分东西都是圆的！）
+   图示 说明      1. 饼图( Pie Chart)： 最受欢迎同时也最受质疑。 正如Edward Tufte所说，“&amp;hellip;&amp;hellip;比一张饼图差的东西只有『很多』”。 现代信息图的父亲Otto Neurath也拒绝使用更多语义图标的饼图。 饼图分为两部分时最好使用：我吃过的派和我离开的派。 有了两个部分，你仍然可以轻松地比较切片的大小 - 这在两个以上的情况下变得困难，因此受到了批评。 一旦你有三个或更多的部分，你有一个比较问题 - 我们的眼睛不习惯比较一个圆的部分。 我们也不擅长比较不同的饼图。 当然饼图仍然有一些适合的场景，但很少。 *例如：我在 “七十亿人做什么” 图表以及 启动资金如何显示创始人股权比例 中使用它*。    2.</description>
+    </item>
+    
+    <item>
+      <title>用 SSH 建立安全隧道</title>
+      <link>https://somax.me/memo/ssh-tunneling.html</link>
+      <pubDate>Thu, 14 Jun 2018 15:19:06 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/ssh-tunneling.html</guid>
+      <description>参考：https://forwardhq.com/help/ssh-tunneling-how-to
+ 使用 SSH 能够安全地访问远程服务器，同时 SSH 也有一些鲜为人知的特点。其中一个很厉害功能就是隧道。
+隧道允许你将远程服务器上的一个端口转发到本地服务器上的一个端口。这对于web开发者尤其有用，它允许你在本地Web服务器和互联网之间创建一个隧道，在互联网的任何地方都可以通过这个隧道访问您的本地应用程序或网站。
+这篇文章介绍如何利用 SSH Tunneling 突破防火墙建立远程链接。
+大致流程如下：
+{ 私有服务器 } ---- 发起 ssh tunneling ---&amp;gt; { 公开服务器 } &amp;lt;----- { 客户机 }  前置条件  你需要有一个可公开访问的服务器，可以是任何一种服务器只要有安装有 SSH 服务。
+ 你还需要设置SSH服务器的配置文件，添加 GatewayPorts yes。
+ 配置文件通常是位于/etc/ssh/sshd_config，可能取决于您的系统的不同。修改后，一定要重新启动SSH服务，运行 sudo service sshd restart
+ 为了保持连接防止超时断开，还需要在配置中添加 ClientAliveInterval 60
+ ClientAliveInterval 指定了服务器端向客户端请求消息的时间间隔, 默认是0，不发送。而ClientAliveInterval 60表示每 60 秒发送一次，然后客户端响应，这样就保持长连接了。
+另外ClientAliveCountMax 使用默认值 3 即可。ClientAliveCountMax 表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开。
+  修改配置  先查看当前配置
+cd /etc/ssh sudo grep &amp;#34;ClientAlive&amp;#34; sshd_config #ClientAliveInterval 0 #ClientAliveCountMax 3 备份配置</description>
+    </item>
+    
+    <item>
       <title>Typora 使用小技巧</title>
       <link>https://somax.me/memo/typora-tips.html</link>
       <pubDate>Sun, 10 Jun 2018 14:36:06 +0800</pubDate>
@@ -31,12 +73,11 @@
 Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。
 命令行启动 很多时候工作流程会使用 git 命令对文档进行版本管理，为了快速的在命令行启动 Typora，我通过添加别名t来快速启动 Typora。在 ~/.bash_profile 中添加 alias t=&amp;quot;open -a typora&amp;quot;，执行source ~/.bash_profile后，就可以在命令行中运行 t path/to/filename.md 以快速打开并开始编辑文件。
 新版 Typora 支持了文件夹模式，所以可以运行t path 打开整个文件夹，或者 用t . 打开当前文件夹。
-偏好设置 按 Ctrl + , 打开偏好设置面板。
+，偏好设置 按 Command + , 打开偏好设置面板。
  偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好，也许在今后的深入使用过程中会更改这些设置。
  自定义主题  可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：https://support.typora.io/Add-Custom-CSS/
  我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 github.user.css文件，添加如下代码：
-body{ background-color: #f3f2ee; } 然后在新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
-/* 添加自动序号样式 */ #write { counter-reset: h2 } h1 { counter-reset: h2 } h2 { counter-reset: h3 } h3 { counter-reset: h4 } h4 { counter-reset: h5 } h5 { counter-reset: h6 } #write h2:before { counter-increment: h2; content: counter(h2) &amp;#34;.</description>
+body{ background-color: #f3f2ee; } @media print { body{ background-color: #fff; } } 然后再新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有主题都起作用的。</description>
     </item>
     
     <item>
@@ -151,7 +192,7 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
     </item>
     
     <item>
-      <title>使用容器部署 openvpn</title>
+      <title>使用容器部署 OpenVPN</title>
       <link>https://somax.me/teambition/tb_5ad5ff7346021671da825337.html</link>
       <pubDate>Tue, 17 Apr 2018 14:06:43 +0000</pubDate>
       
@@ -169,6 +210,17 @@ source &amp;lt;(kubectl completion zsh) 安装 minikube  官方文档：https://
       <guid>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</guid>
       <description>这篇文章（5a0fe53a4da5ce0928d5f28d）是从 Teambition 迁移过来的
  故障描述  之前 RethinkDB 按照 1 + 3 的模式集群部署成功，每个节点分别部署在不同的 host 上。由于某种未知原因，其中一台 host 在 Rancher 中失联，在连接恢复后该 host 上的 RethinkDB 就一直无法正常启动。  解决过程  首先检查了 RethinkDB 节点的日志，发现一切正常，但 Rancher UI 上的状态却一直显示不正常 在 RethinkDB 管理界面上有一瞬间看到了第三个节点加入，然后忽然又没了，推断该节点容器在被 Rancher 一直重启 检查 Rancher 基础服务，发现 Rancher/HealthCheck 处于不正常状态，尝试重启、删除都没有成功。 远程进入容器所在主机，用 docker 命令 kill，竟然没用 🤷‍♂️ Rancher 中停止主机，再删，还是没有用 🤷‍♀️ 要不重启主机？等下&amp;hellip;&amp;hellip; 还是先试试重启 docker 吧&amp;hellip;  解决方案  重启 Docker sudo systemctl restart docker  成功👌，Rancher 会帮我们把余下的事情做掉，所有的容器不出意外都会自动起来（事实上的确没出意外）。来再检查一下，HealthCheck ✅， RethinkDB ✅，搞定！</description>
+    </item>
+    
+    <item>
+      <title>用 sh 脚本生成 Niginx Vhost 配置文件</title>
+      <link>https://somax.me/teambition/tb_59005034c621c6c81bf78e70.html</link>
+      <pubDate>Wed, 26 Apr 2017 07:45:56 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_59005034c621c6c81bf78e70.html</guid>
+      <description>这篇文章（59005034c621c6c81bf78e70）是从 Teambition 迁移过来的
+ touch ngxcfg.sh $$ chmod +x ngxcfg.sh 脚本代码如下：
+#!/bin/bash # MaXiaojun  help() { echo &amp;#34;Generate vhost configuration file for Nginx&amp;#34; echo &amp;#34;Usage:&amp;#34; echo &amp;#34; ngxcfg &amp;#34; echo &amp;#34; ngxcfg -r www.jkr3.com https://192.168.123.123:8080&amp;#34; echo &amp;#34; -h Help&amp;#34; echo &amp;#34; -r Generate redirect config file.&amp;#34; echo &amp;#34; -f Force overwrite config file.&amp;#34; } # get options while getopts &amp;#34;:hrfv&amp;#34; optname &amp;#34;$@&amp;#34; do case &amp;#34;$optname&amp;#34; in &amp;#34;v&amp;#34;) echo v0.</description>
     </item>
     
     <item>

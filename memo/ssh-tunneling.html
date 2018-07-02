@@ -4,21 +4,43 @@
 <head>
   <meta charset='utf-8'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
-<meta name='description' content='这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
- Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&#39;gulp&#39;); var mocha = require(&#39;gulp-mocha&#39;); gulp.task(&#39;default&#39;, function() { return gulp.src([&#39;test/test-*.js&#39;], { read: false }) .pipe(mocha({ reporter: &#39;spec&#39;, globals: { should: require(&#39;should&#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&#39;gulp&#39;); var mocha = require(&#39;gulp-mocha&#39;); var gutil = require(&#39;gulp-util&#39;); gulp.'>
+<meta name='description' content='参考：https://forwardhq.com/help/ssh-tunneling-how-to
+ 使用 SSH 能够安全地访问远程服务器，同时 SSH 也有一些鲜为人知的特点。其中一个很厉害功能就是隧道。
+隧道允许你将远程服务器上的一个端口转发到本地服务器上的一个端口。这对于web开发者尤其有用，它允许你在本地Web服务器和互联网之间创建一个隧道，在互联网的任何地方都可以通过这个隧道访问您的本地应用程序或网站。
+这篇文章介绍如何利用 SSH Tunneling 突破防火墙建立远程链接。
+大致流程如下：
+{ 私有服务器 } ---- 发起 ssh tunneling ---&gt; { 公开服务器 } &lt;----- { 客户机 }  前置条件  你需要有一个可公开访问的服务器，可以是任何一种服务器只要有安装有 SSH 服务。
+ 你还需要设置SSH服务器的配置文件，添加 GatewayPorts yes。
+ 配置文件通常是位于/etc/ssh/sshd_config，可能取决于您的系统的不同。修改后，一定要重新启动SSH服务，运行 sudo service sshd restart
+ 为了保持连接防止超时断开，还需要在配置中添加 ClientAliveInterval 60
+ ClientAliveInterval 指定了服务器端向客户端请求消息的时间间隔, 默认是0，不发送。而ClientAliveInterval 60表示每 60 秒发送一次，然后客户端响应，这样就保持长连接了。
+另外ClientAliveCountMax 使用默认值 3 即可。ClientAliveCountMax 表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开。
+  修改配置  先查看当前配置
+cd /etc/ssh sudo grep &#34;ClientAlive&#34; sshd_config #ClientAliveInterval 0 #ClientAliveCountMax 3 备份配置'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='Mocha test-runner with gulp • Somax'>
-<meta property='og:description' content='这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的
- Passing shared module in all tests // npm install gulp gulp-mocha  var gulp = require(&#39;gulp&#39;); var mocha = require(&#39;gulp-mocha&#39;); gulp.task(&#39;default&#39;, function() { return gulp.src([&#39;test/test-*.js&#39;], { read: false }) .pipe(mocha({ reporter: &#39;spec&#39;, globals: { should: require(&#39;should&#39;) } })); });  Running mocha tests when files change // npm install gulp gulp-mocha gulp-util  var gulp = require(&#39;gulp&#39;); var mocha = require(&#39;gulp-mocha&#39;); var gutil = require(&#39;gulp-util&#39;); gulp.'>
-<meta property='og:url' content='https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html'>
+<meta property='og:title' content='用 SSH 建立安全隧道 • Somax'>
+<meta property='og:description' content='参考：https://forwardhq.com/help/ssh-tunneling-how-to
+ 使用 SSH 能够安全地访问远程服务器，同时 SSH 也有一些鲜为人知的特点。其中一个很厉害功能就是隧道。
+隧道允许你将远程服务器上的一个端口转发到本地服务器上的一个端口。这对于web开发者尤其有用，它允许你在本地Web服务器和互联网之间创建一个隧道，在互联网的任何地方都可以通过这个隧道访问您的本地应用程序或网站。
+这篇文章介绍如何利用 SSH Tunneling 突破防火墙建立远程链接。
+大致流程如下：
+{ 私有服务器 } ---- 发起 ssh tunneling ---&gt; { 公开服务器 } &lt;----- { 客户机 }  前置条件  你需要有一个可公开访问的服务器，可以是任何一种服务器只要有安装有 SSH 服务。
+ 你还需要设置SSH服务器的配置文件，添加 GatewayPorts yes。
+ 配置文件通常是位于/etc/ssh/sshd_config，可能取决于您的系统的不同。修改后，一定要重新启动SSH服务，运行 sudo service sshd restart
+ 为了保持连接防止超时断开，还需要在配置中添加 ClientAliveInterval 60
+ ClientAliveInterval 指定了服务器端向客户端请求消息的时间间隔, 默认是0，不发送。而ClientAliveInterval 60表示每 60 秒发送一次，然后客户端响应，这样就保持长连接了。
+另外ClientAliveCountMax 使用默认值 3 即可。ClientAliveCountMax 表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开。
+  修改配置  先查看当前配置
+cd /etc/ssh sudo grep &#34;ClientAlive&#34; sshd_config #ClientAliveInterval 0 #ClientAliveCountMax 3 备份配置'>
+<meta property='og:url' content='https://somax.me/memo/ssh-tunneling.html'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:tag' content='nodejs'><meta property='article:tag' content='gulp'><meta property='article:tag' content='mocha'><meta property='article:published_time' content='2015-12-06T12:56:36Z'/><meta property='article:modified_time' content='2015-12-06T12:56:36Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Memo'><meta property='article:tag' content='Linux'><meta property='article:tag' content='运维'><meta property='article:published_time' content='2018-06-14T15:19:06&#43;08:00'/><meta property='article:modified_time' content='2018-06-14T15:19:06&#43;08:00'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>Mocha test-runner with gulp • Somax</title>
-  <link rel='canonical' href='https://somax.me/teambition/tb_56643084ce2cd4cc6659b45c.html'>
+  <title>用 SSH 建立安全隧道 • Somax</title>
+  <link rel='canonical' href='https://somax.me/memo/ssh-tunneling.html'>
   
   
   <link rel='icon' href='/favicon.ico'>
@@ -36,7 +58,7 @@ ga('send', 'pageview');
 </head>
 
 
-<body class='page type-teambition has-sidebar'>
+<body class='page type-memo has-sidebar'>
 
   <div class='site'>
 
@@ -349,7 +371,7 @@ ga('send', 'pageview');
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>Mocha test-runner with gulp</h1>
+      <h1 class='title'>用 SSH 建立安全隧道</h1>
       
 
     </div>
@@ -364,7 +386,7 @@ ga('send', 'pageview');
   
 </svg>
 <span class='screen-reader-text'>发布 </span>
-  <time class='entry-date' datetime='2015-12-06T12:56:36Z'>2015-12-06</time>
+  <time class='entry-date' datetime='2018-06-14T15:19:06&#43;08:00'>2018-06-14</time>
 </span>
 
   <span class='byline'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
@@ -398,42 +420,104 @@ ga('send', 'pageview');
   
 
 <blockquote>
-<p>这篇文章（56643084ce2cd4cc6659b45c）是从 Teambition 迁移过来的</p>
+<p>参考：<a href="https://forwardhq.com/help/ssh-tunneling-how-to" target="_blank">https://forwardhq.com/help/ssh-tunneling-how-to</a></p>
 </blockquote>
 
-<h2 id="passing-shared-module-in-all-tests">Passing shared module in all tests</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// npm install gulp gulp-mocha
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mocha</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-mocha&#39;</span>);
+<p>使用 SSH 能够安全地访问远程服务器，同时 SSH 也有一些鲜为人知的特点。其中一个很厉害功能就是隧道。</p>
 
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;default&#39;</span>, <span style="color:#66d9ef">function</span>() {
-  <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>([<span style="color:#e6db74">&#39;test/test-*.js&#39;</span>], { <span style="color:#a6e22e">read</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> })
-    .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">mocha</span>({
-      <span style="color:#a6e22e">reporter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;spec&#39;</span>,
-      <span style="color:#a6e22e">globals</span><span style="color:#f92672">:</span> {
-        <span style="color:#a6e22e">should</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;should&#39;</span>)
-      }
-    }));
-});
-</code></pre></div>
-<h2 id="running-mocha-tests-when-files-change">Running mocha tests when files change</h2>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-js" data-lang="js"><span style="color:#75715e">// npm install gulp gulp-mocha gulp-util
-</span><span style="color:#75715e"></span>
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gulp</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp&#39;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">mocha</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-mocha&#39;</span>);
-<span style="color:#66d9ef">var</span> <span style="color:#a6e22e">gutil</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;gulp-util&#39;</span>);
+<p>隧道允许你将远程服务器上的一个端口转发到本地服务器上的一个端口。这对于web开发者尤其有用，它允许你在本地Web服务器和互联网之间创建一个隧道，在互联网的任何地方都可以通过这个隧道访问您的本地应用程序或网站。</p>
 
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;mocha&#39;</span>, <span style="color:#66d9ef">function</span>() {
-    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">src</span>([<span style="color:#e6db74">&#39;test/*.js&#39;</span>], { <span style="color:#a6e22e">read</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">false</span> })
-        .<span style="color:#a6e22e">pipe</span>(<span style="color:#a6e22e">mocha</span>({ <span style="color:#a6e22e">reporter</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;list&#39;</span> }))
-        .<span style="color:#a6e22e">on</span>(<span style="color:#e6db74">&#39;error&#39;</span>, <span style="color:#a6e22e">gutil</span>.<span style="color:#a6e22e">log</span>);
-});
+<p>这篇文章介绍如何利用 SSH Tunneling 突破防火墙建立远程链接。</p>
 
-<span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">task</span>(<span style="color:#e6db74">&#39;watch-mocha&#39;</span>, <span style="color:#66d9ef">function</span>() {
-    <span style="color:#a6e22e">gulp</span>.<span style="color:#a6e22e">watch</span>([<span style="color:#e6db74">&#39;lib/**&#39;</span>, <span style="color:#e6db74">&#39;test/**&#39;</span>], [<span style="color:#e6db74">&#39;mocha&#39;</span>]);
-});
-</code></pre></div>
+<p>大致流程如下：</p>
+
+<pre><code>{ 私有服务器 } ---- 发起 ssh tunneling ---&gt;  { 公开服务器 }  &lt;----- { 客户机 }
+</code></pre>
+
+<h2 id="前置条件">前置条件</h2>
+
+<ol>
+<li><p>你需要有一个<strong>可公开访问的服务器</strong>，可以是任何一种服务器只要有安装有 SSH 服务。</p></li>
+
+<li><p>你还需要设置SSH服务器的配置文件，<strong>添加 <code>GatewayPorts yes</code></strong>。</p>
+
+<blockquote>
+<p>配置文件通常是位于<code>/etc/ssh/sshd_config</code>，可能取决于您的系统的不同。修改后，一定要重新启动SSH服务，运行 <code>sudo service sshd restart</code></p>
+</blockquote></li>
+
+<li><p>为了保持连接防止超时断开，还需要在配置中<strong>添加 <code>ClientAliveInterval 60</code></strong></p>
+
+<blockquote>
+<p><code>ClientAliveInterval</code> 指定了服务器端向客户端请求消息的时间间隔, 默认是<code>0</code>，不发送。而<code>ClientAliveInterval 60</code>表示每 60 秒发送一次，然后客户端响应，这样就保持长连接了。</p>
+
+<p>另外<code>ClientAliveCountMax</code> 使用默认值 <code>3</code> 即可。<code>ClientAliveCountMax</code> 表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开。</p>
+</blockquote></li>
+</ol>
+
+<h2 id="修改配置">修改配置</h2>
+
+<ol>
+<li><p>先查看当前配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">cd /etc/ssh
+sudo grep <span style="color:#e6db74">&#34;ClientAlive&#34;</span> sshd_config
+<span style="color:#75715e">#ClientAliveInterval 0
+</span><span style="color:#75715e"></span>#ClientAliveCountMax <span style="color:#ae81ff">3</span></code></pre></div></li>
+
+<li><p>备份配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo cp sshd_config sshd_config.bak</code></pre></div></li>
+
+<li><p>修改配置</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo sed -i <span style="color:#e6db74">&#34;s/#ClientAliveInterval 0/ClientAliveInterval 60/g&#34;</span> sshd_config
+<span style="color:#75715e"># ClientAliveCountMax 默认 3 可以不用修改
+</span><span style="color:#75715e"></span>sudo sed -i <span style="color:#e6db74">&#34;s/#ClientAliveCountMax 3/ClientAliveCountMax 5/g&#34;</span> sshd_config</code></pre></div></li>
+
+<li><p>验证修改结果</p></li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo diff sshd_config sshd_config.bak
+<span style="color:#ae81ff">119</span>,120c119,120
+&lt; ClientAliveInterval <span style="color:#ae81ff">60</span>
+&lt; ClientAliveCountMax <span style="color:#ae81ff">3</span>
+---
+&gt; <span style="color:#75715e">#ClientAliveInterval 0
+</span><span style="color:#75715e"></span>&gt; #ClientAliveCountMax <span style="color:#ae81ff">3</span></code></pre></div>
+<ol>
+<li>重启服务</li>
+</ol>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh">sudo systemctl restart sshd</code></pre></div>
+<h2 id="创建隧道">创建隧道</h2>
+
+<p>万事俱备只欠东风，运行：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-sh" data-lang="sh"><span style="color:#75715e"># ssh -NR &lt;公开服务端口&gt;:&lt;私有服务器地址&gt;:&lt;私有服务端口&gt; &lt;公开服务地址&gt;
+</span><span style="color:#75715e"></span>ssh -NR <span style="color:#ae81ff">8080</span>:localhost:80 you@example.com</code></pre></div>
+<p>分解说明：</p>
+
+<ul>
+<li><code>-N</code> 不执行远程命令，用于端口转发</li>
+
+<li><p><code>-R</code> 建立隧道</p></li>
+
+<li><p><code>8080:localhost:80</code></p>
+
+<ol>
+<li><p>第一个数字是你希望远程服务器侦听的端口。可以是 1024-65535 之间的任何数字，你需要确保让你的防火墙通过这个端口。如果这个数字是<code>0</code> ，服务端会动态分配一个端口并返回给客户端。</p></li>
+
+<li><p>中间的是私有服务器地址。大多数时候是 <code>localhost</code> ，但也可以是私有网络中的其他服务器，这样的话发起连接的这台服务只是个中转，类似这样：</p></li>
+</ol>
+
+<pre><code>   { 私有服务器1 } ---- 发起 ssh tunneling ---&gt;  { 公开服务器 }  &lt;----- { 客户机 }
+         |
+         |--&gt;{ 私有服务器2 }
+</code></pre>
+
+<ol>
+<li>最后，右面一个数字是你的本地服务器正在侦听的端口。</li>
+</ol></li>
+
+<li><p><code>you@example.com</code> 最后一部分是公网的域名或者 ip 地址，如果远程 SSH 服务端口不是默认的 <code>22</code>，需要加上 <code>-p</code> 参数指定端口，如 <code>-p 34567</code> ）</p></li>
+</ul>
+
+<p>现在，有了一个开放的SSH隧道，你就可以从任何与互联网连接的地方查看你本地的网站或应用程序。</p>
+
 </div>
 
   
@@ -447,7 +531,7 @@ ga('send', 'pageview');
   
 </svg>
 </span>
-  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/nodejs.html'>Nodejs</a>, <a class='tag' href='/tags/gulp.html'>Gulp</a>, <a class='tag' href='/tags/mocha.html'>Mocha</a></div>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/linux.html'>Linux</a>, <a class='tag' href='/tags/%E8%BF%90%E7%BB%B4.html'>运维</a></div>
 
   </div>
 </footer>
@@ -457,7 +541,7 @@ ga('send', 'pageview');
 
 <nav class='entry-nav'>
   <div class='container'><div class='prev-entry sep-before'>
-      <a href='/teambition/tb_5645566510638ccf2327a70e.html'>
+      <a href='/memo/typora-tips.html'>
         <span aria-hidden='true'><svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="20" y1="12" x2="4" y2="12"/>
@@ -465,10 +549,10 @@ ga('send', 'pageview');
   
 </svg>
  上一个</span>
-        <span class='screen-reader-text'>上一篇文章: </span>ShadowSock 快速上手</a>
+        <span class='screen-reader-text'>上一篇文章: </span>Typora 使用小技巧</a>
     </div><div class='next-entry sep-before'>
-      <a href='/teambition/tb_56652c34bb9364076f95e8a2.html'>
-        <span class='screen-reader-text'>下一篇文章: </span>NodeJS监测module是被直接执行还是被require<span aria-hidden='true'>下一个 <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
+      <a href='/memo/how-to-think-visually.html'>
+        <span class='screen-reader-text'>下一篇文章: </span>（译）如何用视觉类比来思考 - 图表<span aria-hidden='true'>下一个 <svg class='icon' viewbox='0 0 24 24' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' aria-hidden='true'>
   
   <line x1="4" y1="12" x2="20" y2="12"/>
   <polyline points="14 6 20 12 14 18"/>
@@ -488,7 +572,7 @@ ga('send', 'pageview');
 <script>
   var gitment = new Gitment({
     
-    id: 'tb_56643084ce2cd4cc6659b45c',
+    id: 'ssh-tunneling',
     owner: 'somax',
     repo: 'somax.github.io',
     oauth: {

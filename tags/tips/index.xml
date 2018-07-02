@@ -20,12 +20,11 @@
 Typora 新版本增加了很多功能，这里记录一下个人在使用过程中的一些偏好设置与小技巧（基于 MacOS）。
 命令行启动 很多时候工作流程会使用 git 命令对文档进行版本管理，为了快速的在命令行启动 Typora，我通过添加别名t来快速启动 Typora。在 ~/.bash_profile 中添加 alias t=&amp;quot;open -a typora&amp;quot;，执行source ~/.bash_profile后，就可以在命令行中运行 t path/to/filename.md 以快速打开并开始编辑文件。
 新版 Typora 支持了文件夹模式，所以可以运行t path 打开整个文件夹，或者 用t . 打开当前文件夹。
-偏好设置 按 Ctrl + , 打开偏好设置面板。
+，偏好设置 按 Command + , 打开偏好设置面板。
  偏好设置可以根据个人喜好的设置，这里列出了一些我自己的喜好，也许在今后的深入使用过程中会更改这些设置。
  自定义主题  可以在偏好设置面板点击『打开主题文件夹』查看所有样式文件，详细说明查看官方文档：https://support.typora.io/Add-Custom-CSS/
  我比较喜欢 github 主题，但我希望改变一下背景颜色，让眼睛更舒适，在主题文件夹新建 github.user.css文件，添加如下代码：
-body{ background-color: #f3f2ee; } 然后在新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有样式都起作用的。
-/* 添加自动序号样式 */ #write { counter-reset: h2 } h1 { counter-reset: h2 } h2 { counter-reset: h3 } h3 { counter-reset: h4 } h4 { counter-reset: h5 } h5 { counter-reset: h6 } #write h2:before { counter-increment: h2; content: counter(h2) &amp;#34;.</description>
+body{ background-color: #f3f2ee; } @media print { body{ background-color: #fff; } } 然后再新增 base.user.css 文件，在里面添加一些自定义的样式，这个文件是针对所有主题都起作用的。</description>
     </item>
     
   </channel>

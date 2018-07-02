@@ -4,12 +4,12 @@
   
   <url>
     <loc>https://somax.me/</loc>
-    <lastmod>2018-06-10T14:36:06+08:00</lastmod>
+    <lastmod>2018-07-02T09:52:51+08:00</lastmod>
   </url>
   
   <url>
     <loc>https://somax.me/memo.html</loc>
-    <lastmod>2018-06-10T14:36:06+08:00</lastmod>
+    <lastmod>2018-07-02T09:52:51+08:00</lastmod>
   </url>
   
   <url>
@@ -24,6 +24,16 @@
   
   <url>
     <loc>https://somax.me/about.html</loc>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/memo/how-to-think-visually.html</loc>
+    <lastmod>2018-07-02T09:52:51+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/memo/ssh-tunneling.html</loc>
+    <lastmod>2018-06-14T15:19:06+08:00</lastmod>
   </url>
   
   <url>
@@ -79,6 +89,11 @@
   <url>
     <loc>https://somax.me/teambition/tb_5a0fe53a4da5ce0928d5f28d.html</loc>
     <lastmod>2017-11-18T07:46:02+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://somax.me/teambition/tb_59005034c621c6c81bf78e70.html</loc>
+    <lastmod>2017-04-26T07:45:56+00:00</lastmod>
   </url>
   
   <url>
@@ -248,7 +263,7 @@
   
   <url>
     <loc>https://somax.me/tags/linux.html</loc>
-    <lastmod>2015-10-02T05:17:10+00:00</lastmod>
+    <lastmod>2018-06-14T15:19:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -265,14 +280,14 @@
   </url>
   
   <url>
-    <loc>https://somax.me/tags/nodejs.html</loc>
-    <lastmod>2015-12-07T06:50:28+00:00</lastmod>
+    <loc>https://somax.me/tags/nginx.html</loc>
+    <lastmod>2015-10-10T04:55:13+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://somax.me/tags/openvpn.html</loc>
-    <lastmod>2018-04-17T14:06:43+00:00</lastmod>
+    <loc>https://somax.me/tags/nodejs.html</loc>
+    <lastmod>2015-12-07T06:50:28+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -318,7 +333,7 @@
   
   <url>
     <loc>https://somax.me/tags/vpn.html</loc>
-    <lastmod>2015-11-13T03:17:57+00:00</lastmod>
+    <lastmod>2018-04-17T14:06:43+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -329,8 +344,14 @@
   </url>
   
   <url>
+    <loc>https://somax.me/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html</loc>
+    <lastmod>2018-07-02T09:52:51+08:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://somax.me/tags/%E8%BF%90%E7%BB%B4.html</loc>
-    <lastmod>2018-05-17T13:08:30+00:00</lastmod>
+    <lastmod>2018-06-14T15:19:06+08:00</lastmod>
     <priority>0</priority>
   </url>
   

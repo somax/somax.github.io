@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>数据可视化 on So&#39;Blog</title>
+    <link>https://somax.me/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html</link>
+    <description>Recent content in 数据可视化 on So&#39;Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 02 Jul 2018 09:52:51 +0800</lastBuildDate>
+    
+	<atom:link href="https://somax.me/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>（译）如何用视觉类比来思考 - 图表</title>
+      <link>https://somax.me/memo/how-to-think-visually.html</link>
+      <pubDate>Mon, 02 Jul 2018 09:52:51 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/how-to-think-visually.html</guid>
+      <description>这是我目前看到最好的一篇关于数据可视化图表的文章，所以花点时间翻译了一下，并在此转发。
+ 水平有限，翻译过程得到了 谷歌翻译 的帮助，如有不妥请在文章底部留言。
+原文：https://blog.adioma.com/how-to-think-visually-using-visual-analogies-infographic/
+原作者：Anna Vital
+ 视觉学习者是那些用图像思考1并用语言与其他人交流那张图片的人。 世界上约有60％ 2的人是视觉学习者。 （我是他们中的一员，我猜，既然你正在阅读这篇文章，你也是一样，我们中的很多人还不知道我们是视觉学习者，因为学校迫使我们大部分时间在基于文本学习。）
+那么，你如何通过图像和文字与我们交谈？ 使用普遍存在的『视觉符号』和『类比』。 下图是它们的排列组合。
+视觉交流的关键在于寻找普遍存在并且无需解释的视觉符号。
+大多数认知科学研究探讨了我们如何看待事物，但很少研究我们如何『理解』我们所看到的。
+『理解』是对你可视化效果的终极考验。 那么，你如何让人们明白？ 展示一些大家熟悉的『 类比』。如果你对可视化并不了解，可是却选择正确的『类比』，那么你已经成功了一大半了。 这就是专业设计师所做的 - 没有其他可以替代『类比』。
+你如何选择正确的『类比』？ 在下面的表格中，我从抽象到具象整理了『类比』的形式。 我将它们按形状相似性分组。 目标是可以让你快速在你的『信息』上『试用』。 随着时间的推移，你将能够在你的脑海中做到这一切。 但现在这是一条捷径。
+让我们从简单和抽象开始。
+图表，图形和示意图 我们从圆形开始。 （宇宙中的大部分东西都是圆的！）
+   图示 说明      1. 饼图( Pie Chart)： 最受欢迎同时也最受质疑。 正如Edward Tufte所说，“&amp;hellip;&amp;hellip;比一张饼图差的东西只有『很多』”。 现代信息图的父亲Otto Neurath也拒绝使用更多语义图标的饼图。 饼图分为两部分时最好使用：我吃过的派和我离开的派。 有了两个部分，你仍然可以轻松地比较切片的大小 - 这在两个以上的情况下变得困难，因此受到了批评。 一旦你有三个或更多的部分，你有一个比较问题 - 我们的眼睛不习惯比较一个圆的部分。 我们也不擅长比较不同的饼图。 当然饼图仍然有一些适合的场景，但很少。 *例如：我在 “七十亿人做什么” 图表以及 启动资金如何显示创始人股权比例 中使用它*。    2.</description>
+    </item>
+    
+  </channel>
+</rss>

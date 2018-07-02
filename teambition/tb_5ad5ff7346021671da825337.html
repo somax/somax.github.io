@@ -9,17 +9,17 @@
   为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。  OVPN_DATA=&#34;ovpn-data-example&#34;  初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。  docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki  启动容器  docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn  生成客户端证书（无密码）  docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass  导出客户端配置文件（包含证书）  docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &gt; CLIENTNAME.'>
 <meta name='theme-color' content='#ffcd00'>
 
-<meta property='og:title' content='使用容器部署 openvpn • Somax'>
+<meta property='og:title' content='使用容器部署 OpenVPN • Somax'>
 <meta property='og:description' content='这篇文章（5ad5ff7346021671da825337）是从 Teambition 迁移过来的
 部署过程使用了开源项目：kylemanna/docker-openvpn，详细文档请访问 https://github.com/kylemanna/docker-openvpn
   为数据卷选个名字存放到环境变量 $OVPN_DATA，建议使用 ovpn-data- 前缀来方便识别。在下面的示例中请替换 example。  OVPN_DATA=&#34;ovpn-data-example&#34;  初始化 $OVPN_DATA 容器，这个容器将用来存放配置文件与证书。 初始化过程中会提示输入密码来保护证书。下面的示例中请使用合适的域名或 IP 地址替换 VPN.SERVERNAME.COM。  docker volume create --name $OVPN_DATA docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_genconfig -u udp://VPN.SERVERNAME.COM docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn ovpn_initpki  启动容器  docker run -v $OVPN_DATA:/etc/openvpn -d -p 1194:1194/udp --cap-add=NET_ADMIN kylemanna/openvpn  生成客户端证书（无密码）  docker run -v $OVPN_DATA:/etc/openvpn --rm -it kylemanna/openvpn easyrsa build-client-full CLIENTNAME nopass  导出客户端配置文件（包含证书）  docker run -v $OVPN_DATA:/etc/openvpn --rm kylemanna/openvpn ovpn_getclient CLIENTNAME &gt; CLIENTNAME.'>
 <meta property='og:url' content='https://somax.me/teambition/tb_5ad5ff7346021671da825337.html'>
 <meta property='og:site_name' content='So&#39;Blog'>
-<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:tag' content='运维'><meta property='article:tag' content='openvpn'><meta property='article:published_time' content='2018-04-17T14:06:43Z'/><meta property='article:modified_time' content='2018-04-17T14:06:43Z'/><meta name='twitter:card' content='summary'>
+<meta property='og:type' content='article'><meta property='og:image' content='https://www.gravatar.com/avatar/324a1e2c2223c07f5c5f51938bb6bed8?s=256'><meta property='article:section' content='Teambition'><meta property='article:tag' content='运维'><meta property='article:tag' content='VPN'><meta property='article:published_time' content='2018-04-17T14:06:43Z'/><meta property='article:modified_time' content='2018-04-17T14:06:43Z'/><meta name='twitter:card' content='summary'>
 
 <meta name="generator" content="Hugo 0.40.3" />
 
-  <title>使用容器部署 openvpn • Somax</title>
+  <title>使用容器部署 OpenVPN • Somax</title>
   <link rel='canonical' href='https://somax.me/teambition/tb_5ad5ff7346021671da825337.html'>
   
   
@@ -72,45 +72,47 @@ ga('send', 'pageview');
   <ul class='list taxonomy-cloud'><li>
         <a href='/tags/3d.html' style='font-size:1em'>3D</a>
       </li><li>
-        <a href='/tags/develop.html' style='font-size:1.1em'>Develop</a>
+        <a href='/tags/develop.html' style='font-size:1.0833333333333333em'>Develop</a>
       </li><li>
         <a href='/tags/http.html' style='font-size:1em'>HTTP</a>
       </li><li>
-        <a href='/tags/linux.html' style='font-size:1.1em'>Linux</a>
+        <a href='/tags/linux.html' style='font-size:1.25em'>Linux</a>
       </li><li>
         <a href='/tags/nginx.html' style='font-size:1em'>Nginx</a>
       </li><li>
         <a href='/tags/rethinkdb.html' style='font-size:1em'>RethinkDB</a>
       </li><li>
-        <a href='/tags/vpn.html' style='font-size:1em'>VPN</a>
+        <a href='/tags/vpn.html' style='font-size:1.0833333333333333em'>VPN</a>
       </li><li>
-        <a href='/tags/angular.html' style='font-size:1.1em'>Angular</a>
+        <a href='/tags/angular.html' style='font-size:1.0833333333333333em'>Angular</a>
       </li><li>
-        <a href='/tags/docker.html' style='font-size:1.1em'>Docker</a>
+        <a href='/tags/docker.html' style='font-size:1.0833333333333333em'>Docker</a>
       </li><li>
-        <a href='/tags/git.html' style='font-size:1.4em'>Git</a>
+        <a href='/tags/git.html' style='font-size:1.3333333333333333em'>Git</a>
       </li><li>
-        <a href='/tags/gitlab.html' style='font-size:1.1em'>Gitlab</a>
+        <a href='/tags/gitlab.html' style='font-size:1.0833333333333333em'>Gitlab</a>
       </li><li>
         <a href='/tags/gulp.html' style='font-size:1em'>Gulp</a>
       </li><li>
-        <a href='/tags/hugo.html' style='font-size:1.1em'>Hugo</a>
+        <a href='/tags/hugo.html' style='font-size:1.0833333333333333em'>Hugo</a>
       </li><li>
-        <a href='/tags/javascript.html' style='font-size:1.3em'>Javascript</a>
+        <a href='/tags/javascript.html' style='font-size:1.25em'>Javascript</a>
       </li><li>
         <a href='/tags/k8s.html' style='font-size:1em'>K8s</a>
       </li><li>
         <a href='/tags/mocha.html' style='font-size:1em'>Mocha</a>
       </li><li>
-        <a href='/tags/nodejs.html' style='font-size:1.1em'>Nodejs</a>
+        <a href='/tags/nginx.html' style='font-size:1em'>Nginx</a>
       </li><li>
-        <a href='/tags/openvpn.html' style='font-size:1em'>Openvpn</a>
+        <a href='/tags/nodejs.html' style='font-size:1.0833333333333333em'>Nodejs</a>
       </li><li>
         <a href='/tags/rancher.html' style='font-size:1em'>Rancher</a>
       </li><li>
         <a href='/tags/tips.html' style='font-size:1em'>Tips</a>
       </li><li>
-        <a href='/tags/%E5%BB%BA%E7%AB%99.html' style='font-size:1.1em'>建站</a>
+        <a href='/tags/%E5%BB%BA%E7%AB%99.html' style='font-size:1.0833333333333333em'>建站</a>
+      </li><li>
+        <a href='/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96.html' style='font-size:1em'>数据可视化</a>
       </li><li>
         <a href='/tags/%E8%BF%90%E7%BB%B4.html' style='font-size:2em'>运维</a>
       </li></ul>
@@ -124,6 +126,38 @@ ga('send', 'pageview');
   </header>
 
   <ul class='list'>
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-07-02T09:52:51&#43;08:00'>2018-07-02</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/how-to-think-visually.html'>（译）如何用视觉类比来思考 - 图表</a>
+    </h3>
+  </header>
+</li>
+
+  
+    <li class='item'>
+  <div class='meta'>
+    <span>
+  <span class='screen-reader-text'>发布 </span>
+  <time datetime='2018-06-14T15:19:06&#43;08:00'>2018-06-14</time>
+</span>
+
+  </div>
+  <header class='item-header'>
+    <h3 class='item-title'>
+      <a href='/memo/ssh-tunneling.html'>用 SSH 建立安全隧道</a>
+    </h3>
+  </header>
+</li>
+
   
     <li class='item'>
   <div class='meta'>
@@ -253,38 +287,6 @@ ga('send', 'pageview');
 </li>
 
   
-    <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-04-26T16:09:20Z'>2018-04-26</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/teambition/tb_5ae1f9b051c9c600182a40aa.html'>容器中运行的 Gitlab 备份方法</a>
-    </h3>
-  </header>
-</li>
-
-  
-    <li class='item'>
-  <div class='meta'>
-    <span>
-  <span class='screen-reader-text'>发布 </span>
-  <time datetime='2018-04-17T14:06:43Z'>2018-04-17</time>
-</span>
-
-  </div>
-  <header class='item-header'>
-    <h3 class='item-title'>
-      <a href='/teambition/tb_5ad5ff7346021671da825337.html'>使用容器部署 openvpn</a>
-    </h3>
-  </header>
-</li>
-
-  
   </ul>
 </section>
 </div>
@@ -349,7 +351,7 @@ ga('send', 'pageview');
   <header class='header entry-header'>
   <div class='container sep-after'>
     <div class='header-info'>
-      <h1 class='title'>使用容器部署 openvpn</h1>
+      <h1 class='title'>使用容器部署 OpenVPN</h1>
       
 
     </div>
@@ -436,7 +438,7 @@ ga('send', 'pageview');
   
 </svg>
 </span>
-  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/%E8%BF%90%E7%BB%B4.html'>运维</a>, <a class='tag' href='/tags/openvpn.html'>Openvpn</a></div>
+  <span class='screen-reader-text'>标签: </span><a class='tag' href='/tags/%E8%BF%90%E7%BB%B4.html'>运维</a>, <a class='tag' href='/tags/vpn.html'>VPN</a></div>
 
   </div>
 </footer>

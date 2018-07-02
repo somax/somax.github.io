@@ -5,10 +5,42 @@
     <link>https://somax.me/tags/linux.html</link>
     <description>Recent content in Linux on So&#39;Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 02 Oct 2015 05:17:10 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 14 Jun 2018 15:19:06 +0800</lastBuildDate>
     
 	<atom:link href="https://somax.me/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>用 SSH 建立安全隧道</title>
+      <link>https://somax.me/memo/ssh-tunneling.html</link>
+      <pubDate>Thu, 14 Jun 2018 15:19:06 +0800</pubDate>
+      
+      <guid>https://somax.me/memo/ssh-tunneling.html</guid>
+      <description>参考：https://forwardhq.com/help/ssh-tunneling-how-to
+ 使用 SSH 能够安全地访问远程服务器，同时 SSH 也有一些鲜为人知的特点。其中一个很厉害功能就是隧道。
+隧道允许你将远程服务器上的一个端口转发到本地服务器上的一个端口。这对于web开发者尤其有用，它允许你在本地Web服务器和互联网之间创建一个隧道，在互联网的任何地方都可以通过这个隧道访问您的本地应用程序或网站。
+这篇文章介绍如何利用 SSH Tunneling 突破防火墙建立远程链接。
+大致流程如下：
+{ 私有服务器 } ---- 发起 ssh tunneling ---&amp;gt; { 公开服务器 } &amp;lt;----- { 客户机 }  前置条件  你需要有一个可公开访问的服务器，可以是任何一种服务器只要有安装有 SSH 服务。
+ 你还需要设置SSH服务器的配置文件，添加 GatewayPorts yes。
+ 配置文件通常是位于/etc/ssh/sshd_config，可能取决于您的系统的不同。修改后，一定要重新启动SSH服务，运行 sudo service sshd restart
+ 为了保持连接防止超时断开，还需要在配置中添加 ClientAliveInterval 60
+ ClientAliveInterval 指定了服务器端向客户端请求消息的时间间隔, 默认是0，不发送。而ClientAliveInterval 60表示每 60 秒发送一次，然后客户端响应，这样就保持长连接了。
+另外ClientAliveCountMax 使用默认值 3 即可。ClientAliveCountMax 表示服务器发出请求后客户端没有响应的次数达到一定值，就自动断开。
+  修改配置  先查看当前配置
+cd /etc/ssh sudo grep &amp;#34;ClientAlive&amp;#34; sshd_config #ClientAliveInterval 0 #ClientAliveCountMax 3 备份配置</description>
+    </item>
+    
+    <item>
+      <title>用 sh 脚本生成 Niginx Vhost 配置文件</title>
+      <link>https://somax.me/teambition/tb_59005034c621c6c81bf78e70.html</link>
+      <pubDate>Wed, 26 Apr 2017 07:45:56 +0000</pubDate>
+      
+      <guid>https://somax.me/teambition/tb_59005034c621c6c81bf78e70.html</guid>
+      <description>这篇文章（59005034c621c6c81bf78e70）是从 Teambition 迁移过来的
+ touch ngxcfg.sh $$ chmod +x ngxcfg.sh 脚本代码如下：
+#!/bin/bash # MaXiaojun  help() { echo &amp;#34;Generate vhost configuration file for Nginx&amp;#34; echo &amp;#34;Usage:&amp;#34; echo &amp;#34; ngxcfg &amp;#34; echo &amp;#34; ngxcfg -r www.jkr3.com https://192.168.123.123:8080&amp;#34; echo &amp;#34; -h Help&amp;#34; echo &amp;#34; -r Generate redirect config file.&amp;#34; echo &amp;#34; -f Force overwrite config file.&amp;#34; } # get options while getopts &amp;#34;:hrfv&amp;#34; optname &amp;#34;$@&amp;#34; do case &amp;#34;$optname&amp;#34; in &amp;#34;v&amp;#34;) echo v0.</description>
+    </item>
     
     <item>
       <title>Rsync 在非标ssh端口(22) 中用法</title>
